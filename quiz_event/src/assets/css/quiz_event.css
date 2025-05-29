@@ -849,6 +849,9 @@ button {
 .start .outside .floor.floor7 {
   background: url("../images/floor7.png") no-repeat 0 0/auto 100%;
 }
+.start .outside .floor.floor8 {
+  background: url("../images/floor8.png") no-repeat 0 0/auto 100%;
+}
 .start .outside .door {
   position: absolute;
   top: 0;
@@ -1107,6 +1110,7 @@ button {
   position: absolute;
   top: 123rem;
   left: 0;
+  z-index: 1;
   width: 100%;
   text-align: center;
   font-weight: 600;
@@ -1117,6 +1121,7 @@ button {
   position: absolute;
   top: 158rem;
   left: 0;
+  z-index: 1;
   width: 100%;
   text-align: center;
   font-weight: 700;

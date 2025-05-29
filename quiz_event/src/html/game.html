@@ -248,7 +248,7 @@
                     $(".time").text(time + "초");
                 }, 1000);
                 function btnOX(randomQuiz) {
-                    $(".btn_ox button").off().on("click", function() {
+                    $(".btn_ox button").off().on("touchend", function() {
                         $(".screen").removeClass("active");
                         if ($(this).hasClass("btn_o") == randomQuiz[0]) {
                             point = point + randomQuiz[1];

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRX 야간선물옵션 이벤트</title>
+
+    <!-- include css-->
+    <!-- <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/reset.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/share.css?20240520">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/common.css?20240520"> -->
+
+    <!-- include js-->
+    <!-- <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-3.5.0.min.js?20231018"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/fontfaceonload.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/share.js?20210811"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/interaction.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/browser.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/appLink.js?20220928"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/kwscommon.js"></script> -->
+    
+    <link rel="stylesheet" href="../assets/css/baseball_event.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><img src="../assets/images/logo.png" alt="KRX 야간선물옵션 이벤트"></h1>
+            <button type="button" class="btn_close"><img src="../assets/images/btn_close.png" alt="닫기"></button>
+        </header>
+        <div class="ready"><div></div></div>
+        <div class="start">
+            <div class="outside">
+                <ol class="score">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                <div class="floor"></div>
+                <div class="door">
+                    <div class="right"></div>
+                    <div class="left"></div>
+                </div>
+            </div>
+            <div class="inside">
+                <div class="screen">
+                    <div class="quiz_step"></div>
+                    <div class="quiz"></div>
+                    <div class="btn_ox">
+                        <button type="button" class="btn_o"></button>
+                        <button type="button" class="btn_x"></button>
+                    </div>
+                    <div class="pie_time">
+                        <div class="pie"></div>
+                        <div class="time"></div>
+                    </div>
+                </div>
+                <div class="check">
+                    <div class="cumulative_point">
+                        <p class="title">누적 포인트</p>
+                        <div class="cumulative_p">
+                            <p class="cumulative"></p>
+                            <p class="p"></p>
+                        </div>
+                    </div>
+                    <div class="title_correct"></div>
+                    <div class="check_ox"></div>
+                    <div class="get"></div>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <p class="total"></p>
+            <p class="point"></p>
+            <ol class="score_result">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+            <div class="btn_wrap">
+                <button type="button"><img src="../assets/images/btn_point.png" alt="포인트 받기"></button>
+                <button type="button" class="btn_share" onclick="location.href='../html/game.html'"><img src="../assets/images/btn_share.png" alt="공유하고 다시 도전하기"></button>
+            </div>
+            <div class="fireworks">
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        let ready = 1;
+        let count = 0;
+        let point = 0;
+        let percent = 0;
+        let time = 6;
+        let timeoutCheck = "";
+        const quiz1 = [
+            [true, 100, "밤에도 거래가 가능하다."],
+            [true, 100, "거래를 하려면 선물옵션계좌가 필요하다."],
+            [false, 100, "투기 목적만으로 활용된다."],
+        ]
+        const quiz2 = [
+            [false, 200, "야간시간에는 실시간으로 거래되지 않는다."],
+            [true, 200, "파생상품 거래 시간이 12시간으로 늘어난다."],
+            [true, 200, "양방향 매매 투자전략에 유리하다."],
+            [true, 200, "거래 가능한 대표 상품은 코스피200선물/옵션이다."],
+        ]
+        const quiz3 = [
+            [false, 300, "Eurex 휴장일에는 거래를 할 수 없다."],
+            [true, 300, "KRX 자체 야간거래에서 코스피 200선물/옵션 상품이 거래가능하다."],
+            [false, 300, "KRX 자체 야간거래에서 30년 국채선물상품이 거래가능하다."],
+            [false, 300, "KRX 야간거래로 이전돼도 장개시 전 협의 거래는 유지된다."],
+        ]
+        const quiz4 = [
+            [false, 400, "시장가 주문이 불가능하다."],
+            [false, 400, "야간장에서는 선물스프레드 주문이 불가능하다."],
+            [true, 400, "미니코스피200 옵션거래도 가능하다."],
+            [true, 400, "KOSDAQ150선물도 거래 가능하다."],
+        ]
+        const randomQuiz1 = quiz1.sort(() => Math.random() - 0.5);
+        const randomQuiz2 = quiz2.sort(() => Math.random() - 0.5);
+        const randomQuiz3 = quiz3.sort(() => Math.random() - 0.5);
+        const randomQuiz4 = quiz4.sort(() => Math.random() - 0.5);
+        const readyInterval = setInterval(()=> {
+            ready--;
+            $(".ready div").addClass("ready" + ready);
+            if (ready == 0) {
+                $(".ready").hide();
+                $(".start").show();
+                start();
+                clearInterval(readyInterval);
+            }
+        }, 1000);
+        function start() {
+            percent = 0;
+            time = 6;
+            count++;
+            $(".outside").show();
+            $(".inside").hide();
+            $(".check").removeClass("correct wrong");
+            $(".check_ox").removeClass("check_o check_x");
+            $(".get").removeClass("get100 get200 get300 get400");
+            $(".outside").addClass("outside" + count);
+            $(".floor").addClass("floor" + count);
+            $(".quiz_step").addClass("quiz_step" + count);
+            $(".pie").css("background", "conic-gradient(#799fd6 0 0, #333a4b 0 0)");
+            $(".time").text("6초");
+            setTimeout(() => {
+                $(".outside").hide();
+                $(".inside").show();
+                $(".screen").addClass("active");
+            }, 2000);
+            setTimeout(() => {
+                question();
+            }, 2500);
+            function question() {
+                if (count == 1) {
+                    $(".quiz").text(randomQuiz1[0][2]);
+                    timeoutCheck = randomQuiz1[0][0];
+                    btnOX(randomQuiz1[0]);
+                } else if (count == 2) {
+                    $(".quiz").text(randomQuiz1[1][2]);
+                    timeoutCheck = randomQuiz1[1][0];
+                    btnOX(randomQuiz1[1]);
+                } else if (count == 3) {
+                    $(".quiz").text(randomQuiz2[0][2]);
+                    timeoutCheck = randomQuiz2[0][0];
+                    btnOX(randomQuiz2[0]);
+                } else if (count == 4) {
+                    $(".quiz").text(randomQuiz2[1][2]);
+                    timeoutCheck = randomQuiz2[1][0];
+                    btnOX(randomQuiz2[1]);
+                } else if (count == 5) {
+                    $(".quiz").text(randomQuiz3[0][2]);
+                    timeoutCheck = randomQuiz3[0][0];
+                    btnOX(randomQuiz3[0]);
+                } else if (count == 6) {
+                    $(".quiz").text(randomQuiz3[1][2]);
+                    timeoutCheck = randomQuiz3[1][0];
+                    btnOX(randomQuiz3[1]);
+                } else if (count == 7) {
+                    $(".quiz").text(randomQuiz4[0][2]);
+                    timeoutCheck = randomQuiz4[0][0];
+                    btnOX(randomQuiz4[0]);
+                } else if (count == 8) {
+                    $(".quiz").text(randomQuiz4[1][2]);
+                    timeoutCheck = randomQuiz4[1][0];
+                    btnOX(randomQuiz4[1]);
+                }
+                const pieInterval = setInterval(() => {
+                    $(".pie").css("background", "conic-gradient(#799fd6 0 " + percent + "%, #333a4b " + percent + "% 100%)");
+                    percent++ >= 100 && clearInterval(pieInterval);
+                }, 60);
+                const quizInterval = setInterval(() => {
+                    time--;
+                    if (time < 0) {
+                        $(".score li").eq(count - 1).addClass("fail");
+                        $(".score_result li").eq(count - 1).text(0 + "P");
+                        $(".screen").removeClass("active");
+                        $(".check").addClass("wrong");
+                        $(".cumulative").text(point.toLocaleString("ko-KR"));
+                        if (timeoutCheck) {
+                            $(".check_ox").addClass("check_o");
+                        } else {
+                            $(".check_ox").addClass("check_x");
+                        }
+                        clearInterval(pieInterval);
+                        clearInterval(quizInterval);
+                        setTimeout(() => {
+                            if (count >= 8) {
+                                $(".start").hide();
+                                $(".result").show();
+                                $(".total").text("총 " + $(".score .success").length + "문제 정답");
+                                $(".point").html(point.toLocaleString("ko-KR") + "P <span>획득!</span>");
+                                if ($(".score .success").length == 8) {
+                                    $(".btn_share").remove();
+                                }
+                            } else {
+                                start();
+                            }
+                        }, 2000);
+                    }
+                    $(".time").text(time + "초");
+                }, 1000);
+                function btnOX(randomQuiz) {
+                    $(".btn_ox button").off().on("click", function() {
+                        $(".screen").removeClass("active");
+                        if ($(this).hasClass("btn_o") == randomQuiz[0]) {
+                            point = point + randomQuiz[1];
+                            $(".score li").eq(count - 1).addClass("success");
+                            $(".score_result li").eq(count - 1).text(randomQuiz[1] + "P");
+                            $(".check").addClass("correct");
+                            $(".get").addClass("get" + randomQuiz[1]);
+                        } else {
+                            $(".score li").eq(count - 1).addClass("fail");
+                            $(".score_result li").eq(count - 1).text(0 + "P");
+                            $(".check").addClass("wrong");
+                        }
+                        $(".cumulative").text(point.toLocaleString("ko-KR"));
+                        if (timeoutCheck) {
+                            $(".check_ox").addClass("check_o");
+                        } else {
+                            $(".check_ox").addClass("check_x");
+                        }
+                        clearInterval(pieInterval);
+                        clearInterval(quizInterval);
+                        setTimeout(() => {
+                            if (count >= 8) {
+                                $(".start").hide();
+                                $(".result").show();
+                                $(".total").text("총 " + $(".score .success").length + "문제 정답");
+                                $(".point").html(point.toLocaleString("ko-KR") + "P <span>획득!</span>");
+                                if ($(".score .success").length == 8) {
+                                    $(".btn_share").remove();
+                                }
+                            } else {
+                                start();
+                            }
+                        }, 2000);
+                    });
+                }
+            }
+        }
+    </script>
+</body>
+</html>

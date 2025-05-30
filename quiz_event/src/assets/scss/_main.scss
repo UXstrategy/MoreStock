@@ -364,7 +364,7 @@
         }
     }
 
-    // 알림 서비스 동의
+    /* 알림 서비스 동의 */
     &.popup_event {
         .popup_container {
             .pop_header {
@@ -382,7 +382,7 @@
         }
     }
 
-    // 개인신용정보 수집·이용·제공 필수 동의서
+    /* 개인신용정보 수집·이용·제공 필수 동의서 */
     &.popup_agree {
         .pop_header {
             h1 {
@@ -652,6 +652,65 @@
             img {
                 width: 100%;
             }
+        }
+    }
+}
+
+/* 이벤트 조기종료 안내 팝업 */
+.info_popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    .dim {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .wrap {
+        width: 320rem;
+        padding: 20rem;
+        background: #fff;
+        border-radius: 24rem;
+        text-align: center;
+        .title {
+            padding: 22rem 0 20rem;
+            font-weight: 700;
+            font-size: 26rem;
+            color: #000;
+        }
+        .soldout {
+            padding-bottom: 20rem;
+            img {
+                width: 100%;
+            }
+        }
+        .text {
+            padding-bottom: 10rem;
+            line-height: 24rem;
+            font-size: 16rem;
+            color: #333;
+            span {
+                font-size: 16rem;
+                color: #b43a6b;
+            }
+        }
+        button {
+            width: 100%;
+            height: 56rem;
+            margin-top: 12rem;
+            background: #212266;
+            border-radius: 16rem;
+            font-size: 16rem;
+            color: #fff;
         }
     }
 }

@@ -117,7 +117,7 @@
         let count = 0;
         let point = 0;
         let percent = 0;
-        let time = 6;
+        let time = 4;
         let timeoutCheck = "";
         const quiz1 = [
             [true, 100, "밤에도 거래가 가능하다."],
@@ -158,7 +158,7 @@
         }, 1000);
         function start() {
             percent = 0;
-            time = 6;
+            time = 4;
             count++;
             $(".outside").show();
             $(".inside").hide();
@@ -169,7 +169,7 @@
             $(".floor").addClass("floor" + count);
             $(".quiz_step").addClass("quiz_step" + count);
             $(".pie").css("background", "conic-gradient(#799fd6 0 0, #333a4b 0 0)");
-            $(".time").text("6초");
+            $(".time").text("4초");
             setTimeout(() => {
                 $(".outside").hide();
                 $(".inside").show();
@@ -215,7 +215,7 @@
                 const pieInterval = setInterval(() => {
                     $(".pie").css("background", "conic-gradient(#799fd6 0 " + percent + "%, #333a4b " + percent + "% 100%)");
                     percent++ >= 100 && clearInterval(pieInterval);
-                }, 60);
+                }, 40);
                 const quizInterval = setInterval(() => {
                     time--;
                     if (time < 0) {

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위잉 위잉 모기 사냥 게임 이벤트</title>
+
+    <!-- include css-->
+    <!-- <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/reset.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/share.css?20240520">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/common.css?20240520"> -->
+
+    <!-- include js-->
+    <!-- <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-3.5.0.min.js?20231018"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/fontfaceonload.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/share.js?20210811"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/interaction.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/browser.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/appLink.js?20220928"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/kwscommon.js"></script> -->
+    
+    <link rel="stylesheet" href="../assets/css/mosquito_event.css">
+</head>
+<body>
+    <div class="wrap game">
+        <header>
+            <h1>위잉위잉 모기 사냥 게임</h1>
+            <button type="button" class="btn_close">닫기</button>
+        </header>
+        <div class="ready">
+            <div class="text_guide"></div>
+            <div class="text_ready"></div>
+            <div class="text_start"></div>
+        </div>
+        <div class="start">
+            <div class="round_guide"></div>
+            <ol class="score">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+            <div class="human"></div>
+            <div class="gauge"><div></div><span></span></div>
+            <div class="mosquito"><div></div></div>
+            <div class="hand">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <button type="button" class="btn_catch active"></button>
+        </div>
+        <div class="result">
+            <p class="total"></p>
+            <p class="point"></p>
+            <div class="btn_wrap">
+                <button type="button" class="btn_point"><img src="../assets/images/btn_point.png" alt="포인트 받기"></button>
+                <button type="button" class="btn_share" onclick="location.href='../html/game.html'"><img src="../assets/images/btn_share.png" alt="공유하고 다시 도전하기"></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        let ready = 1;
+        let round = 1;
+        let count = 1;
+        let point = 0;
+        let limit = 0;
+        let speed = 0;
+        let second = 0;
+        let roundTime = null;
+        let limitInterval = null;
+        let end = false;
+        setTimeout(() => {
+            $(".text_guide").hide();
+            $(".text_ready").show();
+        }, 2000);
+        setTimeout(() => {
+            $(".ready").addClass("light");
+            $(".text_ready").hide();
+            $(".text_start").show();
+        }, 3000);
+        setTimeout(() => {
+            $(".ready").hide();
+            $(".start").show();
+            start();
+        }, 4000);
+        function start() {
+            $(".score li").show();
+            if (round == 1) {
+                limit = 30000;
+                speed = 1000;
+            } else if (round == 2) {
+                limit = 30000;
+                speed = 700;
+            } else if (round == 3) {
+                limit = 30000;
+                speed = 400;
+            } else if (round == 4) {
+                limit = 30000;
+                speed = 300;
+            } else if (round == 5) {
+                limit = 30000;
+                speed = 200;
+            }
+            $(".score").addClass("round" + round);
+            $(".human").removeClass("success fail");
+            $(".mosquito").removeClass("success fail_top fail_bottom");
+            $(".mosquito").css("animation", "move " + speed + "ms 1s ease-in-out infinite alternate");
+            $(".gauge div").css("animation", "progress " + limit + "ms linear forwards");
+            setTimeout(() => {
+                $(".mosquito").show();
+            });
+            setTimeout(() => {
+                $(".gauge").show();
+            }, 500);
+            if (count == 1) {
+                clearInterval(limitInterval);
+                $(".round_guide").show().addClass("round" + round);
+                $(".game header").removeClass("black");
+                roundTime = setTimeout(() => {
+                    end = true;
+                    $(".game header").removeClass("black");
+                    $(".start").hide();
+                    $(".result").show().addClass("result" + round);
+                    if (round == 1) {
+                        $(".btn_point").hide();
+                    }
+                }, limit);
+                second = String(limit).substr(0, 2);
+                setTimeout(() => {
+                    $(".gauge span").text(second);
+                }, 500);
+                limitInterval = setInterval(()=> {
+                    second--;
+                    if (second < 0) {
+                        second = 0;
+                    }
+                    $(".gauge span").text(second);
+                }, 1000);
+            }
+            setTimeout(() => {
+                $(".round_guide").hide();
+                $(".game header").addClass("black");
+                $(".btn_catch").addClass("active");
+            }, 1000);
+        }
+        $(".btn_catch").off().on("touchstart", function() {
+            $(".hand").removeClass("range");
+            if ($(".btn_catch").hasClass("active")) {
+                $(".hand").addClass("active");
+                $(".btn_catch").removeClass("active");
+                setTimeout(() => {
+                    let position = $(".mosquito").css("top");
+                    position = position.slice(0, -2);
+                    position = Math.floor(position);
+                    position = Math.abs(parseInt(position));
+                    if (position > 423 && position < 492) {
+                        $(".mosquito").css("animation-play-state", "paused");
+                        $(".score li").eq(count - 1).addClass("success");
+                        $(".human").addClass("success");
+                        $(".mosquito").addClass("success");
+                    } else {
+                        $(".score li").eq(count - 1).addClass("fail");
+                        $(".human").addClass("fail");
+                        if (position <= 423) {
+                            $(".mosquito").addClass("fail_top");
+                        } else if (position >= 492) {
+                            $(".mosquito").addClass("fail_bottom");
+                        }
+                    }
+                    const success = $(".score li.success").length;
+                    const fail = $(".score li.fail").length;
+                    if (round == 1 && fail == 3 || round == 2 && fail == 3 || round == 3 && fail == 2 || round == 4 && fail == 2 || round == 5 && fail == 1 || round == 5 && success == 5) {
+                        if (round == 5 && success == 5) {
+                            round++;
+                        }
+                        $(".gauge div").css("animation-play-state", "paused");
+                        clearTimeout(roundTime);
+                        clearInterval(limitInterval);
+                        end = true;
+                        setTimeout(() => {
+                            $(".game header").removeClass("black");
+                            $(".start").hide();
+                            $(".result").show().addClass("result" + round);
+                            if (round == 1) {
+                                $(".btn_point").hide();
+                            }
+                        }, 2000);
+                    }
+                    if (round == 1 && success == 3 || round == 2 && success == 3 || round == 3 && success == 4 || round == 4 && success == 4) {
+                        round++;
+                        count = 0;
+                        setTimeout(() => {
+                            $(".score li").removeClass("success fail");
+                            $(".gauge").hide();
+                        }, 2000);
+                        $(".gauge div").css("animation-play-state", "paused");
+                        clearTimeout(roundTime);
+                        clearInterval(limitInterval);
+                    }
+                    count++;
+                });
+                setTimeout(() => {
+                    $(".hand").removeClass("active");
+                }, 200);
+                setTimeout(() => {
+                    if (!end) {
+                        $(".mosquito").hide();
+                        start();
+                    }
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

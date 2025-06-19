@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간편모드 이벤트</title>
+    
+    <!-- include css-->
+    <!-- <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/reset.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/share.css?20240520">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/common.css?20240520"> -->
+
+    <!-- include js-->
+    <!-- <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-3.5.0.min.js?20231018"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/fontfaceonload.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/share.js?20210811"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/interaction.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/browser.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/appLink.js?20220928"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/kwscommon.js"></script> -->
+    
+    <link rel="stylesheet" href="../assets/css/easymode_event.css">
+</head>
+<body>
+    <div class="certified_agree">
+        <div class="btn_close"><button type="button">닫기</button></div>
+        <p class="title">본인확인(휴대폰인증)</p>
+        <p class="guide">본인인증 후 이벤트 상금을 받을 수 있어요.</p>
+        <label for="name" class="title_label pb2">이름</label>
+        <div><input type="text" placeholder="이름" id="name"></div>
+        <label for="phone" class="title_label">휴대폰 번호</label>
+        <div class="phone">
+            <button type="button" class="btn_phone_front" onclick="layerPopup.open('phone_front_layer')">010</button>
+            <input type="text" maxlength="8" placeholder="휴대폰 번호" id="phone">
+            <button type="button" class="btn_certified" onclick="javascript:alert('인증번호')">인증번호</button><!-- class명에 re 추가시 재요청 버튼으로 변경됨 -->
+        </div>
+        <label for="certified" class="title_label">인증번호</label>
+        <div class="certified">
+            <input type="text" maxlength="6" placeholder="인증번호를 입력해주세요." id="certified">
+            <p class="count">03:00</p>
+        </div>
+        <p class="title_caution">유의사항</p>
+        <ul class="caution">
+            <li class="red">5월 11일까지 계좌개설 완료되어야 경품 지급이 가능합니다.</li>
+            <li class="red">본인 명의로된 비대면계좌가 있어야 경품을 받으실 수 있어요.</li>
+            <li>이벤트 신청을 완료하면 키움증권 계좌개설 링크를 문자로 보내드려요.</li>
+            <li>위 인증정보와 계좌개설시 이름/휴대폰번호 정보가 일치해야 경품을 받으실 수 있어요.</li>
+        </ul>
+        <button type="button" class="btn_ok" disabled onclick="location.href='./agree_event.html'">확인</button>
+    </div>
+
+    <!-- 휴대폰 앞자리 선택 레이어 -->
+    <div class="phone_front_layer">
+        <div class="dim" onclick="layerPopup.close('phone_front_layer')"></div>
+        <div class="popup_container">
+            <button type="button" class="btn_close" onclick="layerPopup.close('phone_front_layer')">닫기</button>
+            <p class="title">휴대폰 앞자리 선택</p>
+            <ul class="selectbox">
+                <li class="active"><button type="button">010</button></li>
+                <li><button type="button">011</button></li>
+                <li><button type="button">016</button></li>
+                <li><button type="button">017</button></li>
+                <li><button type="button">018</button></li>
+                <li><button type="button">019</button></li>
+            </ul>
+            <button type="button" class="btn_ok" onclick="layerPopup.close('phone_front_layer');">닫기</button>
+        </div>
+    </div>
+    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        // layer popup
+        var layerPopup = function () {
+            let dim = $('.dim');
+            return {
+                open: function open(e) {
+                $('.' + e).show();
+                setTimeout(function () {
+                    $('.' + e).addClass("active");
+                }, 10);
+                },
+                close: function close(e) {
+                $('.' + e).removeClass("active");
+                setTimeout(function () {
+                    $('.' + e).hide();
+                }, 500);
+                }
+            };
+        }();
+
+        // 확인 버튼 활성화
+        $("#certified").keyup(function() {
+            if($(this).val().length == 6) {
+                $(".btn_ok").attr("disabled", false);
+            } else {
+                $(".btn_ok").attr("disabled", true);
+            }
+        });
+
+        // 휴대폰 앞자리 선택
+        var phone_front = $('.btn_phone_front'),
+        phone_number_list = $('.selectbox li');
+        phone_number_list.on('click',function(){
+            var idx = phone_number_list.index(this);
+            phone_number_list.removeClass();
+            phone_number_list.eq(idx).addClass('active');
+            phone_front.html(phone_number_list.eq(idx).find('button').html());
+        })
+    </script>
+</body>
+</html>

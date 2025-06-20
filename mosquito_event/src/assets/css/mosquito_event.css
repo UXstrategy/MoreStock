@@ -523,6 +523,9 @@ button {
 }
 
 /* 이벤트 메인 */
+.event .content {
+  line-height: 0;
+}
 .event .content img {
   width: 100%;
 }
@@ -551,21 +554,21 @@ button {
 }
 .event .notice_wrap {
   padding: 0 16px 110px;
-  background-color: #f5f5f5;
+  background-color: #181123;
 }
 .event .notice_wrap .notice dt {
   padding: 38px 0 16px;
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
-  color: #666;
+  color: #ccc;
 }
 .event .notice_wrap .notice li {
   position: relative;
   padding-left: 8px;
   font-size: 12px;
   line-height: 18px;
-  color: #666;
+  color: #ccc;
 }
 .event .notice_wrap .notice li::before {
   content: "";
@@ -574,7 +577,7 @@ button {
   width: 2px;
   height: 2px;
   border-radius: 50%;
-  background-color: #666;
+  background-color: #ccc;
   left: 0;
   top: 9px;
 }
@@ -604,7 +607,7 @@ button {
   font-size: 8px;
   line-height: 13px;
   text-align: right;
-  color: #666;
+  color: #f5f5f5;
 }
 .event .btn_wrap {
   position: fixed;
@@ -872,6 +875,7 @@ button {
   left: 0;
   width: 100%;
   text-align: center;
+  line-height: 20px;
   font-size: 13px;
 }
 .start .mosquito {
@@ -954,7 +958,7 @@ button {
   height: 100px;
 }
 .start .hand.range {
-  background: blue;
+  background: url("../images/range.png") no-repeat 0 3px/100% 100%;
 }
 .start .hand.active .left {
   right: calc(50% - 1px);

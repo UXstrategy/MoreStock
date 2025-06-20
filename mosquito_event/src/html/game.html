@@ -95,10 +95,10 @@
             start();
         }, 4000);
         function start() {
-            $(".score li").show();
             if (round == 1) {
                 limit = 30000;
                 speed = 1000;
+                $(".hand").addClass("range");
             } else if (round == 2) {
                 limit = 30000;
                 speed = 700;
@@ -112,6 +112,7 @@
                 limit = 30000;
                 speed = 200;
             }
+            $(".score li").show();
             $(".score").addClass("round" + round);
             $(".human").removeClass("success fail");
             $(".mosquito").removeClass("success fail_top fail_bottom");
@@ -135,6 +136,7 @@
                     if (round == 1) {
                         $(".btn_point").hide();
                     }
+                    window.scrollTo({top: 0});
                 }, limit);
                 second = String(limit).substr(0, 2);
                 setTimeout(() => {
@@ -152,6 +154,7 @@
                 $(".round_guide").hide();
                 $(".game header").addClass("black");
                 $(".btn_catch").addClass("active");
+                window.scrollTo({top: document.body.scrollHeight});
             }, 1000);
         }
         $(".btn_catch").off().on("touchstart", function() {
@@ -195,6 +198,7 @@
                             if (round == 1) {
                                 $(".btn_point").hide();
                             }
+                            window.scrollTo({top: 0});
                         }, 2000);
                     }
                     if (round == 1 && success == 3 || round == 2 && success == 3 || round == 3 && success == 4 || round == 4 && success == 4) {

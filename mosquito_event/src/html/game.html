@@ -95,6 +95,7 @@
             start();
         }, 4000);
         function start() {
+            $(".score li").show();
             if (round == 1) {
                 limit = 30000;
                 speed = 1000;
@@ -112,7 +113,6 @@
                 limit = 30000;
                 speed = 200;
             }
-            $(".score li").show();
             $(".score").addClass("round" + round);
             $(".human").removeClass("success fail");
             $(".mosquito").removeClass("success fail_top fail_bottom");

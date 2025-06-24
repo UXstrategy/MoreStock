@@ -176,9 +176,7 @@ const swiperSet = (function(){
             observer:true,
             observeParents:true,
             allowTouchMove: ElmOpt.touchMove,
-            watchSlidesProgress: ElmOpt.watchslide,
-            touchStartPreventDefault: false,
-            nested: true
+            watchSlidesProgress: ElmOpt.watchslide
         };
         return applyOpt;
     }

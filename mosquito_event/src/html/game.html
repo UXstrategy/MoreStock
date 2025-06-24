@@ -167,7 +167,7 @@
                     position = position.slice(0, -2);
                     position = Math.floor(position);
                     position = Math.abs(parseInt(position));
-                    if (position > 423 && position < 492) {
+                    if (position > 408 && position < 504) {
                         $(".mosquito").css("animation-play-state", "paused");
                         $(".score li").eq(count - 1).addClass("success");
                         $(".human").addClass("success");
@@ -175,9 +175,9 @@
                     } else {
                         $(".score li").eq(count - 1).addClass("fail");
                         $(".human").addClass("fail");
-                        if (position <= 423) {
+                        if (position <= 408) {
                             $(".mosquito").addClass("fail_top");
-                        } else if (position >= 492) {
+                        } else if (position >= 504) {
                             $(".mosquito").addClass("fail_bottom");
                         }
                     }

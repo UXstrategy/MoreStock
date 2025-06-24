@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간편모드 이벤트</title>
+
+    <!-- include css-->
+    <!-- <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/reset.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/share.css?20240520">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/common.css?20240520"> -->
+
+    <!-- include js-->
+    <!-- <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-3.5.0.min.js?20231018"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/fontfaceonload.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/share.js?20210811"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/interaction.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/browser.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/appLink.js?20220928"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/kwscommon.js"></script> -->
+    
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/easymode_event.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="intro_wrap bg_type1">
+            <div class="section section1 page_in">
+                <div class="section_inner">
+                    <div class="title keyframe_sec">
+                        <p class="t1"><img src="../assets/images/img_section1_title.png" alt="쉬운투자, 쉬운경험 간편모드 출시"></p>
+                    </div>
+                    <div class="logo keyframe_sec"><img src="../assets/images/img_section1_logo.png" alt="영웅문S#"></div>
+                    <div class="star_box keyframe_sec">
+                        <p class="star star1"><img src="../assets/images/icon_section1_star1.png" alt="star"></p>
+                        <p class="star star2"><img src="../assets/images/icon_section1_star2.png" alt="star"></p>
+                        <p class="star star3"><img src="../assets/images/icon_section1_star3.png" alt="star"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="section section2">
+                <div class="section_inner">
+                    <div class="title keyframe_sec">
+                        <p class="t1 keyframe_sec"><img src="../assets/images/img_section2_title.png" alt="투자가 어려운 고객님을 위해 필요한 기능만 쏙 담았어요."></p>
+                        <p class="t2 keyframe_sec"><img src="../assets/images/img_section2_title2.png" alt="간편모드 체험하고 네이버페이 5,000원!"></p>
+                    </div>
+                    <div class="mode_type_text keyframe_sec">
+                        <p class="text">
+                            <span class="t1 keyframe_sec"><img src="../assets/images/img_period.png" alt="이벤트 기간 : 7월 3일 ~ 7월 31일"></span>
+                        </p>
+                    </div>
+                    <div class="main_screen">
+                        <div class="screen_box">
+                            <p class="screen1 keyframe_sec"><img src="../assets/images/img_main_screen1.png" alt="간편모드 스크린1"></p>
+                            <p class="screen2 keyframe_sec"><img src="../assets/images/img_main_screen2.png" alt="간편모드 스크린2"></p>
+                            <p class="screen3 keyframe_sec"><img src="../assets/images/img_main_screen3.png" alt="간편모드 스크린3"></p>
+                            <p class="screen4 keyframe_sec"><img src="../assets/images/img_main_screen4.png" alt="간편모드 스크린4"></p>
+                            <p class="screen5 keyframe_sec"><img src="../assets/images/img_main_screen5.png" alt="간편모드 스크린5"></p>
+                            <p class="screen6 keyframe_sec"><img src="../assets/images/img_main_screen6.png" alt="간편모드 스크린6"></p>
+                        </div>
+                        <div class="mode_screen_wrap">
+                            <div class="mode_screen keyframe_sec">
+                                <p class="simple_screen keyframe_sec"></p>
+                                <div class="fade_screen keyframe_sec">
+                                    <p class="logo keyframe_sec"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        setTimeout(function() {
+            $(".section1").removeClass("page_in").addClass("page_out");
+            $(".section2").addClass("page_in running");
+        }, 2000);
+        setTimeout(function() {
+            $(".intro_wrap").addClass("bg_type2");
+        }, 6000);
+        setTimeout(function() {
+            location.href="main.html";
+        }, 8000);
+    </script>
+</body>
+</html>

@@ -1034,7 +1034,7 @@ button {
   color: #fff;
 }
 
-/* intro */
+/* 인트로 */
 .intro_wrap {
   position: relative;
   height: 100vh;
@@ -1297,7 +1297,6 @@ button {
   animation: logoScaleUp 0.5s linear 3.5s forwards;
   animation-play-state: paused;
 }
-
 @keyframes pageIn {
   0% {
     opacity: 0;
@@ -1509,7 +1508,8 @@ button {
     margin: -62rem 0 0 -62rem;
   }
 }
-/* 게임 메인 */
+
+/* 메인 */
 .main {
   padding-top: 60rem;
   text-align: center;
@@ -1518,7 +1518,7 @@ button {
   padding-bottom: 24rem;
 }
 .main .text_event1 img {
-  width: 248rem;
+  width: 202rem;
   height: 194rem;
 }
 .main .img_event1 {
@@ -1653,104 +1653,11 @@ button {
   width: 312rem;
   height: 60rem;
 }
-.main .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 24rem;
-  left: 0;
-  width: 100%;
-  padding: 0 18rem 0 24rem;
-}
-.main .header img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.main .header h1 {
-  width: 64rem;
-  height: 19rem;
-}
-.main .header .share {
-  width: 26rem;
-  height: 26rem;
-}
 
-/* 게임 */
-.wrap header {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  padding: 20rem 20rem 0;
-}
-.wrap header h1 {
-  line-height: 0;
-}
-.wrap header h1 img {
-  width: 200rem;
-  height: 24rem;
-}
-.wrap header .btn_close {
-  line-height: 0;
-}
-.wrap header .btn_close img {
-  height: 24rem;
-}
-
-.test {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100px;
-  height: 100px;
-  perspective: 500px;
-  /* animation: test 1s linear infinite; */
-}
-@keyframes test {
-  100% {
-    z-index: 0;
-  }
-}
-.test div {
-  width: 100%;
-  height: 100%;
-  background: url("../images/line.png") no-repeat 0 0/100% 100%;
-  transform: perspective(500px) rotateX(0deg);
-  /* animation: div 1s linear infinite; */
-}
-@keyframes div {
-  100% {
-    transform: perspective(500px) rotateX(-360deg);
-  }
-}
-
-.human {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  width: 50px;
-  height: 50px;
-  background: yellow;
-}
-
-.btn {
-  position: absolute;
-  top: 200px;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background: green;
-}
-
+/* 간편모드 체험 */
 .experience {
   min-height: 100vh;
-  background: #16042e url("../images/bg_experience_type1.png") no-repeat 0 0/100% auto;
+  background: #16042e url("../images/bg_experience.png") no-repeat 0 0/100% auto;
   text-align: center;
 }
 .experience .btn_close {
@@ -1762,17 +1669,6 @@ button {
   width: 24rem;
   height: 24rem;
 }
-.experience .list {
-  /* &::after {
-      content: "";
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 237rem;
-      background-image: linear-gradient(to bottom, rgba(27, 9, 54, 0) 4%, #230b45 50%);
-  } */
-}
 .experience .list li {
   display: none;
 }
@@ -1783,24 +1679,21 @@ button {
   width: 360rem;
   height: 650rem;
 }
-.experience .list li .btn1 {
+.experience .list li .btn {
   position: absolute;
-  top: 190rem;
-  left: 98rem;
-  width: 156rem;
-  height: 80rem;
   overflow: hidden;
-  border-radius: 23rem;
+  padding: 5rem;
+  line-height: 0;
 }
-.experience .list li .btn1::before {
+.experience .list li .btn::before {
   content: "";
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 300rem;
-  height: 300rem;
-  background: linear-gradient(130deg, #6ee6ff 8%, #a851ff 52%, #f72c99 94%);
-  border-radius: 20rem;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(130deg, #b6f2ff 8%, #a851ff 52%, #f72c99 94%);
+  border-radius: 50%;
   animation: rotate 1s linear infinite;
 }
 @keyframes rotate {
@@ -1808,21 +1701,79 @@ button {
     transform: rotate(360deg);
   }
 }
-.experience .list li .btn1 img {
+.experience .list li .btn img {
   position: relative;
+}
+.experience .list li .btn1 {
+  top: 189rem;
+  left: 96rem;
+  border-radius: 23rem;
+}
+.experience .list li .btn1 img {
   width: 148rem;
   height: 72rem;
 }
-.experience .list li .title_step3 {
-  padding: 80rem 0 50rem;
+.experience .list li .btn2 {
+  top: 302rem;
+  left: 41rem;
+  border-radius: 23rem;
 }
-.experience .list li .title_step3 img {
-  width: 245rem;
-  height: 157rem;
+.experience .list li .btn2::before {
+  top: -268rem;
+  height: 536rem;
 }
-.experience .list li .img_step3 img {
-  width: 292rem;
-  height: 204rem;
+.experience .list li .btn2 img {
+  width: 268rem;
+  height: 72rem;
+}
+.experience .list li .btn3 {
+  top: 196rem;
+  left: 197rem;
+  border-radius: 50%;
+}
+.experience .list li .btn3 img {
+  width: 56rem;
+  height: 56rem;
+}
+.experience .list li .btn4 {
+  top: 442rem;
+  left: 159rem;
+  border-radius: 23rem;
+}
+.experience .list li .btn4 img {
+  width: 148rem;
+  height: 72rem;
+}
+.experience .list li .btn5 {
+  top: 362rem;
+  left: 184rem;
+  border-radius: 23rem;
+}
+.experience .list li .btn5 img {
+  width: 108rem;
+  height: 54rem;
+}
+.experience .list li .btn6 {
+  top: 332rem;
+  left: 67rem;
+  border-radius: 25rem;
+}
+.experience .list li .btn6 img {
+  width: 56rem;
+  height: 50rem;
+}
+.experience .list li .btn7 {
+  top: 442rem;
+  left: 41rem;
+  border-radius: 23rem;
+}
+.experience .list li .btn7::before {
+  top: -268rem;
+  height: 536rem;
+}
+.experience .list li .btn7 img {
+  width: 268rem;
+  height: 72rem;
 }
 .experience .list li .text_guide {
   position: fixed;
@@ -1835,23 +1786,38 @@ button {
   width: 100%;
   height: 237rem;
 }
-.experience .list li .bubble_friend {
+.experience .list li.complete {
+  min-height: 100vh;
+  background: #16042e url("../images/bg_experience_complete.png") no-repeat 0 0/100% auto;
+}
+.experience .list li.complete .title {
+  padding: 25rem 0 46rem;
+}
+.experience .list li.complete .title img {
+  width: 245rem;
+  height: 203rem;
+}
+.experience .list li.complete .point img {
+  width: 292rem;
+  height: 204rem;
+}
+.experience .list li.complete .bubble {
   position: fixed;
   bottom: 88rem;
   left: 0;
   width: 100%;
 }
-.experience .list li .bubble_friend img {
+.experience .list li.complete .bubble img {
   width: 198rem;
   height: 60rem;
 }
-.experience .list li .btn_bottom {
+.experience .list li.complete .btn_receive {
   position: fixed;
   bottom: 24rem;
   left: 0;
   width: 100%;
 }
-.experience .list li .btn_bottom img {
+.experience .list li.complete .btn_receive img {
   width: 312rem;
   height: 60rem;
 }

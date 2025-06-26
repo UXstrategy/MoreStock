@@ -1882,6 +1882,16 @@ button {
   width: 100%;
   height: 237rem;
 }
+.experience .list li .btn_bottom {
+  position: fixed;
+  bottom: 24rem;
+  left: 0;
+  width: 100%;
+}
+.experience .list li .btn_bottom img {
+  width: 312rem;
+  height: 60rem;
+}
 .experience .list li.complete {
   min-height: 100vh;
   background: #16042e url("../images/bg_experience_complete.png") no-repeat 0 0/100% auto;
@@ -1907,13 +1917,18 @@ button {
   width: 198rem;
   height: 60rem;
 }
-.experience .list li.complete .btn_receive {
-  position: fixed;
-  bottom: 24rem;
-  left: 0;
-  width: 100%;
+.experience .list li.app_complete {
+  min-height: 100vh;
+  background: #16042e url("../images/bg_experience_complete.png") no-repeat 0 0/100% auto;
 }
-.experience .list li.complete .btn_receive img {
-  width: 312rem;
-  height: 60rem;
+.experience .list li.app_complete .title {
+  padding: 64rem 0 36rem;
+}
+.experience .list li.app_complete .title img {
+  width: 260rem;
+  height: 132rem;
+}
+.experience .list li.app_complete .point img {
+  width: 360rem;
+  height: 275rem;
 }

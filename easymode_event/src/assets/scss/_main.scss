@@ -1876,6 +1876,16 @@
                     height: 237rem;
                 }
             }
+            .btn_bottom {
+                position: fixed;
+                bottom: 24rem;
+                left: 0;
+                width: 100%;
+                img {
+                    width: 312rem;
+                    height: 60rem;
+                }
+            }
             &.complete {
                 min-height: 100vh;
                 background: #16042e url("../images/bg_experience_complete.png") no-repeat 0 0 / 100% auto;
@@ -1902,14 +1912,21 @@
                         height: 60rem;
                     }
                 }
-                .btn_receive {
-                    position: fixed;
-                    bottom: 24rem;
-                    left: 0;
-                    width: 100%;
+            }
+            &.app_complete {
+                min-height: 100vh;
+                background: #16042e url("../images/bg_experience_complete.png") no-repeat 0 0 / 100% auto;
+                .title {
+                    padding: 64rem 0 36rem;
                     img {
-                        width: 312rem;
-                        height: 60rem;
+                        width: 260rem;
+                        height: 132rem;
+                    }
+                }
+                .point {
+                    img {
+                        width: 360rem;
+                        height: 275rem;
                     }
                 }
             }

@@ -128,6 +128,7 @@
                 clearInterval(limitInterval);
                 $(".round_guide").show().addClass("round" + round);
                 $(".game header").removeClass("black");
+                $(".mosquito").css("animation", "move " + speed + "ms 2s ease-in-out infinite alternate");
                 roundTime = setTimeout(() => {
                     end = true;
                     $(".game header").removeClass("black");
@@ -213,7 +214,7 @@
                         clearInterval(limitInterval);
                     }
                     count++;
-                });
+                }, 50);
                 setTimeout(() => {
                     $(".hand").removeClass("active");
                 }, 200);

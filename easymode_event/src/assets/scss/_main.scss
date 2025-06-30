@@ -1046,6 +1046,7 @@
         }
     }
     .visual {
+        overflow: hidden;
         height: 760rem;
         margin-bottom: 60rem;
         padding-top: 100rem;
@@ -1060,6 +1061,10 @@
                 width: 100%;
             }
             .title1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
                 img {
                     width: 324rem;
                     height: 120rem;
@@ -1067,12 +1072,15 @@
                 animation: title1 1s 2s forwards;
                 @keyframes title1 {
                     100% {
-                        opacity: 0;
+                        left: -100%;
                     }
                 }
             }
             .title2 {
-                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 100%;
                 img {
                     width: 324rem;
                     height: 125rem;
@@ -1080,7 +1088,7 @@
                 animation: title2 1s 2s forwards;
                 @keyframes title2 {
                     100% {
-                        opacity: 1;
+                        left: 0%;
                     }
                 }
             }
@@ -1175,6 +1183,13 @@
                 line-height: 19rem;
                 color: #222;
             }
+            .event {
+                padding: 14rem 0 12rem;
+                font-size: 13rem;
+                &:first-child {
+                    padding-top: 0;
+                }
+            }
             li {
                 position: relative;
                 padding-left: 8rem;
@@ -1197,6 +1212,11 @@
                 }
                 &.red {
                     color: #ff2c9c;
+                }
+                &.depth {
+                    &::before {
+                        display: none;
+                    }
                 }
             }
         }
@@ -1261,6 +1281,18 @@
         img {
             width: 24rem;
             height: 24rem;
+        }
+    }
+    &>.text_guide {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+        img {
+            width: 100%;
+            height: 237rem;
+            opacity: 0;
         }
     }
     .list {

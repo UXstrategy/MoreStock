@@ -1069,7 +1069,7 @@
                     width: 324rem;
                     height: 120rem;
                 }
-                animation: title1 1s 2s forwards;
+                animation: title1 .4s 2s forwards;
                 @keyframes title1 {
                     100% {
                         left: -100%;
@@ -1085,7 +1085,7 @@
                     width: 324rem;
                     height: 125rem;
                 }
-                animation: title2 1s 2s forwards;
+                animation: title2 .4s 2s forwards;
                 @keyframes title2 {
                     100% {
                         left: 0%;
@@ -1214,9 +1214,7 @@
                     color: #ff2c9c;
                 }
                 &.depth {
-                    &::before {
-                        display: none;
-                    }
+                    margin-left: 10rem;
                 }
             }
         }
@@ -1258,6 +1256,15 @@
             100% {
                 opacity: 1;
             }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -64rem;
+            left: calc(50% - 61rem);
+            width: 122rem;
+            height: 60rem;
+            background: url("../images/bubble_noapp.png") no-repeat 0 0 / 100% 100%;
         }
         button {
             line-height: 0;

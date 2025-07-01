@@ -1083,7 +1083,7 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  animation: title1 1s 2s forwards;
+  animation: title1 0.4s 2s forwards;
 }
 .main .visual .title .title1 img {
   width: 324rem;
@@ -1099,7 +1099,7 @@ button {
   top: 0;
   left: 100%;
   width: 100%;
-  animation: title2 1s 2s forwards;
+  animation: title2 0.4s 2s forwards;
 }
 .main .visual .title .title2 img {
   width: 324rem;
@@ -1228,8 +1228,8 @@ button {
 .main .notice_wrap .notice li.red {
   color: #ff2c9c;
 }
-.main .notice_wrap .notice li.depth::before {
-  display: none;
+.main .notice_wrap .notice li.depth {
+  margin-left: 10rem;
 }
 .main .notice_wrap .footer {
   display: flex;
@@ -1269,6 +1269,15 @@ button {
   100% {
     opacity: 1;
   }
+}
+.main .btn_get::after {
+  content: "";
+  position: absolute;
+  top: -64rem;
+  left: calc(50% - 61rem);
+  width: 122rem;
+  height: 60rem;
+  background: url("../images/bubble_noapp.png") no-repeat 0 0/100% 100%;
 }
 .main .btn_get button {
   line-height: 0;

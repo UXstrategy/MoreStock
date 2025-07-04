@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다이어트 줄넘기 게임 이벤트</title>
+
+    <!-- include css-->
+    <!-- <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/reset.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/share.css?20240520">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/common.css?20240520"> -->
+
+    <!-- include js-->
+    <!-- <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-3.5.0.min.js?20231018"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/fontfaceonload.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/share.js?20210811"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/interaction.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/browser.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/appLink.js?20220928"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/kwscommon.js"></script> -->
+    
+    <link rel="stylesheet" href="../assets/css/jumprope_event.css">
+</head>
+<body>
+    <div class="wrap main">
+        <div class="count"></div>
+        <div class="rope rope1"><div></div></div>
+        <div class="rope rope2"><div></div></div>
+        <div class="rope rope3"><div></div></div>
+        <div class="rope rope4"><div></div></div>
+        <div class="rope rope5"><div></div></div>
+        <div class="human"></div>
+        <div class="btn_jump"></div>
+    </div>
+    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        let count = 0;
+        let speed = 0;
+        let speed1 = 1500;
+        let speed2 = 1000;
+        let speed3 = 800;
+        let speed4 = 500;
+        let speed5 = 400;
+        let number1 = 1;
+        let number2 = 5;
+        let number3 = 5;
+        let number4 = 10;
+        let number5 = 10;
+        let jump = false;
+        let pass = false;
+        let matrix = "";
+        $(".rope1").css("animation", "opacity " + speed1 * number1 + "ms step-end forwards, zindex " + speed1 + "ms linear " + number1);
+        $(".rope1 div").css("animation", "swing " + speed1 + "ms linear " + number1);
+        $(".rope2").css("animation", "opacity " + speed2 * number2 + "ms " + speed1 * number1 + "ms step-end forwards, zindex " + speed2 + "ms " + speed1 * number1 + "ms linear " + number2);
+        $(".rope2 div").css("animation", "swing " + speed2 + "ms " + speed1 * number1 + "ms linear " + number2);
+        $(".rope3").css("animation", "opacity " + speed3 * number3 + "ms " + ((speed1 * number1) + (speed2 * number2)) + "ms step-end forwards, zindex " + speed3 + "ms " + ((speed1 * number1) + (speed2 * number2)) + "ms linear " + number3);
+        $(".rope3 div").css("animation", "swing " + speed3 + "ms " + ((speed1 * number1) + (speed2 * number2)) + "ms linear " + number3);
+        $(".rope4").css("animation", "opacity " + speed4 * number4 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3)) + "ms step-end forwards, zindex " + speed4 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3)) + "ms linear " + number4);
+        $(".rope4 div").css("animation", "swing " + speed4 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3)) + "ms linear " + number4);
+        $(".rope5").css("animation", "opacity " + speed5 * number5 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3) + (speed4 * number4)) + "ms step-end forwards, zindex " + speed5 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3) + (speed4 * number4)) + "ms linear " + number5);
+        $(".rope5 div").css("animation", "swing " + speed5 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3) + (speed4 * number4)) + "ms linear " + number5);
+        level1();
+        function level1() {
+            ropeInterval1 = setInterval(()=> {
+                ropeRepeat(ropeInterval1);
+                if (count == 1) {
+                    level2();
+                    clearInterval(ropeInterval1);
+                }
+            }, speed1);
+        }
+        function level2() {
+            ropeInterval2 = setInterval(()=> {
+                ropeRepeat(ropeInterval2);
+                if (count == 6) {
+                    level3();
+                    clearInterval(ropeInterval2);
+                }
+            }, speed2);
+        }
+        function level3() {
+            ropeInterval3 = setInterval(()=> {
+                ropeRepeat(ropeInterval3);
+                if (count == 11) {
+                    level4();
+                    clearInterval(ropeInterval3);
+                }
+            }, speed3);
+        }
+        function level4() {
+            ropeInterval4 = setInterval(()=> {
+                ropeRepeat(ropeInterval4);
+                if (count == 21) {
+                    level5();
+                    clearInterval(ropeInterval4);
+                }
+            }, speed4);
+        }
+        function level5() {
+            ropeInterval5 = setInterval(()=> {
+                ropeRepeat(ropeInterval5);
+                if (count == 30) {
+                    clearInterval(ropeInterval5);
+                }
+            }, speed5);
+        }
+        function ropeRepeat(ropeInterval) {
+            count++;
+            if (!pass) {
+                $(".rope").css("animation-play-state", "paused");
+                $(".rope div").css("animation-play-state", "paused");
+                clearInterval(ropeInterval);
+                console.log("fail" + count);
+            }
+            jump = false;
+            pass = false;
+        }
+        $(".btn_jump").off().on("touchstart", function() {
+            setTimeout(() => {
+                if (count == 0) {
+                    matrix = $(".rope1 div").css("transform");
+                    speed = speed1;
+                } else if (count >= 1 && count <= 5) {
+                    matrix = $(".rope2 div").css("transform");
+                    speed = speed2;
+                } else if (count >= 6 && count <= 10) {
+                    matrix = $(".rope3 div").css("transform");
+                    speed = speed3;
+                } else if (count >= 11 && count <= 20) {
+                    matrix = $(".rope4 div").css("transform");
+                    speed = speed4;
+                } else if (count >= 21 && count <= 30) {
+                    matrix = $(".rope5 div").css("transform");
+                    speed = speed5;
+                }
+                const value = matrix.match(/matrix3d\((.+)\)/)[1].split(',').map(v => v.trim());
+                if (!jump) {
+                    if (Math.sign(value[5]) == -1 && Math.sign(value[6]) == -1) {
+                        pass = true;
+                        $(".count").text(count + 1);
+                    }
+                    $(".human").css("animation", "jump " + speed / 4 + "ms linear forwards");
+                    setTimeout(() => {
+                        $(".human").css("animation", "none");
+                    }, speed / 4);
+                }
+                jump = true;
+            });
+        });
+    </script>
+</body>
+</html>

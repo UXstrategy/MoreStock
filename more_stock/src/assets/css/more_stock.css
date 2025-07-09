@@ -1,0 +1,446 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  font-weight: 200;
+  src: local("SpoqaHanSansNeo"), url("../fonts/SpoqaHanSansNeo-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  font-weight: 300;
+  src: local("SpoqaHanSansNeo"), url("../fonts/SpoqaHanSansNeo-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  font-weight: 400;
+  src: local("SpoqaHanSansNeo"), url("../fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  font-weight: 600;
+  src: local("NotoSans"), url("../fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  font-weight: 700;
+  src: local("NotoSans"), url("../fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 14rem;
+  font-family: "SpoqaHanSansNeo";
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  line-height: 1;
+}
+
+.settlement {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  background: #000 url("../images/bg_settlement.png") no-repeat 0 -24rem/100% 600rem;
+}
+.settlement .btn_close button {
+  position: absolute;
+  top: 13rem;
+  right: 20rem;
+}
+.settlement .btn_close button img {
+  width: 24rem;
+  height: 24rem;
+}
+.settlement .title {
+  padding: 69rem 0 12rem;
+  text-align: center;
+}
+.settlement .title img {
+  width: 242rem;
+  height: 96rem;
+}
+.settlement .user {
+  padding-bottom: 240rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15rem;
+  color: #fff;
+}
+.settlement .count {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  position: absolute;
+  top: 291rem;
+  left: 0;
+  width: 100%;
+}
+.settlement .count div {
+  width: 36rem;
+  height: 57rem;
+}
+.settlement .count .dot {
+  width: 7rem;
+  background: url("../images/dot.png") no-repeat 0 0/100% 100%;
+  animation: dot 1.5s step-end forwards;
+}
+@keyframes dot {
+  100% {
+    background: url("../images/dot_result.png") no-repeat 0 0/100% 100%;
+  }
+}
+.settlement .count .count6 {
+  background: url("../images/number.png") no-repeat 0 0/100% 100%;
+  animation: count_last6 1.5s step-end forwards;
+}
+@keyframes count_last6 {
+  100% {
+    background: url("../images/number_result1.png") no-repeat 0 0/100% 100%;
+  }
+}
+.settlement .count .count5 {
+  animation: count5 1.5s step-end forwards, count_last5 1.5s step-end forwards;
+}
+@keyframes count5 {
+  0% {
+    background: url("../images/number0.png") no-repeat 0 0/100% 100%;
+  }
+  10% {
+    background: url("../images/number1.png") no-repeat 0 0/100% 100%;
+  }
+  20% {
+    background: url("../images/number2.png") no-repeat 0 0/100% 100%;
+  }
+  30% {
+    background: url("../images/number3.png") no-repeat 0 0/100% 100%;
+  }
+  40% {
+    background: url("../images/number4.png") no-repeat 0 0/100% 100%;
+  }
+  50% {
+    background: url("../images/number5.png") no-repeat 0 0/100% 100%;
+  }
+  60% {
+    background: url("../images/number6.png") no-repeat 0 0/100% 100%;
+  }
+  70% {
+    background: url("../images/number7.png") no-repeat 0 0/100% 100%;
+  }
+  80% {
+    background: url("../images/number8.png") no-repeat 0 0/100% 100%;
+  }
+  90% {
+    background: url("../images/number9.png") no-repeat 0 0/100% 100%;
+  }
+  100% {
+    background: url("../images/number0.png") no-repeat 0 0/100% 100%;
+  }
+}
+@keyframes count_last5 {
+  100% {
+    background: url("../images/number_result0.png") no-repeat 0 0/100% 100%;
+  }
+}
+.settlement .count .count4 {
+  animation: count4 0.5s 3 step-end forwards, count_last4 1.5s step-end forwards;
+}
+@keyframes count4 {
+  0% {
+    background: url("../images/number2.png") no-repeat 0 0/100% 100%;
+  }
+  10% {
+    background: url("../images/number3.png") no-repeat 0 0/100% 100%;
+  }
+  20% {
+    background: url("../images/number4.png") no-repeat 0 0/100% 100%;
+  }
+  30% {
+    background: url("../images/number5.png") no-repeat 0 0/100% 100%;
+  }
+  40% {
+    background: url("../images/number6.png") no-repeat 0 0/100% 100%;
+  }
+  50% {
+    background: url("../images/number7.png") no-repeat 0 0/100% 100%;
+  }
+  60% {
+    background: url("../images/number8.png") no-repeat 0 0/100% 100%;
+  }
+  70% {
+    background: url("../images/number9.png") no-repeat 0 0/100% 100%;
+  }
+  80% {
+    background: url("../images/number0.png") no-repeat 0 0/100% 100%;
+  }
+  90% {
+    background: url("../images/number1.png") no-repeat 0 0/100% 100%;
+  }
+  100% {
+    background: url("../images/number2.png") no-repeat 0 0/100% 100%;
+  }
+}
+@keyframes count_last4 {
+  100% {
+    background: url("../images/number_result2.png") no-repeat 0 0/100% 100%;
+  }
+}
+.settlement .count .count3 {
+  animation: count3 0.5s 3 step-end forwards, count_last3 1.5s step-end forwards;
+}
+@keyframes count3 {
+  0% {
+    background: url("../images/number6.png") no-repeat 0 0/100% 100%;
+  }
+  10% {
+    background: url("../images/number1.png") no-repeat 0 0/100% 100%;
+  }
+  20% {
+    background: url("../images/number3.png") no-repeat 0 0/100% 100%;
+  }
+  30% {
+    background: url("../images/number8.png") no-repeat 0 0/100% 100%;
+  }
+  40% {
+    background: url("../images/number4.png") no-repeat 0 0/100% 100%;
+  }
+  50% {
+    background: url("../images/number9.png") no-repeat 0 0/100% 100%;
+  }
+  60% {
+    background: url("../images/number0.png") no-repeat 0 0/100% 100%;
+  }
+  70% {
+    background: url("../images/number7.png") no-repeat 0 0/100% 100%;
+  }
+  80% {
+    background: url("../images/number2.png") no-repeat 0 0/100% 100%;
+  }
+  90% {
+    background: url("../images/number5.png") no-repeat 0 0/100% 100%;
+  }
+  100% {
+    background: url("../images/number4.png") no-repeat 0 0/100% 100%;
+  }
+}
+@keyframes count_last3 {
+  100% {
+    background: url("../images/number_result4.png") no-repeat 0 0/100% 100%;
+  }
+}
+.settlement .count .count2 {
+  animation: count2 0.5s 3 step-end forwards, count_last2 1.5s step-end forwards;
+}
+@keyframes count2 {
+  0% {
+    background: url("../images/number9.png") no-repeat 0 0/100% 100%;
+  }
+  10% {
+    background: url("../images/number8.png") no-repeat 0 0/100% 100%;
+  }
+  20% {
+    background: url("../images/number7.png") no-repeat 0 0/100% 100%;
+  }
+  30% {
+    background: url("../images/number6.png") no-repeat 0 0/100% 100%;
+  }
+  40% {
+    background: url("../images/number5.png") no-repeat 0 0/100% 100%;
+  }
+  50% {
+    background: url("../images/number4.png") no-repeat 0 0/100% 100%;
+  }
+  60% {
+    background: url("../images/number3.png") no-repeat 0 0/100% 100%;
+  }
+  70% {
+    background: url("../images/number2.png") no-repeat 0 0/100% 100%;
+  }
+  80% {
+    background: url("../images/number1.png") no-repeat 0 0/100% 100%;
+  }
+  90% {
+    background: url("../images/number0.png") no-repeat 0 0/100% 100%;
+  }
+  100% {
+    background: url("../images/number2.png") no-repeat 0 0/100% 100%;
+  }
+}
+@keyframes count_last2 {
+  100% {
+    background: url("../images/number_result2.png") no-repeat 0 0/100% 100%;
+  }
+}
+.settlement .count .count1 {
+  animation: count1 0.5s 3 step-end forwards, count_last1 1.5s step-end forwards;
+}
+@keyframes count1 {
+  0% {
+    background: url("../images/number0.png") no-repeat 0 0/100% 100%;
+  }
+  10% {
+    background: url("../images/number1.png") no-repeat 0 0/100% 100%;
+  }
+  20% {
+    background: url("../images/number2.png") no-repeat 0 0/100% 100%;
+  }
+  30% {
+    background: url("../images/number3.png") no-repeat 0 0/100% 100%;
+  }
+  40% {
+    background: url("../images/number4.png") no-repeat 0 0/100% 100%;
+  }
+  50% {
+    background: url("../images/number5.png") no-repeat 0 0/100% 100%;
+  }
+  60% {
+    background: url("../images/number6.png") no-repeat 0 0/100% 100%;
+  }
+  70% {
+    background: url("../images/number7.png") no-repeat 0 0/100% 100%;
+  }
+  80% {
+    background: url("../images/number8.png") no-repeat 0 0/100% 100%;
+  }
+  90% {
+    background: url("../images/number9.png") no-repeat 0 0/100% 100%;
+  }
+  100% {
+    background: url("../images/number8.png") no-repeat 0 0/100% 100%;
+  }
+}
+@keyframes count_last1 {
+  100% {
+    background: url("../images/number_result8.png") no-repeat 0 0/100% 100%;
+  }
+}
+.settlement .bottom {
+  background: #fff;
+  border-radius: 24rem 24rem 0 0;
+}
+.settlement .bottom .date {
+  padding: 40rem 20rem 4rem;
+  font-size: 14rem;
+  color: #666;
+}
+.settlement .bottom .earning {
+  padding: 0 20rem 10rem;
+  line-height: 22rem;
+  font-weight: 700;
+  font-size: 18rem;
+  color: #222;
+}
+.settlement .bottom .swiper_stock {
+  overflow: hidden;
+  height: 570rem;
+  padding: 0 20rem 80rem;
+  background: #fff;
+}
+.settlement .bottom .swiper_stock .swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36rem;
+}
+.settlement .bottom .swiper_stock .swiper-slide .logo img {
+  width: 36rem;
+  height: 36rem;
+}
+.settlement .bottom .swiper_stock .swiper-slide .name {
+  flex: 1;
+  padding-left: 12rem;
+}
+.settlement .bottom .swiper_stock .swiper-slide .rate {
+  width: 88rem;
+  text-align: right;
+  color: #e22d72;
+}
+.settlement .btn_bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0 20rem;
+  background: #fff;
+  border-radius: 16rem 16rem 0 0;
+  text-align: center;
+}
+.settlement .btn_bottom::before {
+  content: "";
+  position: absolute;
+  top: -20rem;
+  left: 0;
+  width: 100%;
+  height: 96rem;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 2%, rgba(255, 255, 255, 0.44) 4%, rgba(255, 255, 255, 0.6) 7%, rgba(255, 255, 255, 0.86) 15%, #fff);
+}
+.settlement .btn_bottom::after {
+  content: "";
+  position: absolute;
+  top: 105rem;
+  left: 0;
+  width: 100%;
+  height: 500rem;
+  background: #fff;
+}
+.settlement .btn_bottom .btn_start {
+  position: relative;
+  z-index: 1;
+}
+.settlement .btn_bottom .btn_start::before {
+  content: "";
+  position: absolute;
+  top: -24rem;
+  left: calc(50% - 92rem);
+  width: 184rem;
+  height: 35rem;
+  background: url("../images/balloon_coupon.png") no-repeat 0 0/100% 100%;
+  pointer-events: none;
+}
+.settlement .btn_bottom .btn_start button {
+  width: 320rem;
+  height: 56rem;
+  background: #e2327e;
+  border-radius: 16rem;
+  font-weight: 700;
+  font-size: 18rem;
+  color: #fff;
+}
+.settlement .btn_bottom .examination {
+  padding: 20rem 0;
+  text-align: center;
+  font-size: 10rem;
+  color: #bbb;
+}

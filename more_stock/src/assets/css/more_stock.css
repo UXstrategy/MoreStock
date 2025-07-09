@@ -114,7 +114,7 @@ button {
 .settlement .count .dot {
   width: 7rem;
   background: url("../images/dot.png") no-repeat 0 0/100% 100%;
-  animation: dot 1.5s step-end forwards;
+  animation: dot 0.75s step-end forwards;
 }
 @keyframes dot {
   100% {
@@ -123,7 +123,7 @@ button {
 }
 .settlement .count .count6 {
   background: url("../images/number.png") no-repeat 0 0/100% 100%;
-  animation: count_last6 1.5s step-end forwards;
+  animation: count_last6 0.75s step-end forwards;
 }
 @keyframes count_last6 {
   100% {
@@ -131,7 +131,7 @@ button {
   }
 }
 .settlement .count .count5 {
-  animation: count5 1.5s step-end forwards, count_last5 1.5s step-end forwards;
+  animation: count5 0.75s step-end forwards, count_last5 0.75s step-end forwards;
 }
 @keyframes count5 {
   0% {
@@ -174,7 +174,7 @@ button {
   }
 }
 .settlement .count .count4 {
-  animation: count4 0.5s 3 step-end forwards, count_last4 1.5s step-end forwards;
+  animation: count4 0.25s 3 step-end forwards, count_last4 0.75s step-end forwards;
 }
 @keyframes count4 {
   0% {
@@ -217,7 +217,7 @@ button {
   }
 }
 .settlement .count .count3 {
-  animation: count3 0.5s 3 step-end forwards, count_last3 1.5s step-end forwards;
+  animation: count3 0.25s 3 step-end forwards, count_last3 0.75s step-end forwards;
 }
 @keyframes count3 {
   0% {
@@ -260,7 +260,7 @@ button {
   }
 }
 .settlement .count .count2 {
-  animation: count2 0.5s 3 step-end forwards, count_last2 1.5s step-end forwards;
+  animation: count2 0.25s 3 step-end forwards, count_last2 0.75s step-end forwards;
 }
 @keyframes count2 {
   0% {
@@ -303,7 +303,7 @@ button {
   }
 }
 .settlement .count .count1 {
-  animation: count1 0.5s 3 step-end forwards, count_last1 1.5s step-end forwards;
+  animation: count1 0.25s 3 step-end forwards, count_last1 0.75s step-end forwards;
 }
 @keyframes count1 {
   0% {

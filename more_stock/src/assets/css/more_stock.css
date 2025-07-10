@@ -103,13 +103,13 @@ button {
   gap: 6rem;
   justify-content: center;
   position: absolute;
-  top: 291rem;
+  top: 295rem;
   left: 0;
   width: 100%;
 }
 .settlement .count div {
-  width: 36rem;
-  height: 57rem;
+  width: 32rem;
+  height: 50rem;
 }
 .settlement .count .dot {
   width: 7rem;
@@ -119,6 +119,16 @@ button {
 @keyframes dot {
   100% {
     background: url("../images/dot_result.png") no-repeat 0 0/100% 100%;
+  }
+}
+.settlement .count .people {
+  width: 23rem;
+  background: url("../images/people.png") no-repeat 0 0/100% 100%;
+  animation: people 0.75s step-end forwards;
+}
+@keyframes people {
+  100% {
+    background: url("../images/people_result.png") no-repeat 0 0/100% 100%;
   }
 }
 .settlement .count .count6 {

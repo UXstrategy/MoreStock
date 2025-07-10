@@ -213,7 +213,7 @@ button {
 }
 @keyframes count_last4 {
   100% {
-    background: url("../images/number_result2.png") no-repeat 0 0/100% 100%;
+    background: url("../images/number_result3.png") no-repeat 0 0/100% 100%;
   }
 }
 .settlement .count .count3 {
@@ -256,7 +256,7 @@ button {
 }
 @keyframes count_last3 {
   100% {
-    background: url("../images/number_result4.png") no-repeat 0 0/100% 100%;
+    background: url("../images/number_result0.png") no-repeat 0 0/100% 100%;
   }
 }
 .settlement .count .count2 {
@@ -299,7 +299,7 @@ button {
 }
 @keyframes count_last2 {
   100% {
-    background: url("../images/number_result2.png") no-repeat 0 0/100% 100%;
+    background: url("../images/number_result1.png") no-repeat 0 0/100% 100%;
   }
 }
 .settlement .count .count1 {
@@ -342,7 +342,7 @@ button {
 }
 @keyframes count_last1 {
   100% {
-    background: url("../images/number_result8.png") no-repeat 0 0/100% 100%;
+    background: url("../images/number_result6.png") no-repeat 0 0/100% 100%;
   }
 }
 .settlement .bottom {

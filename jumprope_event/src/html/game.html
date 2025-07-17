@@ -30,49 +30,72 @@
 </head>
 <body>
     <div class="wrap main">
-        <div class="count"></div>
-        <div class="rope rope1"><div></div></div>
-        <div class="rope rope2"><div></div></div>
-        <div class="rope rope3"><div></div></div>
-        <div class="rope rope4"><div></div></div>
-        <div class="rope rope5"><div></div></div>
-        <div class="human"></div>
-        <div class="btn_jump"></div>
+        <header>
+            <h1><img src="../assets/images/logo.png" alt="다이어트 줄넘기 게임"></h1>
+            <button type="button" class="btn_close"><img src="../assets/images/btn_close.png" alt="닫기"></button>
+        </header>
+        <div class="ready">
+            <div class="text_guide"></div>
+            <div class="text_ready">
+                <div class="rope"><div></div></div>
+                <div class="human"></div>
+                <div class="ready_count"></div>
+            </div>
+        </div>
+        <div class="start">
+            <div class="score"></div>
+            <div class="total_count"><span class="count">00</span><span class="slash">/</span><span>30</span></div>
+            <div class="rope rope1"><div></div></div>
+            <div class="rope rope2"><div></div></div>
+            <div class="rope rope3"><div></div></div>
+            <div class="rope rope4"><div></div></div>
+            <div class="human"></div>
+            <div class="plus"></div>
+            <div class="btn_jump"></div>
+        </div>
+        <div class="result">
+            <div class="btn_wrap">
+                <button type="button" class="btn_share" onclick="location.href='../html/game.html'"><img src="../assets/images/btn_share.png" alt="공유하고 다시 도전하기"></button>
+                <button type="button" class="btn_point"><img src="../assets/images/btn_point.png" alt="포인트 받기"></button>
+            </div>
+        </div>
     </div>
     
     <script src="../assets/js/jquery-3.3.1.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
-        let count = 0;
+        const speed1 = 1000;
+        const speed2 = 800;
+        const speed3 = 600;
+        const speed4 = 400;
+        let count = 1;
         let speed = 0;
-        let speed1 = 1500;
-        let speed2 = 1000;
-        let speed3 = 800;
-        let speed4 = 500;
-        let speed5 = 400;
-        let number1 = 1;
-        let number2 = 5;
-        let number3 = 5;
-        let number4 = 10;
-        let number5 = 10;
+        let result = 0;
         let jump = false;
         let pass = false;
-        let matrix = "";
-        $(".rope1").css("animation", "opacity " + speed1 * number1 + "ms step-end forwards, zindex " + speed1 + "ms linear " + number1);
-        $(".rope1 div").css("animation", "swing " + speed1 + "ms linear " + number1);
-        $(".rope2").css("animation", "opacity " + speed2 * number2 + "ms " + speed1 * number1 + "ms step-end forwards, zindex " + speed2 + "ms " + speed1 * number1 + "ms linear " + number2);
-        $(".rope2 div").css("animation", "swing " + speed2 + "ms " + speed1 * number1 + "ms linear " + number2);
-        $(".rope3").css("animation", "opacity " + speed3 * number3 + "ms " + ((speed1 * number1) + (speed2 * number2)) + "ms step-end forwards, zindex " + speed3 + "ms " + ((speed1 * number1) + (speed2 * number2)) + "ms linear " + number3);
-        $(".rope3 div").css("animation", "swing " + speed3 + "ms " + ((speed1 * number1) + (speed2 * number2)) + "ms linear " + number3);
-        $(".rope4").css("animation", "opacity " + speed4 * number4 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3)) + "ms step-end forwards, zindex " + speed4 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3)) + "ms linear " + number4);
-        $(".rope4 div").css("animation", "swing " + speed4 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3)) + "ms linear " + number4);
-        $(".rope5").css("animation", "opacity " + speed5 * number5 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3) + (speed4 * number4)) + "ms step-end forwards, zindex " + speed5 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3) + (speed4 * number4)) + "ms linear " + number5);
-        $(".rope5 div").css("animation", "swing " + speed5 + "ms " + ((speed1 * number1) + (speed2 * number2) + (speed3 * number3) + (speed4 * number4)) + "ms linear " + number5);
-        level1();
+        let matrix = null;
+        $(".rope1").css("animation", "opacity " + speed1 * 5 + "ms step-end forwards, zindex " + speed1 + "ms linear " + 5);
+        $(".rope1 div").css("animation", "swing " + speed1 + "ms linear " + 5);
+        $(".rope2").css("animation", "opacity " + speed2 * 5 + "ms " + speed1 * 5 + "ms step-end forwards, zindex " + speed2 + "ms " + speed1 * 5 + "ms linear " + 5);
+        $(".rope2 div").css("animation", "swing " + speed2 + "ms " + speed1 * 5 + "ms linear " + 5);
+        $(".rope3").css("animation", "opacity " + speed3 * 10 + "ms " + ((speed1 * 5) + (speed2 * 5)) + "ms step-end forwards, zindex " + speed3 + "ms " + ((speed1 * 5) + (speed2 * 5)) + "ms linear " + 10);
+        $(".rope3 div").css("animation", "swing " + speed3 + "ms " + ((speed1 * 5) + (speed2 * 5)) + "ms linear " + 10);
+        $(".rope4").css("animation", "opacity " + speed4 * 10 + "ms " + ((speed1 * 5) + (speed2 * 5) + (speed3 * 10)) + "ms step-end forwards, zindex " + speed4 + "ms " + ((speed1 * 5) + (speed2 * 5) + (speed3 * 10)) + "ms linear " + 10);
+        $(".rope4 div").css("animation", "swing " + speed4 + "ms " + ((speed1 * 5) + (speed2 * 5) + (speed3 * 10)) + "ms linear " + 10);
+        setTimeout(() => {
+            $(".text_guide").hide();
+            $(".text_ready").show();
+            window.scrollTo({top: document.body.scrollHeight});
+        }, 2000);
+        setTimeout(() => {
+            $(".ready").hide();
+            $(".start").show();
+            level1();
+        }, 4500);
         function level1() {
             ropeInterval1 = setInterval(()=> {
                 ropeRepeat(ropeInterval1);
-                if (count == 1) {
+                if (count == 6) {
                     level2();
                     clearInterval(ropeInterval1);
                 }
@@ -81,7 +104,7 @@
         function level2() {
             ropeInterval2 = setInterval(()=> {
                 ropeRepeat(ropeInterval2);
-                if (count == 6) {
+                if (count == 11) {
                     level3();
                     clearInterval(ropeInterval2);
                 }
@@ -90,7 +113,7 @@
         function level3() {
             ropeInterval3 = setInterval(()=> {
                 ropeRepeat(ropeInterval3);
-                if (count == 11) {
+                if (count == 21) {
                     level4();
                     clearInterval(ropeInterval3);
                 }
@@ -99,58 +122,78 @@
         function level4() {
             ropeInterval4 = setInterval(()=> {
                 ropeRepeat(ropeInterval4);
-                if (count == 21) {
-                    level5();
+                if (count == 30) {
                     clearInterval(ropeInterval4);
                 }
             }, speed4);
         }
-        function level5() {
-            ropeInterval5 = setInterval(()=> {
-                ropeRepeat(ropeInterval5);
-                if (count == 30) {
-                    clearInterval(ropeInterval5);
-                }
-            }, speed5);
-        }
         function ropeRepeat(ropeInterval) {
-            count++;
             if (!pass) {
-                $(".rope").css("animation-play-state", "paused");
-                $(".rope div").css("animation-play-state", "paused");
+                $(".rope").addClass("gameover").css("animation-play-state", "paused");
+                $(".rope div").css("animation", "none");
+                $(".human").addClass("gameover");
                 clearInterval(ropeInterval);
-                console.log("fail" + count);
+                setTimeout(() => {
+                    const step = $(".count").text();
+                    if (step == "00") {
+                        result = 1;
+                    } else if (step >= "01" && step <= "05") {
+                        result = 2;
+                    } else if (step >= "06" && step <= "10") {
+                        result = 3;
+                    } else if (step >= "11" && step <= "20") {
+                        result = 4;
+                    } else if (step >= "21" && step <= "29") {
+                        result = 5;
+                    } else if (step == "30") {
+                        result = 6;
+                    }
+                    $(".start").hide();
+                    $(".result").show().addClass("result" + result);
+                    window.scrollTo({top: 0});
+                }, 2000);
+            } else {
+                count++;
             }
             jump = false;
             pass = false;
         }
         $(".btn_jump").off().on("touchstart", function() {
             setTimeout(() => {
-                if (count == 0) {
+                if (count == 1) {
+                    $(".human").addClass("sweat");
+                }
+                if (count >= 1 && count <= 5) {
                     matrix = $(".rope1 div").css("transform");
                     speed = speed1;
-                } else if (count >= 1 && count <= 5) {
+                } else if (count >= 6 && count <= 10) {
                     matrix = $(".rope2 div").css("transform");
                     speed = speed2;
-                } else if (count >= 6 && count <= 10) {
+                } else if (count >= 11 && count <= 20) {
                     matrix = $(".rope3 div").css("transform");
                     speed = speed3;
-                } else if (count >= 11 && count <= 20) {
+                } else if (count >= 21 && count <= 30) {
                     matrix = $(".rope4 div").css("transform");
                     speed = speed4;
-                } else if (count >= 21 && count <= 30) {
-                    matrix = $(".rope5 div").css("transform");
-                    speed = speed5;
                 }
                 const value = matrix.match(/matrix3d\((.+)\)/)[1].split(',').map(v => v.trim());
                 if (!jump) {
-                    if (Math.sign(value[5]) == -1 && Math.sign(value[6]) == -1) {
+                    if (Math.sign(value[5]) == 1 && Math.sign(value[6]) == 1) {
                         pass = true;
-                        $(".count").text(count + 1);
+                        $(".plus").addClass("active");
+                        if (count < 10) {
+                            $(".count").text("0" + count);
+                        } else {
+                            $(".count").text(count);
+                        }
+                        if (count == 1 || count == 6 || count == 11 || count == 21 || count == 30) {
+                            $(".score").addClass("score" + count);
+                        }
                     }
-                    $(".human").css("animation", "jump " + speed / 4 + "ms linear forwards");
+                    $(".human").css("animation", "jump " + speed / 4 + "ms ease-in-out forwards");
                     setTimeout(() => {
                         $(".human").css("animation", "none");
+                        $(".plus").removeClass("active");
                     }, speed / 4);
                 }
                 jump = true;

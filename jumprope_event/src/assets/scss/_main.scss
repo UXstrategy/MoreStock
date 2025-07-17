@@ -702,6 +702,7 @@
     }
     &.gameover {
         z-index: 1;
+        opacity: 1;
         div {
             background: url("../images/rope.png") no-repeat 0 0 / 100% 204rem;
         }

@@ -122,8 +122,15 @@
         function level4() {
             ropeInterval4 = setInterval(()=> {
                 ropeRepeat(ropeInterval4);
-                if (count == 30) {
+                if (count == 31) {
                     clearInterval(ropeInterval4);
+                    $(".rope").addClass("gameover").css("animation-play-state", "paused");
+                    $(".rope div").css("animation", "none");
+                    setTimeout(() => {
+                        $(".start").hide();
+                        $(".result").show().addClass("result6");
+                        window.scrollTo({top: 0});
+                    }, 2000);
                 }
             }, speed4);
         }
@@ -145,8 +152,6 @@
                         result = 4;
                     } else if (step >= "21" && step <= "29") {
                         result = 5;
-                    } else if (step == "30") {
-                        result = 6;
                     }
                     $(".start").hide();
                     $(".result").show().addClass("result" + result);

@@ -723,6 +723,7 @@ button {
 }
 .rope.gameover {
   z-index: 1;
+  opacity: 1;
 }
 .rope.gameover div {
   background: url("../images/rope.png") no-repeat 0 0/100% 204rem;

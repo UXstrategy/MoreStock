@@ -142,7 +142,7 @@
                 $(".human").addClass("gameover");
                 clearInterval(ropeInterval);
                 setTimeout(() => {
-                    const step = $(".count").text();
+                    const step = $(".total_count .count").text();
                     if (step == "00") {
                         result = 1;
                     } else if (step >= "01" && step <= "05") {

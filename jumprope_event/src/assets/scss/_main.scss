@@ -771,7 +771,7 @@
     }
     @keyframes jump {
         50% {
-            transform: translateY(-20rem);
+            transform: translateY(-40rem);
         }
     }
 }
@@ -807,6 +807,14 @@
                     background: url("../images/ready_go.png") no-repeat 0 0 / 100% 100%;
                 }
             }
+        }
+        .btn_jump_fake {
+            position: absolute;
+            bottom: 30rem;
+            left: 40rem;
+            width: 280rem;
+            height: 56rem;
+            background: url("../images/btn_jump.png") no-repeat 0 0 / 100% 100%;
         }
     }
 }

@@ -145,6 +145,7 @@
                     const step = $(".total_count .count").text();
                     if (step == "00") {
                         result = 1;
+                        $(".btn_point").hide();
                     } else if (step >= "01" && step <= "05") {
                         result = 2;
                     } else if (step >= "06" && step <= "10") {

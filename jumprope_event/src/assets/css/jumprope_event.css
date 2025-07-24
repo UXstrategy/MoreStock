@@ -832,7 +832,7 @@ button {
 }
 .ready .text_ready .btn_jump_fake {
   position: absolute;
-  bottom: 30rem;
+  bottom: 70rem;
   left: 40rem;
   width: 280rem;
   height: 56rem;
@@ -921,8 +921,9 @@ button {
 }
 .start .btn_jump {
   position: absolute;
-  bottom: 30rem;
+  bottom: 70rem;
   left: 40rem;
+  z-index: 1;
   width: 280rem;
   height: 56rem;
   background: url("../images/btn_jump.png") no-repeat 0 0/100% 100%;

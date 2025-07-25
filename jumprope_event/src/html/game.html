@@ -45,7 +45,7 @@
         </div>
         <div class="start">
             <div class="score"></div>
-            <div class="total_count"><span class="count">00</span><span class="slash">/</span><span>30</span></div>
+            <div class="total_count"><span class="count">0</span><span class="slash">/</span><span>30</span></div>
             <div class="rope rope1"><div></div></div>
             <div class="rope rope2"><div></div></div>
             <div class="rope rope3"><div></div></div>
@@ -143,12 +143,12 @@
                 clearInterval(ropeInterval);
                 setTimeout(() => {
                     const step = $(".total_count .count").text();
-                    if (step == "00") {
+                    if (step == "0") {
                         result = 1;
                         $(".btn_point").hide();
-                    } else if (step >= "01" && step <= "05") {
+                    } else if (step >= "1" && step <= "5") {
                         result = 2;
-                    } else if (step >= "06" && step <= "10") {
+                    } else if (step >= "6" && step <= "10") {
                         result = 3;
                     } else if (step >= "11" && step <= "20") {
                         result = 4;
@@ -188,11 +188,7 @@
                     if (Math.sign(value[5]) == 1 && Math.sign(value[6]) == 1) {
                         pass = true;
                         $(".plus").addClass("active");
-                        if (count < 10) {
-                            $(".count").text("0" + count);
-                        } else {
-                            $(".count").text(count);
-                        }
+                        $(".count").text(count);
                         if (count == 1 || count == 6 || count == 11 || count == 21 || count == 30) {
                             $(".score").addClass("score" + count);
                         }

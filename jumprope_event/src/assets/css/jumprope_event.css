@@ -702,7 +702,7 @@ button {
 
 .rope {
   position: absolute;
-  top: 433rem;
+  top: 403rem;
   left: 11rem;
   z-index: 0;
   width: 339rem;
@@ -751,7 +751,7 @@ button {
 
 .human {
   position: absolute;
-  top: 272rem;
+  top: 242rem;
   left: 25rem;
   width: 315rem;
   height: 358rem;

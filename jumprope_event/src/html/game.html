@@ -143,16 +143,16 @@
                 clearInterval(ropeInterval);
                 setTimeout(() => {
                     const step = $(".total_count .count").text();
-                    if (step == "0") {
+                    if (step == 0) {
                         result = 1;
                         $(".btn_point").hide();
-                    } else if (step >= "1" && step <= "5") {
+                    } else if (step >= 1 && step <= 5) {
                         result = 2;
-                    } else if (step >= "6" && step <= "10") {
+                    } else if (step >= 6 && step <= 10) {
                         result = 3;
-                    } else if (step >= "11" && step <= "20") {
+                    } else if (step >= 11 && step <= 20) {
                         result = 4;
-                    } else if (step >= "21" && step <= "29") {
+                    } else if (step >= 21 && step <= 29) {
                         result = 5;
                     }
                     $(".start").hide();

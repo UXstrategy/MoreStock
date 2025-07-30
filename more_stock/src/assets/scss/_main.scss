@@ -304,8 +304,8 @@
         }
         .swiper_stock {
             overflow: hidden;
-            height: 570rem;
-            padding: 0 20rem 80rem;
+            height: 400rem;
+            padding: 0 20rem;
             background: #fff;
             .swiper-slide {
                 display: flex;
@@ -329,10 +329,25 @@
                 }
             }
         }
+        .examination {
+            margin: 34rem 20rem 0;
+            padding: 16rem 0 4rem;
+            border-top: 1rem solid #eee;
+            letter-spacing: -.25rem;
+            font-size: 10rem;
+            color: #999;
+        }
+        .precautions {
+            padding: 0 20rem 126rem;
+            line-height: 16rem;
+            letter-spacing: -.25rem;
+            font-size: 10rem;
+            color: #bbb;
+        }
     }
     .btn_bottom {
         position: fixed;
-        bottom: 0;
+        bottom: 20rem;
         left: 0;
         z-index: 100;
         width: 100%;

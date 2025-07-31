@@ -1,27 +1,7 @@
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  font-weight: 200;
-  src: local("SpoqaHanSansNeo"), url("../fonts/SpoqaHanSansNeo-Thin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SpoqaHanSansNeo";
-  font-weight: 300;
-  src: local("SpoqaHanSansNeo"), url("../fonts/SpoqaHanSansNeo-Light.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SpoqaHanSansNeo";
   font-weight: 400;
   src: local("SpoqaHanSansNeo"), url("../fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SpoqaHanSansNeo";
-  font-weight: 600;
-  src: local("NotoSans"), url("../fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SpoqaHanSansNeo";
-  font-weight: 700;
-  src: local("NotoSans"), url("../fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -94,7 +74,6 @@ button {
 .settlement .user {
   padding-bottom: 240rem;
   text-align: center;
-  font-weight: 700;
   font-size: 15rem;
   color: #fff;
 }
@@ -360,13 +339,13 @@ button {
   border-radius: 24rem 24rem 0 0;
 }
 .settlement .bottom .earning {
-  padding: 40rem 20rem 10rem;
-  line-height: 22rem;
-  font-weight: 700;
-  font-size: 18rem;
-  color: #222;
+  padding: 40rem 20rem 5rem;
+}
+.settlement .bottom .earning img {
+  height: 26rem;
 }
 .settlement .bottom .summary {
+  height: 17rem;
   margin: 0 20rem 15rem;
   padding: 0 16rem;
   background: url("../images/i.png") no-repeat 0 center/12rem 12rem;
@@ -461,14 +440,9 @@ button {
   background: url("../images/balloon_coupon.png") no-repeat 0 0/100% 100%;
   pointer-events: none;
 }
-.settlement .btn_bottom .btn_start button {
+.settlement .btn_bottom .btn_start button img {
   width: 320rem;
   height: 56rem;
-  background: #e2327e;
-  border-radius: 16rem;
-  font-weight: 700;
-  font-size: 18rem;
-  color: #fff;
 }
 .settlement .btn_bottom .examination {
   padding: 20rem 0;

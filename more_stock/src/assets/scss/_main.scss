@@ -26,7 +26,6 @@
     .user {
         padding-bottom: 240rem;
         text-align: center;
-        font-weight: 700;
         font-size: 15rem;
         color: #fff;
     }
@@ -291,13 +290,13 @@
         background: #fff;
         border-radius: 24rem 24rem 0 0;
         .earning {
-            padding: 40rem 20rem 10rem;
-            line-height: 22rem;
-            font-weight: 700;
-            font-size: 18rem;
-            color: #222;
+            padding: 40rem 20rem 5rem;
+            img {
+                height: 26rem;
+            }
         }
         .summary {
+            height: 17rem;
             margin: 0 20rem 15rem;
             padding: 0 16rem;
             background: url("../images/i.png") no-repeat 0 center / 12rem 12rem;
@@ -394,13 +393,10 @@
                 pointer-events: none;
             }
             button {
-                width: 320rem;
-                height: 56rem;
-                background: #e2327e;
-                border-radius: 16rem;
-                font-weight: 700;
-                font-size: 18rem;
-                color: #fff;
+                img {
+                    width: 320rem;
+                    height: 56rem;
+                }
             }
         }
         .examination {

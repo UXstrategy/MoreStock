@@ -290,17 +290,18 @@
     .bottom {
         background: #fff;
         border-radius: 24rem 24rem 0 0;
-        .date {
-            padding: 40rem 20rem 4rem;
-            font-size: 14rem;
-            color: #666;
-        }
         .earning {
-            padding: 0 20rem 10rem;
+            padding: 43rem 20rem 8rem;
             line-height: 22rem;
             font-weight: 700;
             font-size: 18rem;
             color: #222;
+        }
+        .summary {
+            padding: 0 20rem 15rem;
+            letter-spacing: -.3rem;
+            font-size: 10rem;
+            color: #999;
         }
         .swiper_stock {
             overflow: hidden;

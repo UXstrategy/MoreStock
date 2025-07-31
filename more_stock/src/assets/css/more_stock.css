@@ -359,17 +359,18 @@ button {
   background: #fff;
   border-radius: 24rem 24rem 0 0;
 }
-.settlement .bottom .date {
-  padding: 40rem 20rem 4rem;
-  font-size: 14rem;
-  color: #666;
-}
 .settlement .bottom .earning {
-  padding: 0 20rem 10rem;
+  padding: 43rem 20rem 8rem;
   line-height: 22rem;
   font-weight: 700;
   font-size: 18rem;
   color: #222;
+}
+.settlement .bottom .summary {
+  padding: 0 20rem 15rem;
+  letter-spacing: -0.3rem;
+  font-size: 10rem;
+  color: #999;
 }
 .settlement .bottom .swiper_stock {
   overflow: hidden;

@@ -291,21 +291,23 @@
         background: #fff;
         border-radius: 24rem 24rem 0 0;
         .earning {
-            padding: 43rem 20rem 8rem;
+            padding: 40rem 20rem 10rem;
             line-height: 22rem;
             font-weight: 700;
             font-size: 18rem;
             color: #222;
         }
         .summary {
-            padding: 0 20rem 15rem;
-            letter-spacing: -.3rem;
-            font-size: 10rem;
+            margin: 0 20rem 15rem;
+            padding: 0 16rem;
+            background: url("../images/i.png") no-repeat 0 center / 12rem 12rem;
+            letter-spacing: -.24rem;
+            font-size: 12rem;
             color: #999;
         }
         .swiper_stock {
             overflow: hidden;
-            height: 400rem;
+            height: 378rem;
             padding: 0 20rem;
             background: #fff;
             .swiper-slide {
@@ -331,19 +333,23 @@
             }
         }
         .examination {
-            margin: 34rem 20rem 0;
+            margin: 33rem 20rem 0;
             padding: 16rem 0 4rem;
             border-top: 1rem solid #eee;
             letter-spacing: -.25rem;
             font-size: 10rem;
-            color: #999;
+            color: #bbb;
         }
         .precautions {
-            padding: 0 20rem 126rem;
+            padding: 0 20rem 111rem;
             line-height: 16rem;
             letter-spacing: -.25rem;
             font-size: 10rem;
             color: #bbb;
+            span {
+                font-size: 10rem;
+                color: #b43a6b;
+            }
         }
     }
     .btn_bottom {

@@ -43,247 +43,29 @@
         }
         .dot {
             width: 7rem;
-            background: url("../images/dot.png") no-repeat 0 0 / 100% 100%;
-            animation: dot .75s step-end forwards;
-            @keyframes dot {
-                100% {
-                    background: url("../images/dot_result.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
+            background: url("../images/dot_result.png") no-repeat 0 0 / 100% 100%;
         }
         .people {
             width: 23rem;
-            background: url("../images/people.png") no-repeat 0 0 / 100% 100%;
-            animation: people .75s step-end forwards;
-            @keyframes people {
-                100% {
-                    background: url("../images/people_result.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
+            background: url("../images/people_result.png") no-repeat 0 0 / 100% 100%;
         }
         .count6 {
-            background: url("../images/number.png") no-repeat 0 0 / 100% 100%;
-            animation: count_last6 .75s step-end forwards;
-            @keyframes count_last6 {
-                100% {
-                    background: url("../images/number_result1.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
+            background: url("../images/number_result1.png") no-repeat 0 0 / 100% 100%;
         }
         .count5 {
-            animation: count5 .75s step-end forwards, count_last5 .75s step-end forwards;
-            @keyframes count5 {
-                0% {
-                    background: url("../images/number0.png") no-repeat 0 0 / 100% 100%;
-                }
-                10% {
-                    background: url("../images/number1.png") no-repeat 0 0 / 100% 100%;
-                }
-                20% {
-                    background: url("../images/number2.png") no-repeat 0 0 / 100% 100%;
-                }
-                30% {
-                    background: url("../images/number3.png") no-repeat 0 0 / 100% 100%;
-                }
-                40% {
-                    background: url("../images/number4.png") no-repeat 0 0 / 100% 100%;
-                }
-                50% {
-                    background: url("../images/number5.png") no-repeat 0 0 / 100% 100%;
-                }
-                60% {
-                    background: url("../images/number6.png") no-repeat 0 0 / 100% 100%;
-                }
-                70% {
-                    background: url("../images/number7.png") no-repeat 0 0 / 100% 100%;
-                }
-                80% {
-                    background: url("../images/number8.png") no-repeat 0 0 / 100% 100%;
-                }
-                90% {
-                    background: url("../images/number9.png") no-repeat 0 0 / 100% 100%;
-                }
-                100% {
-                    background: url("../images/number0.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
-            @keyframes count_last5 {
-                100% {
-                    background: url("../images/number_result0.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
+            background: url("../images/number_result0.png") no-repeat 0 0 / 100% 100%;
         }
         .count4 {
-            animation: count4 .25s 3 step-end forwards, count_last4 .75s step-end forwards;
-            @keyframes count4 {
-                0% {
-                    background: url("../images/number2.png") no-repeat 0 0 / 100% 100%;
-                }
-                10% {
-                    background: url("../images/number3.png") no-repeat 0 0 / 100% 100%;
-                }
-                20% {
-                    background: url("../images/number4.png") no-repeat 0 0 / 100% 100%;
-                }
-                30% {
-                    background: url("../images/number5.png") no-repeat 0 0 / 100% 100%;
-                }
-                40% {
-                    background: url("../images/number6.png") no-repeat 0 0 / 100% 100%;
-                }
-                50% {
-                    background: url("../images/number7.png") no-repeat 0 0 / 100% 100%;
-                }
-                60% {
-                    background: url("../images/number8.png") no-repeat 0 0 / 100% 100%;
-                }
-                70% {
-                    background: url("../images/number9.png") no-repeat 0 0 / 100% 100%;
-                }
-                80% {
-                    background: url("../images/number0.png") no-repeat 0 0 / 100% 100%;
-                }
-                90% {
-                    background: url("../images/number1.png") no-repeat 0 0 / 100% 100%;
-                }
-                100% {
-                    background: url("../images/number2.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
-            @keyframes count_last4 {
-                100% {
-                    background: url("../images/number_result3.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
+            background: url("../images/number_result3.png") no-repeat 0 0 / 100% 100%;
         }
         .count3 {
-            animation: count3 .25s 3 step-end forwards, count_last3 .75s step-end forwards;
-            @keyframes count3 {
-                0% {
-                    background: url("../images/number6.png") no-repeat 0 0 / 100% 100%;
-                }
-                10% {
-                    background: url("../images/number1.png") no-repeat 0 0 / 100% 100%;
-                }
-                20% {
-                    background: url("../images/number3.png") no-repeat 0 0 / 100% 100%;
-                }
-                30% {
-                    background: url("../images/number8.png") no-repeat 0 0 / 100% 100%;
-                }
-                40% {
-                    background: url("../images/number4.png") no-repeat 0 0 / 100% 100%;
-                }
-                50% {
-                    background: url("../images/number9.png") no-repeat 0 0 / 100% 100%;
-                }
-                60% {
-                    background: url("../images/number0.png") no-repeat 0 0 / 100% 100%;
-                }
-                70% {
-                    background: url("../images/number7.png") no-repeat 0 0 / 100% 100%;
-                }
-                80% {
-                    background: url("../images/number2.png") no-repeat 0 0 / 100% 100%;
-                }
-                90% {
-                    background: url("../images/number5.png") no-repeat 0 0 / 100% 100%;
-                }
-                100% {
-                    background: url("../images/number4.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
-            @keyframes count_last3 {
-                100% {
-                    background: url("../images/number_result0.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
+            background: url("../images/number_result0.png") no-repeat 0 0 / 100% 100%;
         }
         .count2 {
-            animation: count2 .25s 3 step-end forwards, count_last2 .75s step-end forwards;
-            @keyframes count2 {
-                0% {
-                    background: url("../images/number9.png") no-repeat 0 0 / 100% 100%;
-                }
-                10% {
-                    background: url("../images/number8.png") no-repeat 0 0 / 100% 100%;
-                }
-                20% {
-                    background: url("../images/number7.png") no-repeat 0 0 / 100% 100%;
-                }
-                30% {
-                    background: url("../images/number6.png") no-repeat 0 0 / 100% 100%;
-                }
-                40% {
-                    background: url("../images/number5.png") no-repeat 0 0 / 100% 100%;
-                }
-                50% {
-                    background: url("../images/number4.png") no-repeat 0 0 / 100% 100%;
-                }
-                60% {
-                    background: url("../images/number3.png") no-repeat 0 0 / 100% 100%;
-                }
-                70% {
-                    background: url("../images/number2.png") no-repeat 0 0 / 100% 100%;
-                }
-                80% {
-                    background: url("../images/number1.png") no-repeat 0 0 / 100% 100%;
-                }
-                90% {
-                    background: url("../images/number0.png") no-repeat 0 0 / 100% 100%;
-                }
-                100% {
-                    background: url("../images/number2.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
-            @keyframes count_last2 {
-                100% {
-                    background: url("../images/number_result1.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
+            background: url("../images/number_result1.png") no-repeat 0 0 / 100% 100%;
         }
         .count1 {
-            animation: count1 .25s 3 step-end forwards, count_last1 .75s step-end forwards;
-            @keyframes count1 {
-                0% {
-                    background: url("../images/number0.png") no-repeat 0 0 / 100% 100%;
-                }
-                10% {
-                    background: url("../images/number1.png") no-repeat 0 0 / 100% 100%;
-                }
-                20% {
-                    background: url("../images/number2.png") no-repeat 0 0 / 100% 100%;
-                }
-                30% {
-                    background: url("../images/number3.png") no-repeat 0 0 / 100% 100%;
-                }
-                40% {
-                    background: url("../images/number4.png") no-repeat 0 0 / 100% 100%;
-                }
-                50% {
-                    background: url("../images/number5.png") no-repeat 0 0 / 100% 100%;
-                }
-                60% {
-                    background: url("../images/number6.png") no-repeat 0 0 / 100% 100%;
-                }
-                70% {
-                    background: url("../images/number7.png") no-repeat 0 0 / 100% 100%;
-                }
-                80% {
-                    background: url("../images/number8.png") no-repeat 0 0 / 100% 100%;
-                }
-                90% {
-                    background: url("../images/number9.png") no-repeat 0 0 / 100% 100%;
-                }
-                100% {
-                    background: url("../images/number8.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
-            @keyframes count_last1 {
-                100% {
-                    background: url("../images/number_result6.png") no-repeat 0 0 / 100% 100%;
-                }
-            }
+            background: url("../images/number_result6.png") no-repeat 0 0 / 100% 100%;
         }
     }
     .bottom {

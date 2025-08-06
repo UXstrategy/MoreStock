@@ -575,6 +575,9 @@ button {
 }
 
 /* 이벤트 메인 */
+.event .content {
+  line-height: 0;
+}
 .event .content img {
   width: 100%;
 }
@@ -668,8 +671,8 @@ button {
 }
 .event .btn_wrap button {
   display: block;
-  width: 328rem;
-  height: 64rem;
+  width: 280rem;
+  height: 56rem;
   margin: 0 auto;
 }
 .event .btn_wrap button img {
@@ -712,7 +715,7 @@ button {
 }
 .ready .text_guide .text {
   position: absolute;
-  top: 468rem;
+  top: 471rem;
   left: 106rem;
   font-weight: 600;
   font-size: 18rem;
@@ -763,7 +766,7 @@ button {
 }
 .start .round_guide .text {
   position: absolute;
-  top: 468rem;
+  top: 471rem;
   left: 106rem;
   font-weight: 600;
   font-size: 18rem;
@@ -812,6 +815,7 @@ button {
 }
 .start .success_goal .success_wrap {
   position: relative;
+  top: 3rem;
   overflow: hidden;
   height: 22rem;
   line-height: 22rem;
@@ -828,6 +832,8 @@ button {
   color: #ff1c9d;
 }
 .start .success_goal .slash {
+  position: relative;
+  top: 3rem;
   height: 22rem;
   line-height: 22rem;
   font-weight: 700;
@@ -835,6 +841,8 @@ button {
   color: #5e6e84;
 }
 .start .success_goal .goal {
+  position: relative;
+  top: 3rem;
   height: 22rem;
   line-height: 22rem;
   font-weight: 700;
@@ -876,6 +884,7 @@ button {
 }
 .start .time .timer {
   position: relative;
+  top: 3rem;
   line-height: 42rem;
   text-align: right;
   font-weight: 700;

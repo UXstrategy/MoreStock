@@ -552,6 +552,7 @@
 /* 이벤트 메인 */
 .event {
     .content {
+        line-height: 0;
         img {
             width: 100%;
         }
@@ -647,8 +648,8 @@
         z-index: 30;
         button {
             display: block;
-            width: 328rem;
-            height: 64rem;
+            width: 280rem;
+            height: 56rem;
             margin: 0 auto;
             img {
                 width: 100%;
@@ -690,7 +691,7 @@
         background: url("../images/bg_guide.png") no-repeat 0 0 / 100% 100%;
         .text {
             position: absolute;
-            top: 468rem;
+            top: 471rem;
             left: 106rem;
             font-weight: 600;
             font-size: 18rem;
@@ -740,7 +741,7 @@
         background: url("../images/bg_guide.png") no-repeat 0 0 / 100% 100%;
         .text {
             position: absolute;
-            top: 468rem;
+            top: 471rem;
             left: 106rem;
             font-weight: 600;
             font-size: 18rem;
@@ -789,6 +790,7 @@
         background: url("../images/bg_success.png") no-repeat 0 0 / 100% 100%;
         .success_wrap {
             position: relative;
+            top: 3rem;
             overflow: hidden;
             height: 22rem;
             line-height: 22rem;
@@ -805,6 +807,8 @@
             }
         }
         .slash {
+            position: relative;
+            top: 3rem;
             height: 22rem;
             line-height: 22rem;
             font-weight: 700;
@@ -812,6 +816,8 @@
             color: #5e6e84;
         }
         .goal {
+            position: relative;
+            top: 3rem;
             height: 22rem;
             line-height: 22rem;
             font-weight: 700;
@@ -853,6 +859,7 @@
         }
         .timer {
             position: relative;
+            top: 3rem;
             line-height: 42rem;
             text-align: right;
             font-weight: 700;

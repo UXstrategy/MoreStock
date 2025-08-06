@@ -74,6 +74,7 @@
         let ten = 0;
         let success = 0;
         let tube = 1;
+        let touch = true;
         setTimeout(() => {
             $(".text_guide").hide();
             $(".text_ready").show();
@@ -104,7 +105,7 @@
                 setTimeout(() => {
                     $(".round_guide").hide();
                     $(".progressbar").show();
-                    $(".btn_touch").prop("disabled", false);
+                    touch = true;
                     /* window.scrollTo({top: document.body.scrollHeight}); */
                     timeLimit();
                 }, 2000);
@@ -132,7 +133,7 @@
                         clearInterval(limitInterval);
                         $(".timer").text("0 : 00");
                         $(".gameover").show();
-                        $(".btn_touch").prop("disabled", true);
+                        touch = false;
                         setTimeout(() => {
                             $(".start").hide();
                             $(".result").show().addClass("result" + round);
@@ -141,8 +142,8 @@
                 }, 10);
             }
         }
-        $(".btn_touch").not(":disabled").off().on("click", function() {
-            if (!$(this).prop("disabled")) {
+        $(".btn_touch").off().on("click", function() {
+            if (touch) {
                 count++;
                 if (count % 2 == 0) {
                     $(".body").addClass("pull");
@@ -154,7 +155,7 @@
                     $(".tube").addClass("tube" + tube);
                 }
                 success = success - 20;
-                $(".success").css("top", success);
+                $(".success").css("top", success + "rem");
                 if (count == goal) {
                     clearInterval(limitInterval);
                     count = 0;
@@ -163,7 +164,7 @@
                     $(".progressbar").css("animation-play-state", "paused");
                     $(".face").addClass("face" + round);
                     $(".tube").addClass("tube" + tube);
-                    $(".btn_touch").prop("disabled", true);
+                    touch = false;
                     setTimeout(() => {
                         if (round == 6) {
                             $(".start").hide();

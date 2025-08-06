@@ -815,7 +815,7 @@ button {
 }
 .start .success_goal .success_wrap {
   position: relative;
-  top: 3rem;
+  top: 2rem;
   overflow: hidden;
   height: 28rem;
   line-height: 28rem;
@@ -833,7 +833,7 @@ button {
 }
 .start .success_goal .slash {
   position: relative;
-  top: 3rem;
+  top: 2rem;
   height: 28rem;
   line-height: 28rem;
   font-weight: 700;
@@ -842,7 +842,7 @@ button {
 }
 .start .success_goal .goal {
   position: relative;
-  top: 3rem;
+  top: 2rem;
   height: 28rem;
   line-height: 28rem;
   font-weight: 700;

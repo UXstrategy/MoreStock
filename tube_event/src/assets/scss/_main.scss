@@ -1001,7 +1001,7 @@
         height: 160rem;
         background: url("../images/gameover.png") no-repeat 0 0 / 100% 100%;
     }
-    .btn_touch {
+    .btn_put {
         position: absolute;
         bottom: 100rem;
         left: 40rem;
@@ -1009,7 +1009,6 @@
         width: 280rem;
         height: 56rem;
         background: url("../images/btn_put.png") no-repeat 0 0 / 100% 100%;
-        touch-action: manipulation;
     }
 }
 .result {

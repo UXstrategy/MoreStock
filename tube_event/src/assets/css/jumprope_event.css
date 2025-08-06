@@ -49,6 +49,7 @@ time, mark, audio, video, button {
 
 body {
   line-height: 1;
+  touch-action: pan-x pan-y;
 }
 
 ol, ul {
@@ -1025,7 +1026,7 @@ button {
   height: 160rem;
   background: url("../images/gameover.png") no-repeat 0 0/100% 100%;
 }
-.start .btn_touch {
+.start .btn_put {
   position: absolute;
   bottom: 100rem;
   left: 40rem;
@@ -1033,7 +1034,6 @@ button {
   width: 280rem;
   height: 56rem;
   background: url("../images/btn_put.png") no-repeat 0 0/100% 100%;
-  touch-action: manipulation;
 }
 
 .result {

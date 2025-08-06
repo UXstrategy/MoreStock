@@ -792,14 +792,14 @@
             position: relative;
             top: 3rem;
             overflow: hidden;
-            height: 22rem;
-            line-height: 22rem;
+            height: 28rem;
+            line-height: 28rem;
             .success {
                 position: relative;
                 text-align: right;
                 transition: .1s;
                 li {
-                    height: 20rem;
+                    height: 28rem;
                     font-weight: 700;
                     font-size: 18rem;
                     color: #ff1c9d;
@@ -809,8 +809,8 @@
         .slash {
             position: relative;
             top: 3rem;
-            height: 22rem;
-            line-height: 22rem;
+            height: 28rem;
+            line-height: 28rem;
             font-weight: 700;
             font-size: 18rem;
             color: #5e6e84;
@@ -818,8 +818,8 @@
         .goal {
             position: relative;
             top: 3rem;
-            height: 22rem;
-            line-height: 22rem;
+            height: 28rem;
+            line-height: 28rem;
             font-weight: 700;
             font-size: 18rem;
             color: #5e6e84;
@@ -859,7 +859,7 @@
         }
         .timer {
             position: relative;
-            top: 3rem;
+            top: 2rem;
             line-height: 42rem;
             text-align: right;
             font-weight: 700;

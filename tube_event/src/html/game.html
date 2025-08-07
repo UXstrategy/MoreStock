@@ -78,7 +78,6 @@
         setTimeout(() => {
             $(".text_guide").hide();
             $(".text_ready").show();
-            /* window.scrollTo({top: document.body.scrollHeight}); */
         }, 2000);
         setTimeout(() => {
             $(".ready").hide();
@@ -106,7 +105,6 @@
                     $(".round_guide").hide();
                     $(".progressbar").show();
                     touch = true;
-                    /* window.scrollTo({top: document.body.scrollHeight}); */
                     timeLimit();
                 }, 2000);
             }
@@ -127,10 +125,11 @@
                     }
                     $(".timer").text(second + " : " + ten);
                     if (second == 3) {
-                        $(".main").addClass("warning");
+                        $(".start, .time").addClass("warning");
                     }
                     if (second < 0) {
                         clearInterval(limitInterval);
+                        $(".start").removeClass("warning");
                         $(".timer").text("0 : 00");
                         $(".gameover").show();
                         touch = false;
@@ -161,6 +160,7 @@
                     count = 0;
                     round++;
                     tube++;
+                    $(".start").removeClass("warning");
                     $(".progressbar").css("animation-play-state", "paused");
                     $(".face").addClass("face" + round);
                     $(".tube").addClass("tube" + tube);
@@ -170,6 +170,7 @@
                             $(".start").hide();
                             $(".result").show().addClass("result" + round);
                         } else {
+                            $(".time").removeClass("warning");
                             $(".progressbar").hide();
                             $(".timer").text("10 : 00");
                             start();

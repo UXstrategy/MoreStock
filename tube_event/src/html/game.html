@@ -26,7 +26,7 @@
     <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/appLink.js?20220928"></script>
     <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/kwscommon.js"></script> -->
     
-    <link rel="stylesheet" href="../assets/css/jumprope_event.css">
+    <link rel="stylesheet" href="../assets/css/tube_event.css">
 </head>
 <body>
     <div class="wrap main">
@@ -157,23 +157,29 @@
                 $(".success").css("top", success + "rem");
                 if (count == goal) {
                     clearInterval(limitInterval);
-                    count = 0;
                     round++;
                     tube++;
                     $(".start").removeClass("warning");
                     $(".progressbar").css("animation-play-state", "paused");
                     $(".face").addClass("face" + round);
                     $(".tube").addClass("tube" + tube);
-                    touch = false;
                     setTimeout(() => {
-                        if (round == 6) {
+                        if (count > goal) {
+                            round = round - 1;
                             $(".start").hide();
                             $(".result").show().addClass("result" + round);
                         } else {
-                            $(".time").removeClass("warning");
-                            $(".progressbar").hide();
-                            $(".timer").text("10 : 00");
-                            start();
+                            if (round == 6) {
+                                $(".start").hide();
+                                $(".result").show().addClass("result" + round);
+                            } else {
+                                count = 0;
+                                touch = false;
+                                $(".time").removeClass("warning");
+                                $(".progressbar").hide();
+                                $(".timer").text("10 : 00");
+                                start();
+                            }
                         }
                     }, 2000);
                 }

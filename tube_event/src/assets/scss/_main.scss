@@ -740,7 +740,7 @@
             height: 100%;
             opacity: 0;
             filter: blur(20rem);
-            border: solid 20rem #f00;
+            border: 20rem solid #f00;
             box-sizing: border-box;
             animation: warning .5s linear infinite alternate;
             @keyframes warning {

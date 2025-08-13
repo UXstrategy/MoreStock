@@ -1102,10 +1102,12 @@ button {
   display: none;
 }
 .result .btn_wrap button {
+  width: 152rem;
   line-height: 0;
 }
 .result .btn_wrap .btn_share_single {
   display: none;
+  width: 280rem;
 }
 .result .btn_wrap img {
   width: 100%;

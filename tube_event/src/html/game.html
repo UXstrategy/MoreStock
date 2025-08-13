@@ -57,8 +57,9 @@
         </div>
         <div class="result">
             <div class="btn_wrap">
-                <button type="button" class="btn_share" onclick="location.href='../html/game.html'"><img src="../assets/images/btn_share.png" alt="공유하고 다시 도전하기"></button>
-                <button type="button" class="btn_point"><img src="../assets/images/btn_point.png" alt="포인트 받기"></button>
+                <button type="button" class="btn_share" onclick="location.href='../html/game.html'"><img src="../assets/images/btn_share.png" alt="공유 후 재도전"></button>
+                <button type="button" class="btn_share_single" onclick="location.href='../html/game.html'"><img src="../assets/images/btn_share_single.png" alt="공유 후 재도전"></button>
+                <button type="button" class="btn_point"><img src="../assets/images/btn_point.png" alt="포인트 수령"></button>
             </div>
         </div>
     </div>
@@ -136,6 +137,9 @@
                         setTimeout(() => {
                             $(".start").hide();
                             $(".result").show().addClass("result" + round);
+                            if (round == 1) {
+                                $(".btn_wrap").addClass("zero");
+                            }
                         }, 2000);
                     }
                 }, 10);
@@ -181,6 +185,9 @@
                     round = round - 1;
                     $(".start").hide();
                     $(".result").show().addClass("result" + round);
+                    if (round == 1) {
+                        $(".btn_wrap").addClass("zero");
+                    }
                 }
             }
         });

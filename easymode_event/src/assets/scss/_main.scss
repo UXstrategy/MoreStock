@@ -1319,20 +1319,20 @@
                 opacity: 0;
                 transform: translate(30rem, 30rem);
                 pointer-events: none;
-                animation: pointer 4s 1s infinite;
+                animation: pointer 2s 1s infinite;
                 @keyframes pointer {
-                    12.5% {
+                    25% {
                         opacity: 1;
                         transform: translate(0, 0);
                     }
-                    17.5% {
+                    35% {
                         transform: scale(.7);
                     }
-                    22.5% {
+                    45% {
                         opacity: 1;
                         transform: scale(1);
                     }
-                    25% {
+                    50% {
                         opacity: 0;
                         transform: scale(1);
                     }
@@ -1348,42 +1348,42 @@
                 &::after {
                     top: 310rem;
                     left: 143rem;
-                    animation: pointer 4s 4s infinite;
+                    animation: pointer 2s 2s infinite;
                 }
             }
             &.list3 {
                 &::after {
                     top: 208rem;
                     left: 221rem;
-                    animation: pointer 4s 2s infinite;
+                    animation: pointer 2s 1s infinite;
                 }
             }
             &.list4 {
                 &::after {
                     top: 436rem;
                     left: 224rem;
-                    animation: pointer 4s 4s infinite;
+                    animation: pointer 2s 2s infinite;
                 }
             }
             &.list5 {
                 &::after {
                     top: 388rem;
                     left: 234rem;
-                    animation: pointer 4s 2s infinite;
+                    animation: pointer 2s 1s infinite;
                 }
             }
             &.list6 {
                 &::after {
                     top: 309rem;
                     left: 76rem;
-                    animation: pointer 4s 2s infinite;
+                    animation: pointer 2s 1s infinite;
                 }
             }
             &.list7 {
                 &::after {
                     top: 455rem;
                     left: 170rem;
-                    animation: pointer 4s 2s infinite;
+                    animation: pointer 2s 1s infinite;
                 }
             }
             &.complete {
@@ -1440,7 +1440,7 @@
                 }
             }
             .mockup2 {
-                animation: mockup2 1s step-end forwards;
+                animation: mockup2 .5s step-end forwards;
                 @keyframes mockup2 {
                     100% {
                         opacity: 0;
@@ -1449,7 +1449,7 @@
             }
             .mockup3 {
                 opacity: 0;
-                animation: mockup3 1s step-end forwards;
+                animation: mockup3 .5s step-end forwards;
                 @keyframes mockup3 {
                     100% {
                         opacity: 1;
@@ -1470,7 +1470,7 @@
                     left: 0;
                     width: 218rem;
                     height: 1016rem;
-                    animation: mockup_scroll1 ease-in-out 2s 1s forwards;
+                    animation: mockup_scroll1 ease-in-out 1s .5s forwards;
                     @keyframes mockup_scroll1 {
                         100% {
                             top: -335rem;
@@ -1479,7 +1479,7 @@
                 }
             }
             .text_guide2 {
-                animation: text_guide2 1s step-end forwards;
+                animation: text_guide2 .5s step-end forwards;
                 @keyframes text_guide2 {
                     100% {
                         opacity: 0;
@@ -1488,7 +1488,7 @@
             }
             .text_guide3 {
                 opacity: 0;
-                animation: text_guide3 4s step-end forwards;
+                animation: text_guide3 2s step-end forwards;
                 @keyframes text_guide3 {
                     25% {
                         opacity: 1;
@@ -1500,7 +1500,7 @@
             }
             .text_guide4 {
                 opacity: 0;
-                animation: text_guide4 1s 3s step-end forwards;
+                animation: text_guide4 2s step-end forwards;
                 @keyframes text_guide4 {
                     100% {
                         opacity: 1;
@@ -1515,7 +1515,7 @@
                     top: -268rem;
                     height: calc(268rem * 2);
                     opacity: 0;
-                    animation: rotate 1s linear infinite, btn2_before 1s 3.5s forwards;
+                    animation: rotate 1s linear infinite, btn2_before .5s 1.75s forwards;
                     @keyframes btn2_before {
                         100% {
                             opacity: 1;
@@ -1527,7 +1527,7 @@
                     height: 72rem;
                     transform: scale(.77);
                     opacity: 0;
-                    animation: btn2 1s 3s forwards;
+                    animation: btn2 .5s 1.5s forwards;
                     @keyframes btn2 {
                         10% {
                             opacity: 1;
@@ -1540,7 +1540,7 @@
                 }
             }
             .text_guide5 {
-                animation: text_guide5 2s step-end forwards;
+                animation: text_guide5 1s step-end forwards;
                 @keyframes text_guide5 {
                     100% {
                         opacity: 0;
@@ -1549,7 +1549,7 @@
             }
             .text_guide6 {
                 opacity: 0;
-                animation: text_guide6 2s step-end forwards;
+                animation: text_guide6 1s step-end forwards;
                 @keyframes text_guide6 {
                     100% {
                         opacity: 1;
@@ -1564,7 +1564,7 @@
                     top: -50%;
                     height: calc(56rem * 2);
                     opacity: 0;
-                    animation: rotate 1s linear infinite, btn3_before 1s 1.5s forwards;
+                    animation: rotate 1s linear infinite, btn3_before .5s .75s forwards;
                     @keyframes btn3_before {
                         100% {
                             opacity: 1;
@@ -1576,7 +1576,7 @@
                     height: 56rem;
                     transform: scale(.55);
                     opacity: 0;
-                    animation: btn3 1s 1s forwards;
+                    animation: btn3 .5s .5s forwards;
                     @keyframes btn3 {
                         10% {
                             opacity: 1;
@@ -1603,7 +1603,7 @@
                     left: 0;
                     width: 218rem;
                     height: 585rem;
-                    animation: mockup_scroll2 ease-in-out 2s 1s forwards;
+                    animation: mockup_scroll2 ease-in-out 1s .5s forwards;
                     @keyframes mockup_scroll2 {
                         100% {
                             top: -240rem;
@@ -1613,7 +1613,7 @@
             }
             .text_guide7 {
                 opacity: 1;
-                animation: text_guide7 1s step-end forwards;
+                animation: text_guide7 .5s step-end forwards;
                 @keyframes text_guide7 {
                     100% {
                         opacity: 0;
@@ -1622,7 +1622,7 @@
             }
             .text_guide8 {
                 opacity: 0;
-                animation: text_guide8 4s step-end forwards;
+                animation: text_guide8 2s step-end forwards;
                 @keyframes text_guide8 {
                     25% {
                         opacity: 1;
@@ -1634,7 +1634,7 @@
             }
             .text_guide9 {
                 opacity: 0;
-                animation: text_guide9 1s 3s step-end forwards;
+                animation: text_guide9 2s step-end forwards;
                 @keyframes text_guide9 {
                     100% {
                         opacity: 1;
@@ -1649,7 +1649,7 @@
                     top: -148rem;
                     height: calc(148rem * 2);
                     opacity: 0;
-                    animation: rotate 1s linear infinite, btn2_before 1s 3.5s forwards;
+                    animation: rotate 1s linear infinite, btn2_before .5s 1.75s forwards;
                     @keyframes btn2_before {
                         100% {
                             opacity: 1;
@@ -1661,7 +1661,7 @@
                     height: 72rem;
                     transform: scale(.85);
                     opacity: 0;
-                    animation: btn2 1s 3s forwards;
+                    animation: btn2 .5s 1.5s forwards;
                     @keyframes btn2 {
                         10% {
                             opacity: 1;
@@ -1674,7 +1674,7 @@
                 }
             }
             .text_guide10 {
-                animation: text_guide10 2s step-end forwards;
+                animation: text_guide10 1s step-end forwards;
                 @keyframes text_guide10 {
                     100% {
                         opacity: 0;
@@ -1683,7 +1683,7 @@
             }
             .text_guide11 {
                 opacity: 0;
-                animation: text_guide11 2s step-end forwards;
+                animation: text_guide11 1s step-end forwards;
                 @keyframes text_guide11 {
                     100% {
                         opacity: 1;
@@ -1698,7 +1698,7 @@
                     top: -108rem;
                     height: calc(108rem * 2);
                     opacity: 0;
-                    animation: rotate 1s linear infinite, btn5_before 1s 1.5s forwards;
+                    animation: rotate 1s linear infinite, btn5_before .5s .75s forwards;
                     @keyframes btn5_before {
                         100% {
                             opacity: 1;
@@ -1710,7 +1710,7 @@
                     height: 54rem;
                     transform: scale(.7);
                     opacity: 0;
-                    animation: btn5 1s 1s forwards;
+                    animation: btn5 .5s .5s forwards;
                     @keyframes btn5 {
                         10% {
                             opacity: 1;
@@ -1723,7 +1723,7 @@
                 }
             }
             .text_guide12 {
-                animation: text_guide12 2s step-end forwards;
+                animation: text_guide12 1s step-end forwards;
                 @keyframes text_guide12 {
                     100% {
                         opacity: 0;
@@ -1732,7 +1732,7 @@
             }
             .text_guide13 {
                 opacity: 0;
-                animation: text_guide13 2s step-end forwards;
+                animation: text_guide13 1s step-end forwards;
                 @keyframes text_guide13 {
                     100% {
                         opacity: 1;
@@ -1747,7 +1747,7 @@
                     top: -50%;
                     height: calc(56rem * 2);
                     opacity: 0;
-                    animation: rotate 1s linear infinite, btn6_before 1s 1.5s forwards;
+                    animation: rotate 1s linear infinite, btn6_before .5s .75s forwards;
                     @keyframes btn6_before {
                         100% {
                             opacity: 1;
@@ -1759,7 +1759,7 @@
                     height: 50rem;
                     transform: scale(.8);
                     opacity: 0;
-                    animation: btn6 1s 1s forwards;
+                    animation: btn6 .5s .5s forwards;
                     @keyframes btn6 {
                         10% {
                             opacity: 1;
@@ -1779,7 +1779,7 @@
                     top: -268rem;
                     height: calc(268rem * 2);
                     opacity: 0;
-                    animation: rotate 1s linear infinite, btn7_before 1s 1.5s forwards;
+                    animation: rotate 1s linear infinite, btn7_before .5s .75s forwards;
                     @keyframes btn7_before {
                         100% {
                             opacity: 1;
@@ -1791,7 +1791,7 @@
                     height: 72rem;
                     transform: scale(.8);
                     opacity: 0;
-                    animation: btn7 1s 1s forwards;
+                    animation: btn7 .5s .5s forwards;
                     @keyframes btn7 {
                         10% {
                             opacity: 1;

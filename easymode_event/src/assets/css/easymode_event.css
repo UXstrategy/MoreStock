@@ -1331,21 +1331,21 @@ button {
   opacity: 0;
   transform: translate(30rem, 30rem);
   pointer-events: none;
-  animation: pointer 4s 1s infinite;
+  animation: pointer 2s 1s infinite;
 }
 @keyframes pointer {
-  12.5% {
+  25% {
     opacity: 1;
     transform: translate(0, 0);
   }
-  17.5% {
+  35% {
     transform: scale(0.7);
   }
-  22.5% {
+  45% {
     opacity: 1;
     transform: scale(1);
   }
-  25% {
+  50% {
     opacity: 0;
     transform: scale(1);
   }
@@ -1357,32 +1357,32 @@ button {
 .experience .list li.list2::after {
   top: 310rem;
   left: 143rem;
-  animation: pointer 4s 4s infinite;
+  animation: pointer 2s 2s infinite;
 }
 .experience .list li.list3::after {
   top: 208rem;
   left: 221rem;
-  animation: pointer 4s 2s infinite;
+  animation: pointer 2s 1s infinite;
 }
 .experience .list li.list4::after {
   top: 436rem;
   left: 224rem;
-  animation: pointer 4s 4s infinite;
+  animation: pointer 2s 2s infinite;
 }
 .experience .list li.list5::after {
   top: 388rem;
   left: 234rem;
-  animation: pointer 4s 2s infinite;
+  animation: pointer 2s 1s infinite;
 }
 .experience .list li.list6::after {
   top: 309rem;
   left: 76rem;
-  animation: pointer 4s 2s infinite;
+  animation: pointer 2s 1s infinite;
 }
 .experience .list li.list7::after {
   top: 455rem;
   left: 170rem;
-  animation: pointer 4s 2s infinite;
+  animation: pointer 2s 1s infinite;
 }
 .experience .list li.complete::after {
   display: none;
@@ -1434,7 +1434,7 @@ button {
   height: 72rem;
 }
 .experience .list li .mockup2 {
-  animation: mockup2 1s step-end forwards;
+  animation: mockup2 0.5s step-end forwards;
 }
 @keyframes mockup2 {
   100% {
@@ -1443,7 +1443,7 @@ button {
 }
 .experience .list li .mockup3 {
   opacity: 0;
-  animation: mockup3 1s step-end forwards;
+  animation: mockup3 0.5s step-end forwards;
 }
 @keyframes mockup3 {
   100% {
@@ -1465,7 +1465,7 @@ button {
   left: 0;
   width: 218rem;
   height: 1016rem;
-  animation: mockup_scroll1 ease-in-out 2s 1s forwards;
+  animation: mockup_scroll1 ease-in-out 1s 0.5s forwards;
 }
 @keyframes mockup_scroll1 {
   100% {
@@ -1473,7 +1473,7 @@ button {
   }
 }
 .experience .list li .text_guide2 {
-  animation: text_guide2 1s step-end forwards;
+  animation: text_guide2 0.5s step-end forwards;
 }
 @keyframes text_guide2 {
   100% {
@@ -1482,7 +1482,7 @@ button {
 }
 .experience .list li .text_guide3 {
   opacity: 0;
-  animation: text_guide3 4s step-end forwards;
+  animation: text_guide3 2s step-end forwards;
 }
 @keyframes text_guide3 {
   25% {
@@ -1494,7 +1494,7 @@ button {
 }
 .experience .list li .text_guide4 {
   opacity: 0;
-  animation: text_guide4 1s 3s step-end forwards;
+  animation: text_guide4 2s step-end forwards;
 }
 @keyframes text_guide4 {
   100% {
@@ -1510,7 +1510,7 @@ button {
   top: -268rem;
   height: 536rem;
   opacity: 0;
-  animation: rotate 1s linear infinite, btn2_before 1s 3.5s forwards;
+  animation: rotate 1s linear infinite, btn2_before 0.5s 1.75s forwards;
 }
 @keyframes btn2_before {
   100% {
@@ -1522,7 +1522,7 @@ button {
   height: 72rem;
   transform: scale(0.77);
   opacity: 0;
-  animation: btn2 1s 3s forwards;
+  animation: btn2 0.5s 1.5s forwards;
 }
 @keyframes btn2 {
   10% {
@@ -1534,7 +1534,7 @@ button {
   }
 }
 .experience .list li .text_guide5 {
-  animation: text_guide5 2s step-end forwards;
+  animation: text_guide5 1s step-end forwards;
 }
 @keyframes text_guide5 {
   100% {
@@ -1543,7 +1543,7 @@ button {
 }
 .experience .list li .text_guide6 {
   opacity: 0;
-  animation: text_guide6 2s step-end forwards;
+  animation: text_guide6 1s step-end forwards;
 }
 @keyframes text_guide6 {
   100% {
@@ -1559,7 +1559,7 @@ button {
   top: -50%;
   height: 112rem;
   opacity: 0;
-  animation: rotate 1s linear infinite, btn3_before 1s 1.5s forwards;
+  animation: rotate 1s linear infinite, btn3_before 0.5s 0.75s forwards;
 }
 @keyframes btn3_before {
   100% {
@@ -1571,7 +1571,7 @@ button {
   height: 56rem;
   transform: scale(0.55);
   opacity: 0;
-  animation: btn3 1s 1s forwards;
+  animation: btn3 0.5s 0.5s forwards;
 }
 @keyframes btn3 {
   10% {
@@ -1598,7 +1598,7 @@ button {
   left: 0;
   width: 218rem;
   height: 585rem;
-  animation: mockup_scroll2 ease-in-out 2s 1s forwards;
+  animation: mockup_scroll2 ease-in-out 1s 0.5s forwards;
 }
 @keyframes mockup_scroll2 {
   100% {
@@ -1607,7 +1607,7 @@ button {
 }
 .experience .list li .text_guide7 {
   opacity: 1;
-  animation: text_guide7 1s step-end forwards;
+  animation: text_guide7 0.5s step-end forwards;
 }
 @keyframes text_guide7 {
   100% {
@@ -1616,7 +1616,7 @@ button {
 }
 .experience .list li .text_guide8 {
   opacity: 0;
-  animation: text_guide8 4s step-end forwards;
+  animation: text_guide8 2s step-end forwards;
 }
 @keyframes text_guide8 {
   25% {
@@ -1628,7 +1628,7 @@ button {
 }
 .experience .list li .text_guide9 {
   opacity: 0;
-  animation: text_guide9 1s 3s step-end forwards;
+  animation: text_guide9 2s step-end forwards;
 }
 @keyframes text_guide9 {
   100% {
@@ -1644,7 +1644,7 @@ button {
   top: -148rem;
   height: 296rem;
   opacity: 0;
-  animation: rotate 1s linear infinite, btn2_before 1s 3.5s forwards;
+  animation: rotate 1s linear infinite, btn2_before 0.5s 1.75s forwards;
 }
 @keyframes btn2_before {
   100% {
@@ -1656,7 +1656,7 @@ button {
   height: 72rem;
   transform: scale(0.85);
   opacity: 0;
-  animation: btn2 1s 3s forwards;
+  animation: btn2 0.5s 1.5s forwards;
 }
 @keyframes btn2 {
   10% {
@@ -1668,7 +1668,7 @@ button {
   }
 }
 .experience .list li .text_guide10 {
-  animation: text_guide10 2s step-end forwards;
+  animation: text_guide10 1s step-end forwards;
 }
 @keyframes text_guide10 {
   100% {
@@ -1677,7 +1677,7 @@ button {
 }
 .experience .list li .text_guide11 {
   opacity: 0;
-  animation: text_guide11 2s step-end forwards;
+  animation: text_guide11 1s step-end forwards;
 }
 @keyframes text_guide11 {
   100% {
@@ -1693,7 +1693,7 @@ button {
   top: -108rem;
   height: 216rem;
   opacity: 0;
-  animation: rotate 1s linear infinite, btn5_before 1s 1.5s forwards;
+  animation: rotate 1s linear infinite, btn5_before 0.5s 0.75s forwards;
 }
 @keyframes btn5_before {
   100% {
@@ -1705,7 +1705,7 @@ button {
   height: 54rem;
   transform: scale(0.7);
   opacity: 0;
-  animation: btn5 1s 1s forwards;
+  animation: btn5 0.5s 0.5s forwards;
 }
 @keyframes btn5 {
   10% {
@@ -1717,7 +1717,7 @@ button {
   }
 }
 .experience .list li .text_guide12 {
-  animation: text_guide12 2s step-end forwards;
+  animation: text_guide12 1s step-end forwards;
 }
 @keyframes text_guide12 {
   100% {
@@ -1726,7 +1726,7 @@ button {
 }
 .experience .list li .text_guide13 {
   opacity: 0;
-  animation: text_guide13 2s step-end forwards;
+  animation: text_guide13 1s step-end forwards;
 }
 @keyframes text_guide13 {
   100% {
@@ -1742,7 +1742,7 @@ button {
   top: -50%;
   height: 112rem;
   opacity: 0;
-  animation: rotate 1s linear infinite, btn6_before 1s 1.5s forwards;
+  animation: rotate 1s linear infinite, btn6_before 0.5s 0.75s forwards;
 }
 @keyframes btn6_before {
   100% {
@@ -1754,7 +1754,7 @@ button {
   height: 50rem;
   transform: scale(0.8);
   opacity: 0;
-  animation: btn6 1s 1s forwards;
+  animation: btn6 0.5s 0.5s forwards;
 }
 @keyframes btn6 {
   10% {
@@ -1774,7 +1774,7 @@ button {
   top: -268rem;
   height: 536rem;
   opacity: 0;
-  animation: rotate 1s linear infinite, btn7_before 1s 1.5s forwards;
+  animation: rotate 1s linear infinite, btn7_before 0.5s 0.75s forwards;
 }
 @keyframes btn7_before {
   100% {
@@ -1786,7 +1786,7 @@ button {
   height: 72rem;
   transform: scale(0.8);
   opacity: 0;
-  animation: btn7 1s 1s forwards;
+  animation: btn7 0.5s 0.5s forwards;
 }
 @keyframes btn7 {
   10% {

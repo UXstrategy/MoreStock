@@ -110,6 +110,7 @@
             $(".second").text(second);
             $(".progressbar").css("animation", "progressbar "+ second +"s linear forwards");
             $(".success").css("top", "0");
+            $(".face").removeClass("face_success");
             if (round == 1) {
                 timeLimit();
             } else {
@@ -175,7 +176,7 @@
                     tube++;
                     $(".start").removeClass("warning");
                     $(".progressbar").css("animation-play-state", "paused");
-                    $(".face").addClass("face" + round);
+                    $(".face").addClass("face" + round + " face_success");
                     $(".tube").addClass("tube" + tube);
                     setTimeout(() => {
                         if (round == 6) {

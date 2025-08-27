@@ -1027,18 +1027,19 @@
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        top: 21rem;
+        top: 20rem;
         left: 0;
+        z-index: 1;
         width: 100%;
-        padding: 0 21rem;
+        padding: 0 24rem;
         img {
             display: block;
             width: 100%;
             height: 100%;
         }
         h1 {
-            width: 64rem;
-            height: 19rem;
+            width: 70rem;
+            height: 22rem;
         }
         .share {
             width: 26rem;
@@ -1049,61 +1050,294 @@
         overflow: hidden;
         height: 760rem;
         margin-bottom: 60rem;
-        padding-top: 100rem;
         background: #16042e url("../images/bg_visual.png") no-repeat 0 0 / 100% auto;
         .title {
-            position: relative;
-            height: 125rem;
-            div {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
+            position: absolute;
+            top: 93rem;
+            left: 0;
+            width: 100%;
+            img {
+                width: 218rem;
+                height: 110rem;
             }
-            .title1 {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
+        }
+        .swiper_visual {
+            overflow: hidden;
+            margin-top: 235rem;
+            .swiper-slide {
+                width: 254rem;
                 img {
-                    width: 324rem;
-                    height: 120rem;
+                    width: 100%;
                 }
-                animation: title1 .4s 2s forwards;
-                @keyframes title1 {
-                    100% {
-                        left: -100%;
+                .swiper-slide-shadow-left {
+                    border-radius: 30rem;
+                    background: url("../images/main_visual_back.png") no-repeat 0 0 / 100% auto;
+                }
+                .swiper-slide-shadow-right {
+                    border-radius: 30rem;
+                    background: url("../images/main_visual_back.png") no-repeat 0 0 / 100% auto;
+                }
+                &.slide3 {
+                    .step1 {
+                        position: absolute;
+                        top: 39rem;
+                        left: 154rem;
+                        z-index: 10;
+                        width: 100rem;
+                        height: 148rem;
+                        background: url("../images/main_visual3_3.png") no-repeat 0 0 / 100% 100%;
+                        opacity: 0;
+                    }
+                    .step2 {
+                        position: absolute;
+                        top: 39rem;
+                        left: 27rem;
+                        width: 200rem;
+                        height: 206rem;
+                        div {
+                            overflow: hidden;
+                            width: 100rem;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: calc(50% - 100rem);
+                                width: 200rem;
+                                height: 206rem;
+                                background: url("../images/main_visual3_1.png") no-repeat 0 0 / 100% 100%;
+                            }
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 8rem;
+                                left: 0;
+                                width: 100rem;
+                                height: 210rem;
+                                border-right: 1rem solid #9077e8;
+                            }
+                            img {
+                                position: relative;
+                                z-index: 1;
+                                width: 200rem;
+                            }
+                        }
                     }
                 }
-            }
-            .title2 {
-                position: absolute;
-                top: 0;
-                left: 100%;
-                width: 100%;
-                img {
-                    width: 324rem;
-                    height: 125rem;
+                &.slide4 {
+                    .step1 {
+                        position: absolute;
+                        top: 44rem;
+                        left: 5rem;
+                        width: 244rem;
+                        height: 206rem;
+                        background: url("../images/main_visual4_1.png") no-repeat 0 0 / 100% 100%;
+                        opacity: 0;
+                    }
+                    .step2 {
+                        position: absolute;
+                        top: 44rem;
+                        left: 0;
+                        width: 110rem;
+                        height: 88rem;
+                        background: url("../images/main_visual4_2.png") no-repeat 0 0 / 100% 100%;
+                        opacity: 0;
+                    }
+                    .step3 {
+                        position: absolute;
+                        top: 53rem;
+                        left: 172rem;
+                        width: 36rem;
+                        height: 36rem;
+                        background: url("../images/main_visual4_3.png") no-repeat 0 0 / 100% 100%;
+                        opacity: 0;
+                    }
                 }
-                animation: title2 .4s 2s forwards;
-                @keyframes title2 {
-                    100% {
-                        left: 0%;
+                &.slide5 {
+                    .step1 {
+                        position: absolute;
+                        top: 57rem;
+                        left: 33rem;
+                        width: 192rem;
+                        height: 196rem;
+                        background: url("../images/main_visual5_1.png") no-repeat 0 0 / 100% 100%;
+                        opacity: 0;
+                    }
+                    .step2 {
+                        position: absolute;
+                        top: 22rem;
+                        left: 99rem;
+                        width: 32rem;
+                        height: 40rem;
+                        background: url("../images/main_visual5_2.png") no-repeat 0 0 / 100% 100%;
+                        opacity: 0;
+                        translate: 0 10rem;
+                    }
+                    .step3 {
+                        position: absolute;
+                        top: 46rem;
+                        left: 129rem;
+                        width: 26rem;
+                        height: 34rem;
+                        background: url("../images/main_visual5_3.png") no-repeat 0 0 / 100% 100%;
+                        opacity: 0;
+                        translate: 0 10rem;
+                    }
+                }
+                &.swiper-slide-active {
+                    &.slide3 {
+                        .step1 {
+                            animation: slide3_step1 .5s .4s forwards;
+                            @keyframes slide3_step1 {
+                                100% {opacity: 1;}
+                            }
+                        }
+                        .step2 {
+                            div {
+                                animation: step1 1.5s .6s linear forwards;
+                                &::after {
+                                    animation: step1 1.5s .6s linear forwards;
+                                }
+                                @keyframes step1 {
+                                    25% {width: 0rem;}
+                                    75% {width: 0rem;}
+                                    99% {width: 200rem;}
+                                    100% {width: 200rem;}
+                                }
+                            }
+                        }
+                    }
+                    &.slide4 {
+                        .step1 {
+                            animation: slide4_step1 .5s .4s forwards;
+                            @keyframes slide4_step1 {
+                                100% {opacity: 1;}
+                            }
+                        }
+                        .step2 {
+                            animation: slide4_step2 .5s .6s forwards;
+                            @keyframes slide4_step2 {
+                                100% {opacity: 1;}
+                            }
+                        }
+                        .step3 {
+                            animation: slide4_step3 .5s .8s forwards;
+                            @keyframes slide4_step3 {
+                                100% {opacity: 1;}
+                            }
+                        }
+                    }
+                    &.slide5 {
+                        .step1 {
+                            animation: slide5_step1 .5s .4s forwards;
+                            @keyframes slide5_step1 {
+                                100% {opacity: 1;}
+                            }
+                        }
+                        .step2 {
+                            animation: slide5_step2 .5s .6s forwards;
+                            @keyframes slide5_step2 {
+                                100% {opacity: 1; translate: 0;}
+                            }
+                        }
+                        .step3 {
+                            animation: slide5_step3 .5s .8s forwards;
+                            @keyframes slide5_step3 {
+                                100% {opacity: 1; translate: 0;}
+                            }
+                        }
                     }
                 }
             }
         }
-        .period {
-            padding: 18rem 0 22rem;
-            img {
-                width: 200rem;
-                height: 18rem;
+        .keyvisual {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: keyvisual 3s 1s linear forwards;
+            @keyframes keyvisual {
+                0% {background: transparent;}
+                10% {background: #16042e;}
+                90% {background: #16042e;}
+                99.99% {background: transparent;}
+                100% {display: none;}
             }
-        }
-        .mockup {
-            img {
-                width: 190rem;
-                height: 376rem;
+            .zoom {
+                position: fixed;
+                top: 193rem;
+                left: calc(50% - 152rem);
+                width: 304rem;
+                height: 494rem;
+                background: transparent;
+                transform: scale(0.83);
+                animation: zoom 3s 1s linear forwards;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -36rem;
+                    left: -28rem;
+                    width: 360rem;
+                    height: 570rem;
+                    animation: shine 3s 1s linear forwards;
+                    @keyframes shine {
+                        0% {background: transparent;}
+                        10% {background: url("../images/main_visual_shine.png") no-repeat 0 0 / 100% 100%;}
+                        90% {background: url("../images/main_visual_shine.png") no-repeat 0 0 / 100% 100%;}
+                        100% {background: transparent;}
+                    }
+                }
+                @keyframes zoom {
+                    0% {transform: scale(0.83);}
+                    10% {transform: scale(1); top: calc(50% - 247rem);}
+                    40% {transform: scale(1);}
+                    60% {transform: scale(1);}
+                    90% {transform: scale(1); top: calc(50% - 247rem);}
+                    100% {transform: scale(0.83);}
+                }
+                .change {
+                    position: fixed;
+                    top: 0;
+                    left: calc(50% - 152rem);
+                    width: 304rem;
+                    height: 494rem;
+                    perspective: 600rem;
+                    div {
+                        overflow: hidden;
+                        width: 152rem;
+                        animation: change 1.5s 1.5s linear forwards;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: calc(50% - 152rem);
+                            width: 304rem;
+                            height: 494rem;
+                            background: url("../images/main_visual1.png") no-repeat 0 0 / 100% 100%;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -20rem;
+                            left: 0;
+                            width: 152rem;
+                            height: 534rem;
+                            border-right: 2rem solid #9077e8;
+                            animation: change 1.5s 1.5s linear forwards;
+                        }
+                        @keyframes change {
+                            25% {width: 0rem;}
+                            75% {width: 0rem;}
+                            99% {width: 304rem;}
+                            100% {width: 304rem;}
+                        }
+                        img {
+                            position: relative;
+                            z-index: 1;
+                            width: 304rem;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1132,7 +1366,28 @@
         padding-bottom: 60rem;
         img {
             width: 292rem;
-            height: 232rem;
+            height: 252rem;
+        }
+    }
+    .text_event3 {
+        padding-bottom: 24rem;
+        img {
+            width: 254rem;
+            height: 194rem;
+        }
+    }
+    .img_event3 {
+        padding-bottom: 60rem;
+        img {
+            width: 292rem;
+            height: 252rem;
+        }
+    }
+    .btn_detail {
+        padding-bottom: 40rem;
+        img {
+            width: 248rem;
+            height: 52rem;
         }
     }
     .swiper_wrap {
@@ -1175,6 +1430,13 @@
         padding: 0 16rem 110rem;
         background: #f7f7f7;
         text-align: left;
+        opacity: 0;
+        animation: notice_wrap 1s step-end forwards;
+        @keyframes notice_wrap {
+            100% {
+                opacity: 1;
+            }
+        }
         .notice {
             dt {
                 padding: 38rem 0 16rem;
@@ -1241,31 +1503,14 @@
             }
         }
     }
-    .btn_get {
+    .btn_rookie {
         position: fixed;
         bottom: 0;
         left: 0;
-        z-index: 10;
         width: 100%;
         padding-bottom: 24rem;
         text-align: center;
         line-height: 0;
-        opacity: 0;
-        animation: btn_get 1s 2s forwards;
-        @keyframes btn_get {
-            100% {
-                opacity: 1;
-            }
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            top: -64rem;
-            left: calc(50% - 61rem);
-            width: 122rem;
-            height: 60rem;
-            background: url("../images/bubble_noapp.png") no-repeat 0 0 / 100% 100%;
-        }
         button {
             line-height: 0;
             img {
@@ -1384,16 +1629,6 @@
                     top: 455rem;
                     left: 170rem;
                     animation: pointer 2s 1s infinite;
-                }
-            }
-            &.complete {
-                &::after {
-                    display: none;
-                }
-            }
-            &.app_complete {
-                &::after {
-                    display: none;
                 }
             }
             .mockup {
@@ -1824,14 +2059,18 @@
                     height: 60rem;
                 }
             }
-            &.complete {
+            &.experience_complete {
                 min-height: 100vh;
+                padding-bottom: 108rem;
                 background: #16042e url("../images/bg_experience_complete.png") no-repeat 0 0 / 100% auto;
+                &::after {
+                    display: none;
+                }
                 .title {
-                    padding: 25rem 0 46rem;
+                    padding: 25rem 0 32rem;
                     img {
                         width: 245rem;
-                        height: 203rem;
+                        height: 228rem;
                     }
                 }
                 .point {
@@ -1851,23 +2090,132 @@
                     }
                 }
             }
-            &.app_complete {
-                min-height: 100vh;
-                background: #16042e url("../images/bg_experience_complete.png") no-repeat 0 0 / 100% auto;
-                .title {
-                    padding: 64rem 0 36rem;
-                    img {
-                        width: 260rem;
-                        height: 132rem;
-                    }
-                }
-                .point {
-                    img {
-                        width: 360rem;
-                        height: 275rem;
-                    }
-                }
+        }
+    }
+}
+
+/* 신청완료, 참여내역 */
+.complete {
+    min-height: 100vh;
+    padding-bottom: 132rem;
+    text-align: center;
+    background: #16042e url("../images/bg_experience_complete.png") no-repeat 0 0 / 100% auto;
+    .btn_close {
+        position: absolute;
+        top: 24rem;
+        right: 24rem;
+        img {
+            width: 24rem;
+            height: 24rem;
+        }
+    }
+    .title_event {
+        padding: 70rem 0 30rem;
+        img {
+            width: 244rem;
+            height: 141rem;
+        }
+    }
+    .title_naverpay {
+        padding: 40rem 0 34rem;
+        img {
+            width: 264rem;
+            height: 184rem;
+        }
+    }
+    .title_kiwoom {
+        padding: 40rem 0 59rem;
+        img {
+            width: 264rem;
+            height: 184rem;
+        }
+    }
+    .title_detail {
+        padding: 76rem 0 20rem;
+        img {
+            width: 306rem;
+            height: 112rem;
+        }
+    }
+    .complete_event {
+        img {
+            width: 360rem;
+            height: 387rem;
+        }
+    }
+    .point {
+        img {
+            width: 292rem;
+            height: 224rem;
+        }
+    }
+    .detail {
+        width: 360rem;
+        height: 430rem;
+        padding: 94rem 0 0 78rem;
+        background: url("../images/detail0.png") no-repeat 0 0 / 100% 100%;
+        text-align: left;
+        &.detail1 {
+            background: url("../images/detail1.png") no-repeat 0 0 / 100% 100%;
+        }
+        &.detail2 {
+            background: url("../images/detail2.png") no-repeat 0 0 / 100% 100%;
+        }
+        &.detail3 {
+            background: url("../images/detail3.png") no-repeat 0 0 / 100% 100%;
+        }
+        li {
+            padding-bottom: 135rem;
+            font-size: 12rem;
+            color: #cccfd4;
+            span {
+                font-size: 12rem;
+                color: #d2b2ff;
             }
+        }
+    }
+    .btn_bottom {
+        position: fixed;
+        bottom: 24rem;
+        left: 0;
+        width: 100%;
+        img {
+            width: 312rem;
+            height: 60rem;
+        }
+    }
+    .btn_bottom2 {
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+        position: fixed;
+        bottom: 24rem;
+        left: 0;
+        width: 100%;
+        padding: 0 24rem;
+        .btn_account {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -38rem;
+                left: -3rem;
+                width: 136rem;
+                height: 32rem;
+                background: url("../images/no_account.png") no-repeat 0 0 / 100% 100%;
+            }
+            img {
+                width: 128rem;
+            }
+        }
+        .btn_rookie {
+            img {
+                width: 174rem;
+            }
+        }
+        img {
+            width: 100%;
+            height: 60rem;
         }
     }
 }

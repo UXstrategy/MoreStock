@@ -158,7 +158,7 @@ const swiperSet = (function(){
             autoplay: {
             enabled: ElmOpt.auto,
             delay: ElmOpt.delay,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
             },
             navigation: {
             nextEl: "."+ElmOpt.navNext,

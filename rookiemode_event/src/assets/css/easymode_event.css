@@ -1084,17 +1084,22 @@ button {
 }
 .main .visual .swiper_visual .swiper-slide {
   width: 254rem;
+  background: url("../images/main_visual_back.png") no-repeat 0 0/100% 100%;
 }
 .main .visual .swiper_visual .swiper-slide img {
   width: 100%;
+  opacity: 0;
 }
 .main .visual .swiper_visual .swiper-slide .swiper-slide-shadow-left {
+  margin: 0 -15rem;
   border-radius: 30rem;
-  background: url("../images/main_visual_back.png") no-repeat 0 0/100% auto;
 }
 .main .visual .swiper_visual .swiper-slide .swiper-slide-shadow-right {
+  margin: 0 15rem;
   border-radius: 30rem;
-  background: url("../images/main_visual_back.png") no-repeat 0 0/100% auto;
+}
+.main .visual .swiper_visual .swiper-slide.swiper-slide-active img {
+  opacity: 1;
 }
 .main .visual .swiper_visual .swiper-slide.slide3 .step1 {
   position: absolute;
@@ -1112,6 +1117,7 @@ button {
   left: 27rem;
   width: 200rem;
   height: 206rem;
+  opacity: 0;
 }
 .main .visual .swiper_visual .swiper-slide.slide3 .step2 div {
   overflow: hidden;
@@ -1204,6 +1210,9 @@ button {
     opacity: 1;
   }
 }
+.main .visual .swiper_visual .swiper-slide.swiper-slide-active.slide3 .step2 {
+  opacity: 1;
+}
 .main .visual .swiper_visual .swiper-slide.swiper-slide-active.slide3 .step2 div {
   animation: step1 1.5s 0.6s linear forwards;
 }
@@ -1212,16 +1221,16 @@ button {
 }
 @keyframes step1 {
   25% {
-    width: 0rem;
+    width: 20rem;
   }
   75% {
-    width: 0rem;
+    width: 20rem;
   }
   99% {
-    width: 200rem;
+    width: 178rem;
   }
   100% {
-    width: 200rem;
+    width: 178rem;
   }
 }
 .main .visual .swiper_visual .swiper-slide.swiper-slide-active.slide4 .step1 {
@@ -1388,16 +1397,16 @@ button {
 }
 @keyframes change {
   25% {
-    width: 0rem;
+    width: 28rem;
   }
   75% {
-    width: 0rem;
+    width: 28rem;
   }
   99% {
-    width: 304rem;
+    width: 274rem;
   }
   100% {
-    width: 304rem;
+    width: 274rem;
   }
 }
 .main .visual .keyvisual .zoom .change div img {
@@ -1582,7 +1591,7 @@ button {
   height: 60rem;
 }
 
-/* 간편모드 체험 */
+/* 루키모드 체험 */
 .experience {
   min-height: 100vh;
   background: #16042e url("../images/bg_experience.png") no-repeat 0 0/100% auto;
@@ -2192,7 +2201,7 @@ button {
 .complete .detail {
   width: 360rem;
   height: 430rem;
-  padding: 94rem 0 0 78rem;
+  padding: 95rem 0 0 78rem;
   background: url("../images/detail0.png") no-repeat 0 0/100% 100%;
   text-align: left;
 }

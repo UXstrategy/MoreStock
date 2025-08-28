@@ -1066,16 +1066,23 @@
             margin-top: 235rem;
             .swiper-slide {
                 width: 254rem;
+                background: url("../images/main_visual_back.png") no-repeat 0 0 / 100% 100%;
                 img {
                     width: 100%;
+                    opacity: 0;
                 }
                 .swiper-slide-shadow-left {
+                    margin: 0 -15rem;
                     border-radius: 30rem;
-                    background: url("../images/main_visual_back.png") no-repeat 0 0 / 100% auto;
                 }
                 .swiper-slide-shadow-right {
+                    margin: 0 15rem;
                     border-radius: 30rem;
-                    background: url("../images/main_visual_back.png") no-repeat 0 0 / 100% auto;
+                }
+                &.swiper-slide-active {
+                    img {
+                        opacity: 1;
+                    }
                 }
                 &.slide3 {
                     .step1 {
@@ -1094,6 +1101,7 @@
                         left: 27rem;
                         width: 200rem;
                         height: 206rem;
+                        opacity: 0;
                         div {
                             overflow: hidden;
                             width: 100rem;
@@ -1192,16 +1200,17 @@
                             }
                         }
                         .step2 {
+                            opacity: 1;
                             div {
                                 animation: step1 1.5s .6s linear forwards;
                                 &::after {
                                     animation: step1 1.5s .6s linear forwards;
                                 }
                                 @keyframes step1 {
-                                    25% {width: 0rem;}
-                                    75% {width: 0rem;}
-                                    99% {width: 200rem;}
-                                    100% {width: 200rem;}
+                                    25% {width: 20rem;}
+                                    75% {width: 20rem;}
+                                    99% {width: 178rem;}
+                                    100% {width: 178rem;}
                                 }
                             }
                         }
@@ -1326,10 +1335,10 @@
                             animation: change 1.5s 1.5s linear forwards;
                         }
                         @keyframes change {
-                            25% {width: 0rem;}
-                            75% {width: 0rem;}
-                            99% {width: 304rem;}
-                            100% {width: 304rem;}
+                            25% {width: 28rem;}
+                            75% {width: 28rem;}
+                            99% {width: 274rem;}
+                            100% {width: 274rem;}
                         }
                         img {
                             position: relative;
@@ -1521,7 +1530,7 @@
     }
 }
 
-/* 간편모드 체험 */
+/* 루키모드 체험 */
 .experience {
     min-height: 100vh;
     background: #16042e url("../images/bg_experience.png") no-repeat 0 0 / 100% auto;
@@ -2152,7 +2161,7 @@
     .detail {
         width: 360rem;
         height: 430rem;
-        padding: 94rem 0 0 78rem;
+        padding: 95rem 0 0 78rem;
         background: url("../images/detail0.png") no-repeat 0 0 / 100% 100%;
         text-align: left;
         &.detail1 {

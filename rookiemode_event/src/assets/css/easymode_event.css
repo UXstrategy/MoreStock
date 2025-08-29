@@ -993,42 +993,37 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
 }
 .info_popup .wrap {
   width: 320rem;
-  padding: 20rem;
+  padding: 30rem 20rem 20rem;
   background: #fff;
-  border-radius: 24rem;
-  text-align: center;
+  border-radius: 30rem;
+  text-align: left;
 }
 .info_popup .wrap .title {
-  padding: 22rem 0 20rem;
+  padding-bottom: 8rem;
+  text-align: center;
+  line-height: 28rem;
   font-weight: 700;
-  font-size: 26rem;
-  color: #000;
-}
-.info_popup .wrap .soldout {
-  padding-bottom: 20rem;
-}
-.info_popup .wrap .soldout img {
-  width: 100%;
+  font-size: 20rem;
+  color: #222;
 }
 .info_popup .wrap .text {
-  padding-bottom: 10rem;
-  line-height: 24rem;
-  font-size: 16rem;
-  color: #333;
+  padding-bottom: 30rem;
+  line-height: 22rem;
+  font-size: 14rem;
+  color: #222;
 }
 .info_popup .wrap .text span {
-  font-size: 16rem;
-  color: #b43a6b;
+  font-size: 14rem;
+  color: #ff2c9c;
 }
 .info_popup .wrap button {
   width: 100%;
   height: 56rem;
-  margin-top: 12rem;
-  background: #212266;
+  background: #600cd9;
   border-radius: 16rem;
   font-size: 16rem;
   color: #fff;
@@ -1083,10 +1078,24 @@ button {
   margin-top: 235rem;
 }
 .main .visual .swiper_visual .swiper-slide {
-  width: 254rem;
+  width: 222rem;
+  height: 412rem;
+}
+.main .visual .swiper_visual .swiper-slide .img {
+  position: relative;
+  overflow: hidden;
+  width: 222rem;
+  height: 412rem;
+  padding-top: 8rem;
   background: url("../images/main_visual_back.png") no-repeat 0 0/100% 100%;
+  border-radius: 32rem;
+}
+.main .visual .swiper_visual .swiper-slide .img img {
+  width: 204rem;
+  height: 394rem;
 }
 .main .visual .swiper_visual .swiper-slide img {
+  position: relative;
   width: 100%;
   opacity: 0;
 }
@@ -1104,7 +1113,7 @@ button {
 .main .visual .swiper_visual .swiper-slide.slide3 .step1 {
   position: absolute;
   top: 39rem;
-  left: 154rem;
+  left: 138rem;
   z-index: 10;
   width: 100rem;
   height: 148rem;
@@ -1114,7 +1123,7 @@ button {
 .main .visual .swiper_visual .swiper-slide.slide3 .step2 {
   position: absolute;
   top: 39rem;
-  left: 27rem;
+  left: 11rem;
   width: 200rem;
   height: 206rem;
   opacity: 0;
@@ -1149,7 +1158,7 @@ button {
 .main .visual .swiper_visual .swiper-slide.slide4 .step1 {
   position: absolute;
   top: 44rem;
-  left: 5rem;
+  left: -11rem;
   width: 244rem;
   height: 206rem;
   background: url("../images/main_visual4_1.png") no-repeat 0 0/100% 100%;
@@ -1158,7 +1167,7 @@ button {
 .main .visual .swiper_visual .swiper-slide.slide4 .step2 {
   position: absolute;
   top: 44rem;
-  left: 0;
+  left: -16rem;
   width: 110rem;
   height: 88rem;
   background: url("../images/main_visual4_2.png") no-repeat 0 0/100% 100%;
@@ -1167,7 +1176,7 @@ button {
 .main .visual .swiper_visual .swiper-slide.slide4 .step3 {
   position: absolute;
   top: 53rem;
-  left: 172rem;
+  left: 156rem;
   width: 36rem;
   height: 36rem;
   background: url("../images/main_visual4_3.png") no-repeat 0 0/100% 100%;
@@ -1176,7 +1185,7 @@ button {
 .main .visual .swiper_visual .swiper-slide.slide5 .step1 {
   position: absolute;
   top: 57rem;
-  left: 33rem;
+  left: 17rem;
   width: 192rem;
   height: 196rem;
   background: url("../images/main_visual5_1.png") no-repeat 0 0/100% 100%;
@@ -1185,7 +1194,7 @@ button {
 .main .visual .swiper_visual .swiper-slide.slide5 .step2 {
   position: absolute;
   top: 22rem;
-  left: 99rem;
+  left: 83rem;
   width: 32rem;
   height: 40rem;
   background: url("../images/main_visual5_2.png") no-repeat 0 0/100% 100%;
@@ -1195,12 +1204,30 @@ button {
 .main .visual .swiper_visual .swiper-slide.slide5 .step3 {
   position: absolute;
   top: 46rem;
-  left: 129rem;
+  left: 113rem;
   width: 26rem;
   height: 34rem;
   background: url("../images/main_visual5_3.png") no-repeat 0 0/100% 100%;
   opacity: 0;
   translate: 0 10rem;
+}
+.main .visual .swiper_visual .swiper-slide.swiper-slide-active .img {
+  border: 1rem solid #a591c2;
+}
+.main .visual .swiper_visual .swiper-slide.swiper-slide-active .img::before {
+  content: "";
+  position: absolute;
+  top: -55%;
+  left: -55%;
+  width: 210%;
+  height: 210%;
+  background: linear-gradient(130deg, #b6f2ff 8%, #a851ff 52%, #f72c99 94%);
+  animation: back_rotate 1s linear infinite;
+}
+@keyframes back_rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .main .visual .swiper_visual .swiper-slide.swiper-slide-active.slide3 .step1 {
   animation: slide3_step1 0.5s 0.4s forwards;
@@ -1289,23 +1316,26 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: keyvisual 3s 1s linear forwards;
+  animation: keyvisual 6s 1s linear forwards;
 }
 @keyframes keyvisual {
   0% {
     background: transparent;
   }
-  10% {
+  5% {
     background: #16042e;
   }
-  90% {
+  45% {
+    background: #16042e;
+  }
+  95% {
     background: #16042e;
   }
   99.99% {
     background: transparent;
   }
   100% {
-    display: none;
+    visibility: hidden;
   }
 }
 .main .visual .keyvisual .zoom {
@@ -1316,7 +1346,7 @@ button {
   height: 494rem;
   background: transparent;
   transform: scale(0.83);
-  animation: zoom 3s 1s linear forwards;
+  animation: zoom 6s 1s linear forwards;
 }
 .main .visual .keyvisual .zoom::before {
   content: "";
@@ -1325,16 +1355,19 @@ button {
   left: -28rem;
   width: 360rem;
   height: 570rem;
-  animation: shine 3s 1s linear forwards;
+  animation: shine 6s 1s linear forwards;
 }
 @keyframes shine {
   0% {
     background: transparent;
   }
-  10% {
+  5% {
     background: url("../images/main_visual_shine.png") no-repeat 0 0/100% 100%;
   }
-  90% {
+  45% {
+    background: url("../images/main_visual_shine.png") no-repeat 0 0/100% 100%;
+  }
+  95% {
     background: url("../images/main_visual_shine.png") no-repeat 0 0/100% 100%;
   }
   100% {
@@ -1345,17 +1378,21 @@ button {
   0% {
     transform: scale(0.83);
   }
-  10% {
+  5% {
     transform: scale(1);
     top: calc(50% - 247rem);
   }
-  40% {
+  20% {
     transform: scale(1);
   }
-  60% {
+  30% {
     transform: scale(1);
   }
-  90% {
+  45% {
+    transform: scale(1);
+    top: calc(50% - 247rem);
+  }
+  95% {
     transform: scale(1);
     top: calc(50% - 247rem);
   }
@@ -1369,7 +1406,12 @@ button {
   left: calc(50% - 152rem);
   width: 304rem;
   height: 494rem;
-  perspective: 600rem;
+  animation: change_hide 0.5s 4.5s forwards;
+}
+@keyframes change_hide {
+  100% {
+    opacity: 0;
+  }
 }
 .main .visual .keyvisual .zoom .change div {
   overflow: hidden;
@@ -1383,7 +1425,7 @@ button {
   left: calc(50% - 152rem);
   width: 304rem;
   height: 494rem;
-  background: url("../images/main_visual1.png") no-repeat 0 0/100% 100%;
+  background: url("../images/main_key_visual2.png") no-repeat 0 0/100% 100%;
 }
 .main .visual .keyvisual .zoom .change div::after {
   content: "";
@@ -1404,15 +1446,140 @@ button {
   }
   99% {
     width: 274rem;
+    border-right: 2rem solid #9077e8;
   }
   100% {
     width: 274rem;
+    border-right: 0;
   }
 }
 .main .visual .keyvisual .zoom .change div img {
   position: relative;
   z-index: 1;
   width: 304rem;
+}
+.main .visual .keyvisual .zoom .rookie_mode {
+  position: relative;
+  overflow: hidden;
+  width: 264rem;
+  height: 494rem;
+  margin: 0 auto;
+  padding-top: 10rem;
+  border: 1rem solid #a591c2;
+  border-radius: 38rem;
+  opacity: 0;
+  animation: rookie_mode 0.5s 4.5s forwards;
+}
+.main .visual .keyvisual .zoom .rookie_mode::before {
+  content: "";
+  position: absolute;
+  top: -55%;
+  left: -55%;
+  width: 210%;
+  height: 210%;
+  background: linear-gradient(130deg, #b6f2ff 8%, #a851ff 52%, #f72c99 94%);
+  animation: back_rotate 1s linear infinite;
+}
+@keyframes back_rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rookie_mode {
+  100% {
+    opacity: 1;
+  }
+}
+.main .visual .keyvisual .zoom .rookie_mode img {
+  position: relative;
+  width: 244rem;
+  height: 472rem;
+}
+.main .visual .keyvisual .zoom .touch_guide {
+  position: absolute;
+  overflow: hidden;
+  top: -10rem;
+  left: 9rem;
+  padding: 5rem;
+  border-radius: 23rem;
+  line-height: 0;
+  animation: touch_guide 0.5s 4.5s forwards;
+}
+@keyframes touch_guide {
+  100% {
+    opacity: 0;
+  }
+}
+.main .visual .keyvisual .zoom .touch_guide::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(130deg, #b6f2ff 8%, #a851ff 52%, #f72c99 94%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: rotate 1s linear infinite, btn2_before 0.5s 3.25s forwards;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes btn2_before {
+  100% {
+    opacity: 1;
+  }
+}
+.main .visual .keyvisual .zoom .touch_guide::after {
+  content: "";
+  position: absolute;
+  top: 28rem;
+  left: 75rem;
+  width: 39rem;
+  height: 39rem;
+  background: rgba(35, 167, 255, 0.6);
+  border: 2rem solid rgba(0, 138, 230, 0.9019607843);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(30rem, 30rem);
+  pointer-events: none;
+  animation: pointer 2s 3.5s infinite;
+}
+@keyframes pointer {
+  25% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  35% {
+    transform: scale(0.7);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+.main .visual .keyvisual .zoom .touch_guide img {
+  position: relative;
+  width: 148rem;
+  height: 72rem;
+  transform: scale(0.5);
+  opacity: 0;
+  animation: btn2 0.5s 3s forwards;
+}
+@keyframes btn2 {
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .main .text_event1 {
   padding-bottom: 24rem;

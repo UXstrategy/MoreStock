@@ -39,27 +39,33 @@
             <div class="title"><img src="../assets/images/visual_title.png" alt="루키모드 체험만 하면 최대 1만원!"></div>
             <div class="swiper_unit swiper_visual" data-effect="coverflow" data-loop="false" data-autoplay="true" data-delay="2000">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide slide2"><img src="../assets/images/main_visual2.png" alt="루키모드"></div>
+                    <div class="swiper-slide slide2"><div class="img"><img src="../assets/images/main_visual2.png" alt="루키모드"></div></div>
                     <div class="swiper-slide slide3">
-                        <img src="../assets/images/main_visual3.png" alt="한가지 앱, 두가지 모드">
+                        <div class="img"><img src="../assets/images/main_visual3.png" alt="한가지 앱, 두가지 모드"></div>
                         <div class="step1"></div>
                         <div class="step2"><div><img src="../assets/images/main_visual3_2.png" alt="루키모드"></div></div>
                     </div>
                     <div class="swiper-slide slide4">
-                        <img src="../assets/images/main_visual4.png" alt="주식 거래에만 집중">
+                        <div class="img"><img src="../assets/images/main_visual4.png" alt="주식 거래에만 집중"></div>
                         <div class="step1"></div>
                         <div class="step2"></div>
                         <div class="step3"></div>
                     </div>
                     <div class="swiper-slide slide5">
-                        <img src="../assets/images/main_visual5.png" alt="다양한 거래 선택지">
+                        <div class="img"><img src="../assets/images/main_visual5.png" alt="다양한 거래 선택지"></div>
                         <div class="step1"></div>
                         <div class="step2"></div>
                         <div class="step3"></div>
                     </div>
                 </div>
             </div>
-            <div class="keyvisual"><div class="zoom"><div class="change"><div><img src="../assets/images/main_visual2.png" alt="루키모드"></div></div></div></div>
+            <div class="keyvisual">
+                <div class="zoom">
+                    <div class="change"><div><img src="../assets/images/main_key_visual1.png" alt="일반모드"></div></div>
+                    <div class="rookie_mode"><img src="../assets/images/main_key_visual3.png" alt="루키모드"></div>
+                    <button type="button" class="touch_guide"><img src="../assets/images/btn1.png" alt="루키모드버튼"></button>
+                </div>
+            </div>
         </div>
         <div class="text_event1"><img src="../assets/images/text_event1.png" alt="네이버페이 1,000원 드려요"></div>
         <div class="img_event1"><img src="../assets/images/img_event1.png" alt="선착순 30만명"></div>
@@ -127,6 +133,33 @@
             </div>
         </div>
         <div class="btn_rookie"><button type="button"><img src="../assets/images/btn_experience.png" alt="루키모드 체험하기"></button></div>
+
+        <!-- 조기종료 안내 -->
+        <div class="info_popup" style="display: none;">
+            <div class="dim"></div>
+            <div class="wrap">
+                <div class="title">조기종료 안내</div>
+                <div class="text">
+                    루키모드 오픈 이벤트에 많은 관심 가져주셔서<br>
+                    감사합니다.<br>
+                    많은 관심과 성원으로 이벤트가 <span>조기종료</span> 되었습니다. 새로운 이벤트로 다시 돌아오겠습니다!
+                </div>
+                <button type="button">확인</button>
+            </div>
+        </div>
+
+        <!-- 종료 안내 -->
+        <div class="info_popup" style="display: none;">
+            <div class="dim"></div>
+            <div class="wrap">
+                <div class="title">종료 안내</div>
+                <div class="text">
+                    루키모드 오픈 이벤트가 종료되었습니다.<br>
+                    새로운 이벤트로 다시 돌아오겠습니다!
+                </div>
+                <button type="button">확인</button>
+            </div>
+        </div>
     </div>
     
     <script src="../assets/js/jquery-3.3.1.min.js"></script>
@@ -140,10 +173,10 @@
         }, 100);
         setTimeout(() => {
             swiperSet.getter()[0].autoplay.start();
-        }, 2000);
+        }, 5000);
         setTimeout(() => {
             $("body").removeClass("non_scroll");
-        }, 4000);
+        }, 7000);
     </script>
 </body>
 </html>

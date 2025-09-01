@@ -1088,6 +1088,13 @@
                     margin: 0 15rem;
                     border-radius: 30rem;
                 }
+                &:nth-child(1) {
+                    opacity: 0;
+                    animation: first_slide .5s 1s forwards;
+                    @keyframes first_slide {
+                        100% {opacity: 1;}
+                    }
+                }
                 &.swiper-slide-active {
                     img {
                         opacity: 1;
@@ -1316,13 +1323,13 @@
                     left: -28rem;
                     width: 360rem;
                     height: 570rem;
+                    background: url("../images/main_visual_shine.png") no-repeat 0 0 / 100% 100%;
+                    opacity: 0;
                     animation: shine 6s 1s linear forwards;
                     @keyframes shine {
-                        0% {background: transparent;}
-                        5% {background: url("../images/main_visual_shine.png") no-repeat 0 0 / 100% 100%;}
-                        45% {background: url("../images/main_visual_shine.png") no-repeat 0 0 / 100% 100%;}
-                        95% {background: url("../images/main_visual_shine.png") no-repeat 0 0 / 100% 100%;}
-                        100% {background: transparent;}
+                        5% {opacity: 1;}
+                        95% {opacity: 1;}
+                        100% {opacity: 0;}
                     }
                 }
                 @keyframes zoom {
@@ -1350,6 +1357,12 @@
                         overflow: hidden;
                         width: 152rem;
                         animation: change 1.5s 1.5s linear forwards;
+                        @keyframes change {
+                            25% {width: 28rem;}
+                            75% {width: 28rem;}
+                            99% {width: 274rem;}
+                            100% {width: 274rem;}
+                        }
                         &::before {
                             content: "";
                             position: absolute;
@@ -1367,13 +1380,13 @@
                             width: 152rem;
                             height: 534rem;
                             border-right: 2rem solid #9077e8;
-                            animation: change 1.5s 1.5s linear forwards;
-                        }
-                        @keyframes change {
-                            25% {width: 28rem;}
-                            75% {width: 28rem;}
-                            99% {width: 274rem; border-right: 2rem solid #9077e8;}
-                            100% {width: 274rem; border-right: 0;}
+                            animation: change_border 1.5s 1.5s linear forwards;
+                            @keyframes change_border {
+                                25% {width: 28rem;}
+                                75% {width: 28rem;}
+                                99% {width: 274rem; border-right: 2rem solid #9077e8;}
+                                100% {width: 274rem; border-right: 0;}
+                            }
                         }
                         img {
                             position: relative;
@@ -1392,7 +1405,7 @@
                     border: 1rem solid #a591c2;
                     border-radius: 38rem;
                     opacity: 0;
-                    animation: rookie_mode .5s 4.5s forwards;
+                    animation: rookie_mode .5s 4.0s forwards;
                     &::before {
                         content: "";
                         position: absolute;
@@ -2276,11 +2289,18 @@
             height: 24rem;
         }
     }
-    .title_event {
+    .title_event1 {
         padding: 70rem 0 30rem;
         img {
-            width: 244rem;
-            height: 141rem;
+            width: 286rem;
+            height: 160rem;
+        }
+    }
+    .title_event2 {
+        padding: 70rem 0 30rem;
+        img {
+            width: 253rem;
+            height: 160rem;
         }
     }
     .title_naverpay {
@@ -2301,13 +2321,13 @@
         padding: 76rem 0 20rem;
         img {
             width: 306rem;
-            height: 112rem;
+            height: 94rem;
         }
     }
     .complete_event {
         img {
             width: 360rem;
-            height: 387rem;
+            height: 352rem;
         }
     }
     .point {
@@ -2318,8 +2338,8 @@
     }
     .detail {
         width: 360rem;
-        height: 430rem;
-        padding: 96rem 0 0 78rem;
+        height: 380rem;
+        padding: 91rem 0 0 78rem;
         background: url("../images/detail0.png") no-repeat 0 0 / 100% 100%;
         text-align: left;
         &.detail1 {
@@ -2332,13 +2352,20 @@
             background: url("../images/detail3.png") no-repeat 0 0 / 100% 100%;
         }
         li {
-            padding-bottom: 134rem;
+            padding-bottom: 114rem;
             font-size: 12rem;
             color: #cccfd4;
             span {
                 font-size: 12rem;
                 color: #d2b2ff;
             }
+        }
+    }
+    .information {
+        padding-top: 30rem;
+        img {
+            width: 312rem;
+            height: 102rem;
         }
     }
     .btn_bottom {

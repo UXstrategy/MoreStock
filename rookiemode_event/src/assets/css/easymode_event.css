@@ -1107,6 +1107,15 @@ button {
   margin: 0 15rem;
   border-radius: 30rem;
 }
+.main .visual .swiper_visual .swiper-slide:nth-child(1) {
+  opacity: 0;
+  animation: first_slide 0.5s 1s forwards;
+}
+@keyframes first_slide {
+  100% {
+    opacity: 1;
+  }
+}
 .main .visual .swiper_visual .swiper-slide.swiper-slide-active img {
   opacity: 1;
 }
@@ -1355,23 +1364,19 @@ button {
   left: -28rem;
   width: 360rem;
   height: 570rem;
+  background: url("../images/main_visual_shine.png") no-repeat 0 0/100% 100%;
+  opacity: 0;
   animation: shine 6s 1s linear forwards;
 }
 @keyframes shine {
-  0% {
-    background: transparent;
-  }
   5% {
-    background: url("../images/main_visual_shine.png") no-repeat 0 0/100% 100%;
-  }
-  45% {
-    background: url("../images/main_visual_shine.png") no-repeat 0 0/100% 100%;
+    opacity: 1;
   }
   95% {
-    background: url("../images/main_visual_shine.png") no-repeat 0 0/100% 100%;
+    opacity: 1;
   }
   100% {
-    background: transparent;
+    opacity: 0;
   }
 }
 @keyframes zoom {
@@ -1418,6 +1423,20 @@ button {
   width: 152rem;
   animation: change 1.5s 1.5s linear forwards;
 }
+@keyframes change {
+  25% {
+    width: 28rem;
+  }
+  75% {
+    width: 28rem;
+  }
+  99% {
+    width: 274rem;
+  }
+  100% {
+    width: 274rem;
+  }
+}
 .main .visual .keyvisual .zoom .change div::before {
   content: "";
   position: absolute;
@@ -1435,9 +1454,9 @@ button {
   width: 152rem;
   height: 534rem;
   border-right: 2rem solid #9077e8;
-  animation: change 1.5s 1.5s linear forwards;
+  animation: change_border 1.5s 1.5s linear forwards;
 }
-@keyframes change {
+@keyframes change_border {
   25% {
     width: 28rem;
   }
@@ -1468,7 +1487,7 @@ button {
   border: 1rem solid #a591c2;
   border-radius: 38rem;
   opacity: 0;
-  animation: rookie_mode 0.5s 4.5s forwards;
+  animation: rookie_mode 0.5s 4s forwards;
 }
 .main .visual .keyvisual .zoom .rookie_mode::before {
   content: "";
@@ -2329,12 +2348,19 @@ button {
   width: 24rem;
   height: 24rem;
 }
-.complete .title_event {
+.complete .title_event1 {
   padding: 70rem 0 30rem;
 }
-.complete .title_event img {
-  width: 244rem;
-  height: 141rem;
+.complete .title_event1 img {
+  width: 286rem;
+  height: 160rem;
+}
+.complete .title_event2 {
+  padding: 70rem 0 30rem;
+}
+.complete .title_event2 img {
+  width: 253rem;
+  height: 160rem;
 }
 .complete .title_naverpay {
   padding: 40rem 0 34rem;
@@ -2355,11 +2381,11 @@ button {
 }
 .complete .title_detail img {
   width: 306rem;
-  height: 112rem;
+  height: 94rem;
 }
 .complete .complete_event img {
   width: 360rem;
-  height: 387rem;
+  height: 352rem;
 }
 .complete .point img {
   width: 292rem;
@@ -2367,8 +2393,8 @@ button {
 }
 .complete .detail {
   width: 360rem;
-  height: 430rem;
-  padding: 96rem 0 0 78rem;
+  height: 380rem;
+  padding: 91rem 0 0 78rem;
   background: url("../images/detail0.png") no-repeat 0 0/100% 100%;
   text-align: left;
 }
@@ -2382,13 +2408,20 @@ button {
   background: url("../images/detail3.png") no-repeat 0 0/100% 100%;
 }
 .complete .detail li {
-  padding-bottom: 134rem;
+  padding-bottom: 114rem;
   font-size: 12rem;
   color: #cccfd4;
 }
 .complete .detail li span {
   font-size: 12rem;
   color: #d2b2ff;
+}
+.complete .information {
+  padding-top: 30rem;
+}
+.complete .information img {
+  width: 312rem;
+  height: 102rem;
 }
 .complete .btn_bottom {
   position: fixed;

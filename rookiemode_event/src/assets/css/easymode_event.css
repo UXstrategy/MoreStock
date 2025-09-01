@@ -1083,6 +1083,7 @@ button {
 }
 .main .visual .swiper_visual .swiper-slide .img {
   position: relative;
+  z-index: 0;
   overflow: hidden;
   width: 222rem;
   height: 412rem;
@@ -2359,7 +2360,7 @@ button {
   padding: 70rem 0 30rem;
 }
 .complete .title_event2 img {
-  width: 253rem;
+  width: 246rem;
   height: 160rem;
 }
 .complete .title_naverpay {

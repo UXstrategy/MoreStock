@@ -1521,6 +1521,13 @@
                 }
             }
         }
+        .btn_detail {
+            margin-top: 44rem;
+            img {
+                width: 116rem;
+                height: 30rem;
+            }
+        }
     }
     .text_event1 {
         padding-bottom: 24rem;
@@ -1564,12 +1571,10 @@
             height: 252rem;
         }
     }
-    .btn_detail {
+    .notice {
         padding-bottom: 40rem;
-        img {
-            width: 248rem;
-            height: 52rem;
-        }
+        font-size: 12rem;
+        color: #999;
     }
     .swiper_wrap {
         height: 560rem;
@@ -2291,16 +2296,16 @@
         }
     }
     .title_event1 {
-        padding: 70rem 0 30rem;
+        padding: 70rem 0 26rem;
         img {
-            width: 286rem;
-            height: 160rem;
+            width: 304rem;
+            height: 159rem;
         }
     }
     .title_event2 {
-        padding: 70rem 0 30rem;
+        padding: 70rem 0 26rem;
         img {
-            width: 246rem;
+            width: 269rem;
             height: 160rem;
         }
     }

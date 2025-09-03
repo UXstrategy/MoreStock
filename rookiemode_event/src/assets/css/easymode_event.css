@@ -1601,6 +1601,13 @@ button {
     transform: scale(1);
   }
 }
+.main .visual .btn_detail {
+  margin-top: 44rem;
+}
+.main .visual .btn_detail img {
+  width: 116rem;
+  height: 30rem;
+}
 .main .text_event1 {
   padding-bottom: 24rem;
 }
@@ -1643,12 +1650,10 @@ button {
   width: 292rem;
   height: 252rem;
 }
-.main .btn_detail {
+.main .notice {
   padding-bottom: 40rem;
-}
-.main .btn_detail img {
-  width: 248rem;
-  height: 52rem;
+  font-size: 12rem;
+  color: #999;
 }
 .main .swiper_wrap {
   height: 560rem;
@@ -2350,17 +2355,17 @@ button {
   height: 24rem;
 }
 .complete .title_event1 {
-  padding: 70rem 0 30rem;
+  padding: 70rem 0 26rem;
 }
 .complete .title_event1 img {
-  width: 286rem;
-  height: 160rem;
+  width: 304rem;
+  height: 159rem;
 }
 .complete .title_event2 {
-  padding: 70rem 0 30rem;
+  padding: 70rem 0 26rem;
 }
 .complete .title_event2 img {
-  width: 246rem;
+  width: 269rem;
   height: 160rem;
 }
 .complete .title_naverpay {

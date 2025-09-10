@@ -716,7 +716,7 @@ button {
 }
 .ready .text_guide .limit {
   position: absolute;
-  top: 436rem;
+  top: 438rem;
   left: 127rem;
   font-weight: 500;
   font-size: 16rem;
@@ -729,7 +729,7 @@ button {
 }
 .ready .text_guide .text {
   position: absolute;
-  top: 457rem;
+  top: 459rem;
   left: 127rem;
   font-weight: 500;
   font-size: 16rem;
@@ -810,7 +810,7 @@ button {
   align-items: center;
   gap: 6rem;
   position: absolute;
-  top: 78rem;
+  top: 80rem;
   left: 28rem;
   width: 143rem;
   height: 40rem;
@@ -855,7 +855,7 @@ button {
 }
 .start .time {
   position: absolute;
-  top: 77rem;
+  top: 79rem;
   right: 28rem;
   overflow: hidden;
   width: 142rem;

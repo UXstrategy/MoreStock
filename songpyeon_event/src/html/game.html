@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>추석 송편 만들기 이벤트</title>
+
+    <!-- include css-->
+    <!-- <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/reset.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/share.css?20240520">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/common.css?20240520"> -->
+
+    <!-- include js-->
+    <!-- <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-3.5.0.min.js?20231018"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/fontfaceonload.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/share.js?20210811"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/interaction.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/browser.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/appLink.js?20220928"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/kwscommon.js"></script> -->
+    
+    <link rel="stylesheet" href="../assets/css/songpyeon_event.css">
+</head>
+<body>
+    <div class="wrap main">
+        <header>
+            <h1><img src="../assets/images/logo.png" alt="튜브 바람 넣기 챌린지"></h1>
+            <button type="button" class="btn_close"><img src="../assets/images/btn_close.png" alt="닫기"></button>
+        </header>
+        <div class="ready">
+            <div class="text_guide">
+                <div class="limit">제한시간 : <span><span class="second"></span>초</span></div>
+                <div class="text">목표개수 : <span><span class="goal"></span>개</span></div>
+            </div>
+            <div class="text_ready"><div class="ready_count"></div></div>
+        </div>
+        <div class="start">
+            <div class="round_guide">
+                <div class="limit">제한시간 : <span><span class="second"></span>초</span></div>
+                <div class="text">목표개수 : <span><span class="goal"></span>개</span></div>
+            </div>
+            <div class="success_goal">
+                <div class="success_wrap"><ol class="success"><li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li><li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>24</li><li>25</li><li>26</li><li>27</li><li>28</li><li>29</li><li>30</li><li>31</li><li>32</li><li>33</li><li>34</li><li>35</li><li>36</li><li>37</li><li>38</li><li>39</li><li>40</li><li>41</li><li>42</li><li>43</li><li>44</li><li>45</li><li>46</li><li>47</li><li>48</li><li>49</li><li>50</li><li>51</li><li>52</li><li>53</li><li>54</li><li>55</li><li>56</li><li>57</li><li>58</li><li>59</li><li>60</li><li>61</li><li>62</li><li>63</li><li>64</li><li>65</li><li>66</li><li>67</li><li>68</li><li>69</li><li>70</li><li>71</li><li>72</li><li>73</li><li>74</li><li>75</li><li>76</li><li>77</li><li>78</li><li>79</li><li>80</li><li>81</li><li>82</li><li>83</li><li>84</li><li>85</li><li>86</li><li>87</li><li>88</li><li>89</li><li>90</li><li>91</li><li>92</li><li>93</li><li>94</li><li>95</li><li>96</li><li>97</li><li>98</li><li>99</li><li>100</li></ol></div>
+                <div class="slash">/</div>
+                <div class="goal"></div>
+            </div>
+            <div class="time"><div class="timer"></div></div>
+            <ul class="plate">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="material"></div>
+            <div class="songpyeon"></div>
+            <div class="spoon"></div>
+            <div class="plus"></div>
+            <div class="gameover"></div>
+            <ul class="btn_put">
+                <li class="put0"></li>
+                <li class="put1"></li>
+                <li class="put2"></li>
+                <li class="put3"></li>
+            </div>
+        </div>
+        <div class="result">
+            <div class="btn_wrap">
+                <button type="button" class="btn_share" onclick="location.href='../html/game.html'"><img src="../assets/images/btn_share.png" alt="공유 후 재도전"></button>
+                <button type="button" class="btn_point"><img src="../assets/images/btn_point.png" alt="포인트 수령"></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        let round = 1;
+        let goal = 2;
+        let second = 10;
+        let ten = 0;
+        let count = 0;
+        let success = 0;
+        let score = 0;
+        let touch = true;
+        $(".second").text(second);
+        $(".goal").text(goal);
+        setTimeout(() => {
+            $(".text_guide").hide();
+            $(".text_ready").show();
+        }, 2000);
+        setTimeout(() => {
+            $(".ready").hide();
+            $(".start").show();
+            start();
+        }, 3000);
+        function start() {
+            if (round == 2) {
+                goal = 4;
+                second = 10;
+            } else if (round == 3) {
+                goal = 6;
+                second = 10;
+            } else if (round == 4) {
+                goal = 8;
+                second = 10;
+            } else if (round == 5) {
+                goal = 10;
+                second = 10;
+            }
+            $(".goal").text(goal);
+            $(".second").text(second);
+            $(".success").css("top", "0");
+            if (round == 1) {
+                timeLimit();
+            } else {
+                $(".round_guide").addClass("round_guide" + round).show();
+                setTimeout(() => {
+                    $(".round_guide").hide();
+                    touch = true;
+                    timeLimit();
+                }, 2000);
+            }
+            second = second - 1;
+            ten = 99;
+            success = 0;
+            score = 0;
+            function timeLimit() {
+                limitInterval = setInterval(()=> {
+                    ten--;
+                    if (ten < 10) {
+                        ten = "0" + ten;
+                    }
+                    if (ten == 0) {
+                        second--;
+                        ten = 99;
+                    }
+                    $(".timer").text(second + " : " + ten);
+                    if (second < 0) {
+                        clearInterval(limitInterval);
+                        $(".timer").text("0 : 00");
+                        $(".gameover").show();
+                        touch = false;
+                        setTimeout(() => {
+                            $(".start").hide();
+                            $(".result").show().addClass("result" + round);
+                            if (round == 1) {
+                                $(".btn_point").hide();
+                            }
+                        }, 2000);
+                    }
+                }, 10);
+            }
+            $(".plate li").removeClass();
+            $(".plate li").each(function() {
+                $(this).addClass("plate" + Math.floor(Math.random() * 4));
+            });
+        }
+        $(".btn_put li").off().on("touchstart", function() {
+            if (touch) {
+                if ($(this).attr("class").slice(-1) == $(".plate li").eq(count).attr("class").slice(-1)) {
+                    $(".spoon").addClass("spoon" + count);
+                    if (count == 3) {
+                        count = 0;
+                        success++;
+                        score = score - 28;
+                        $(".success").css("top", score + "rem");
+                        $(".songpyeon").removeClass("songpyeon_complete songpyeon0 songpyeon1 songpyeon2 songpyeon3");
+                        $(".plus").addClass("active");
+                        setTimeout(() => {
+                            $(".spoon").removeClass("spoon0 spoon1 spoon2 spoon3");
+                            $(".plus").removeClass("active");
+                        }, 500);
+                        if (success == goal) {
+                            clearInterval(limitInterval);
+                            round++;
+                            touch = false;
+                            $(".songpyeon").addClass("songpyeon_complete");
+                            setTimeout(() => {
+                                if (round == 6) {
+                                    $(".start").hide();
+                                    $(".result").show().addClass("result" + round);
+                                    $(".btn_share").hide();
+                                } else {
+                                    count = 0;
+                                    $(".timer").text("10 : 00");
+                                    $(".songpyeon").removeClass("songpyeon_complete");
+                                    start();
+                                }
+                            }, 1000);
+                        } else {
+                            $(".plate li").removeClass();
+                            $(".plate li").each(function() {
+                                $(this).addClass("plate" + Math.floor(Math.random() * 4));
+                            });
+                        }
+                    } else {
+                        count++;
+                        $(".songpyeon").addClass("songpyeon" + count);
+                    }
+                } else {
+                    count = 0;
+                    $(".spoon").removeClass("spoon0 spoon1 spoon2 spoon3");
+                    $(".songpyeon").removeClass("songpyeon_complete songpyeon0 songpyeon1 songpyeon2 songpyeon3");
+                }
+            }
+        });
+    </script>
+</body>
+</html>

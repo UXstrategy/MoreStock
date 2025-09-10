@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>추석 송편 만들기 이벤트</title>
+
+    <!-- include css-->
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/reset.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/share.css?20240520">
+    <link rel="stylesheet" href="https://www1.kiwoom.com/m/kms/assets/css/common.css?20240520">
+
+    <!-- include js-->
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-3.5.0.min.js?20231018"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/lib/fontfaceonload.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/share.js?20210811"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/interaction.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/browser.js"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/appLink.js?20220928"></script>
+    <script type="text/javascript" src="https://www1.kiwoom.com/m/kms/assets/js/kwscommon.js"></script>
+    
+    <link rel="stylesheet" href="../assets/css/songpyeon_event.css">
+</head>
+<body>
+    <div class="wrap event">
+        <div class="content"><img src="../assets/images/event.png" alt=""></div>
+        <div class="header">
+            <h1><img src="../assets/images/logo_header.png" alt="키움증권"></h1>
+            <div class="share"><button type="button"><img src="../assets/images/btn_kakao.png" alt="카카오톡 공유하기"></button></div>
+        </div>
+        <div class="notice_wrap">
+            <dl class="notice">
+                <dt>이벤트 유의사항</dt>
+                <dd>
+                    <ul>
+                        <li>본 이벤트는 개인(신용)정보 선택 동의서에 따라 선택/서비스<br>안내 등에 동의하신 고객에 한하여 참여할 수 있습니다.<br>(이벤트 신청 필수)</li>
+                        <li>본 이벤트는 법인고객의 참여가 제외됩니다.</li>
+                        <li>본 이벤트는 당사의 사정으로 조기 종료될 수 있습니다.<br>(단, 상금 기 확정고객 제외)</li>
+                        <li>본 이벤트는 이벤트 페이지를 통해 이벤트 기간 내 게임에 참여한 고객에 한해 상금이 지급됩니다.</li>
+                        <li>당첨된 상금은 이벤트 종료 후 2주 이내 지급되는 것을 원칙으로 하나, 당사의 사유로 일부 지연될 수도 있습니다.</li>
+                        <li>당첨된 상금은 1인 최대 1회 지급이며, 상금 확정 시, 재도전이 불가합니다.</li>
+                        <li>부정한 방법을 통한 이벤트 참여는 당첨 취소 사유가 될 수 있습니다.</li>
+                        <li class="red">포인트 지급 시점에 정상 계좌를 보유하지 않거나 포인트 서비스에 가입되어 있지 않은 경우에는 포인트 지급이 불가합니다.</li>
+                        <li>1포인트는 1원과 동일한 가치를 지닙니다.</li>
+                        <li>본 이벤트의 동일인 한도는 10,000원이며, 동일 고객에게 지급되는 총 혜택은 동일인 한도를 초과할 수 없습니다.</li>
+                        <li>재도전할 경우, 게임 성적은 초기화되어 시작합니다. 참여 가능 기회 부족 시, 친구에게 공유하기를 통해 재도전이 가능하며, 공유 횟수는 무제한 입니다.</li>
+                        <li>공유하기를 통해 재도전 기회를 획득하지 않더라도, 1일 1회 한정하여 참여 기회가 기본 부여됩니다.</li>
+                        <li>본 이벤트와 관련한 문의사항은 키움금융센터(T.1544-9000),<br>나이트데스크(T.1544-8400)나 본사 영업부에서 안내 받으실 수 있습니다.</li>
+                    </ul>
+                </dd>
+                <dt>거래 유의사항</dt>
+                <dd>
+                    <ul>
+                        <li>투자자는 금융투자상품에 대하여, 키움증권으로부터 충분한 설명을 받을 권리가 있으며, 투자 전 상품설명서 및 약관을 반드시 읽어보시기 바랍니다.</li>
+                        <li>이 금융상품은 예금자보호법에 따라 보호되지 않습니다.</li>
+                        <li>금융투자상품 자산가격 변동, 환율 변동, 신용등급 하락 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</li>
+                        <li>주식거래 시 수수료는 0.015% (KRX), 0.0145% (NXT)이며, 기타 자세한 사항은 홈페이지 등을 참고하시기 바랍니다. NXT(넥스트레이드)는 자본시장법상 다자간매매체결회사로 대체거래소(ATS:Alternative Trading System)입니다.</li>
+                        <li>원활한 경품 지급 및 금융사기 예방을 위하여 고객정보는 반드시 최신정보로 관리하시기 바랍니다.</li>
+                        <li>본 이벤트는 단순 이벤트 안내이며, 투자권유 및 추천이 아닙니다.</li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="footer">
+                <div class="logo"><img src="../assets/images/logo_footer.png" alt="키움증권"></div>
+                <p>키움증권 준법감시인 심사필 2025-01818호<br>(2025.08.28 ~ 2025.09.30)</p>
+            </div>
+        </div>
+        <div class="btn_wrap"><button type="button" onclick="popup.open('popup_event');"><img src="../assets/images/btn_start.png" alt="게임 시작하기"></button></div>
+    </div>
+
+    <!-- 이벤트 이용동의 바텀시트 -->
+    <div class="popup popup_event none bottomsheet">
+        <div class="dim"></div>
+        <div class="popup_container">
+            <div class="pop_header">
+                <h1>이벤트 이용동의</h1>
+                <div class="close"><button type="button" onclick="popup.close('popup_event')">닫기</button></div>
+            </div>
+            <div class="pop_body">
+                <dl class="agree_wrap">
+                    <dt>이벤트 참여를 위해서는 개인(신용)정보 <br>수집·이용 동의가 필요해요.</dt>
+                    <dd>
+                        <p class="all_agree">
+                            <input type="checkbox" id="chk_all_1">
+                            <label for="chk_all_1">개인(신용)정보 수집·이용 동의</label>
+                        </p>
+                        <ul class="agree_list">
+                            <li>
+                                <input type="checkbox" id="chk_1_1" data-class="popup_collect_agree">
+                                <label for="chk_1_1">개인(신용)정보 수집·이용</label>
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt>이벤트를 통해 지급되는 키움포인트 적립 또는 사용을 위해 이용 동의가 필요해요.</dt>
+                    <dd>
+                        <p class="all_agree">
+                            <input type="checkbox" id="chk_all_2">
+                            <label for="chk_all_2">전체동의</label>
+                        </p>
+                        <ul class="agree_list">
+                            <li>
+                                <input type="checkbox" id="chk_2_1" data-class="popup_point">
+                                <label for="chk_2_1">키움포인트 약관동의</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="chk_2_2" data-class="popup_agree">
+                                <label for="chk_2_2">개인신용정보 수집·이용</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="chk_2_3" data-class="popup_alarm">
+                                <label for="chk_2_3">포인트 안내 앱 Push</label>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="btn_wrap"><button type="button" class="btn_all_agree" disabled>동의하기</button></div>
+        </div>
+    </div>
+
+    <!-- 개인(신용)정보 필수 동의 -->
+    <div class="popup popup_collect_agree none full">
+        <div class="popup_container">
+            <div class="con">
+                <div class="pop_header">
+                    <h1>개인(신용)정보 동의</h1>
+                    <div class="close"><button type="button" onclick="popup.close('popup_collect_agree')">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <section class="layer-pop-wrap" id="dialog_modal_6" usetype="" style="z-index: 207; display: block;">
+                        <div class="accessbilityLast offscreen" tabindex="0" aria-hidden="true"></div>
+                        <div class="layerMask" aria-hidden="true"></div>
+                        <div class="layer-box full layer-evt-agreement-page" tabindex="0">
+                            <div class="layer-head"><h1 class="layer-tit">개인(신용)정보 동의</h1></div>
+                            <div class="layer-body" style="padding-top: 87px; padding-bottom: 308px; max-height: 858px;">
+                                <div class="layer-content">
+                                    <div class="agreement-personal page">
+                                        <div class="agreement-personal-title"><h2 class="head-title">'튜브 바람 넣기 챌린지' 이벤트 참여·경품 지급을 위한 수집·이용</h2></div>
+                                        <div class="agreement-grade">
+                                            <h2 class="con-title"><span class="num">1</span> 수집·이용에 관한 사항</h2>
+                                            <div class="step"><img src="https://www.kiwoom.com/e/kms/assets/images/biz/agreement/evt-agree-step-01.png" alt="안심등급"></div>
+                                            <div class="qr"><img src="../assets/images/FIA00014-2024-00017.png" alt="qr코드"></div>
+                                            <div class="desc"><i>※</i> 위 등급은 사생활 침해 위험, 혜택, 명확성 등을 종합적으로 고려하여 동의내용의 평가등급을 제공하는 제도입니다.(자세한 사항 QR코드 참조)</div>
+                                        </div>
+                                        <div class="table-agreement-container">
+                                            <table>
+                                                <caption>개인정보 수집·이용 목적, 보유 및 이용기간, 거부 권리 및 불이익을 포함하고 있는 표</caption>
+                                                <colgroup>
+                                                    <col style="width: 41%">
+                                                    <col style="width: auto">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">수집·이용 목적</th>
+                                                        <td>
+                                                            <div class="em">‘튜브 바람 넣기 챌린지’ 이벤트 참여·경품 지급</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">보유 및 이용기간</th>
+                                                        <td>
+                                                            <div class="em">- 당해 이벤트 종료일까지 1년 이내(또는 동의철회 시)까지</div>
+                                                            <div>위 보유 기간에서의 이벤트 종료일이란 해당 ‘튜브 바람 넣기 챌린지’의 종료일을 의미합니다.</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">거부 권리 및 불이익</th>
+                                                        <td>
+                                                            귀하는 개인(신용)정보의 선택적인 수집‧이용에 대한 동의를 거부할 수 있습니다.<br>
+                                                            다만, 수집‧이용에 동의하지 않으실 경우 ‘‘튜브 바람 넣기 챌린지’의 혜택을 받지 못할 수 있습니다.<br>
+                                                            또한, 동의하시더라도 키움금융센터(1544-9000)를 통해 언제든지 철회하실 수 있습니다.
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <h3 class="form-table-title">수집·이용 항목</h3>
+                                        <div class="table-agreement-container">
+                                            <table>
+                                                <caption>고유식별번호,민감정보,개인(신용)정보 항목에 대한 동의여부를 포함하고 있는 표</caption>
+                                                <colgroup>
+                                                    <col style="width: 35%">
+                                                    <col style="width: auto">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row"><span class="input-check">개인(신용)정보</span></th>
+                                                        <td>
+                                                            <dl class="inner-table">
+                                                                <dt>일반개인정보</dt><dd>고객번호, 성명, 휴대전화번호, 고객아이디</dd>
+                                                                <dt>신용거래정보</dt><dd>거래내역, 계좌번호</dd>
+                                                            </dl>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="agreement-check-all">
+                                            <div class="text">위 개인신용정보 <span class="underline">수집·이용</span>에 동의하십니까?<span class="label-agree-grade type-round grade01">안심</span></div>
+                                        </div>
+                                        <div class="agreement-grade">
+                                            <div class="desc"><i>※</i> 상품 서비스 안내 등 수집 이용 목적을 달성하기 위해 위의 동의한 안내수단으로 고객님께 문자 및 전화로 연락할 수 있습니다.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-layer-close" onclick="popup.close('popup_collect_agree')"><em class="offscreen">닫기</em></button>
+                                <div class="layer-foot">
+                                    <div class="logo-group">
+                                        <div class="logo"><img src="https://www.kiwoom.com/e/kms/assets/images/biz/agreement/evt-agree-footer-logo.png" alt="키움증권"></div>
+                                        <div class="date">2024년 06월 25일</div>
+                                    </div>
+                                    <div class="btn-page-wrap">
+                                        <div class="inner-flex">
+                                            <div class="btn-item">
+                                                <button type="button" class="btn-primary white cancel" onclick="popup.close('popup_collect_agree')"><span>취소</span></button>
+                                            </div>
+                                            <div class="btn-item">
+                                                <button type="button" class="btn-primary confirm agree_btn" data-class="popup_collect_agree"><span>확인</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accessbilityFirst offscreen" tabindex="0" aria-hidden="true"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 알림 서비스 동의 -->
+    <div class="popup popup_alarm none full">
+        <div class="popup_container">
+            <div class="con">
+                <div class="pop_header">
+                    <h1>알림 서비스 동의</h1>
+                    <div class="close"><button type="button" onclick="popup.close('popup_alarm')">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <p class="info">포인트, 국내주식, 해외주식, 계좌/상품, 혜택/이벤트 등 맞춤 정보를 받아보기 위한 동의에요.</p>
+                    <dl class="notice">
+                        <dt>유의사항</dt>
+                        <dd>
+                            <ol>
+                                <li>
+                                    <p class="tit">1. 국내주식 / 해외주식 알림 신청 안내</p>
+                                    <ul class="list_dot">
+                                        <li>본 서비스는 영웅문4 [0862] 알리미 등록/해제 또는 홈페이지 &gt; 온라인지점 &gt; 서비스신청 &gt; 알리미서비스에서도 신청이 가능합니다.</li>
+                                        <li>알림 서비스는 ID당 하나의 스마트폰만 이용 가능합니다.</li>
+                                        <li>알림 메세지는 고객정보와 상관없이 신청한 스마트폰으로 통보됩니다.</li>
+                                        <li>통신사 네트워크 사정에 따라 메세지가 지연/누락되는 경우 발생하므로, 반드시 알림 발송 여부 등을 수시로 확인하셔야 합니다. 이에 대해 당사는 어떠한 책임이나 보상도 할 수 없습니다.</li>
+                                        <li>
+                                            발송시간
+                                            <ul class="list_bar">
+                                                <li>해외증시 안내 : 오전 8시 30분</li>
+                                                <li>국내증시/개별종목 종가 안내 : 오후 4시</li>
+                                                <li>외국인/기관 상위종목 안내 : 오전 9시 30분 이후 ~ (5회)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="tit">2. 스마트알림(PUSH) 유의사항</p>
+                                    <ul class="list_dot">
+                                        <li>알림서비스는 ID기준으로 등록되오니 이점 유의하시기 바랍니다.</li>
+                                        <li>당일체결내역은 주문번호·주문수량으로 보여주며, 반드시 체결내역을 확인하여 주십시오.</li>
+                                        <li>당일체결내역의 일부체결내역은 장종료 후 오후 4시에 일괄 발송됩니다.</li>
+                                        <li>CFD 반대매매 진행 통보는 필수사항이므로 해제가 불가능합니다.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="btn_wrap">
+                    <button type="button" class="agree_btn" data-class="popup_alarm">동의</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 개인신용정보 수집·이용 동의서 -->
+    <div class="popup popup_agree none full">
+        <div class="popup_container">
+            <div class="con">
+                <div class="pop_header">
+                    <h1>개인신용정보 수집·이용 동의서</h1>
+                    <div class="close"><button type="button" onclick="popup.close('popup_agree')">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <h2>개인신용정보 수집·이용 필수 동의서</h2>
+                    <h3>[키움 포인트 서비스 가입을 위한 수집·이용]</h3>
+                    <p>(주)키움증권과의 (금융)거래와 관련하여 (주)키움증권이 본인의 개인(신용)정보를 수집·이용·제공하는 경우에는 「신용 정보의 이용 및 보호에 관한 법률」, 「개인정보 보호법」 등 관계 법령에 따라 본인의 동의가 필요합니다.</p>
+                    <h4><span>1</span> 수집·이용에 관한 사항</h4>
+                    <table class="tbl_collect">
+                        <colgroup>
+                            <col width="30%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>수집 및 이용 <br>목적</th>
+                                <td>키움 포인트 서비스 제공 및 이용</td>
+                            </tr>
+                            <tr>
+                                <th>보유 및 이용 <br>기간</th>
+                                <td>
+                                    <span class="tit">동의일로부터 서비스 해지일(또는 동의철회 시)까지</span>
+                                    <span>위 보유 기간에서의 서비스 해지일이란 '키움 포인트 서비스의 해지가 이루어지는 시점'을 말합니다.</span>
+                                    <span class="noti">※ 단, 관련 법령에 보관기간이 명시되어 있는 경우 해당 법령상의 보존기간을 따름</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>거부 권리 <br>및 불이익</th>
+                                <td>귀하는 아래 개인신용정보 수집·이용에 대해 거부하실 수 있습니다. 다만, 수집·이용에 관한 동의는 "키움 포인트 서비스 가입"을 위한 필수적 사항이므로 동의 거부 시 키움 포인트 서비스 가입이 불가능할 수 있습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>수집·이용 항목</h5>
+                    <table class="tbl_collect">
+                        <colgroup>
+                            <col width="30%">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="2">개인(신용)정보</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>일반개인 <br>정보</th>
+                                <td>고객번호, 고객아이디, 기기식별정보</td>
+                            </tr>
+                            <tr>
+                                <th>신용거래 <br>정보</th>
+                                <td>계좌번호, 포인트 사용내역</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn_wrap">
+                    <button type="button" class="agree_btn" data-class="popup_agree">동의</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 키움포인트 약관 동의 -->
+    <div class="popup popup_point none full">
+        <div class="popup_container">
+            <div class="con">
+                <div class="pop_header">
+                    <h1>키움포인트 서비스 이용 약관</h1>
+                    <div class="close"><button type="button" onclick="popup.close('popup_point')">닫기</button></div>
+                </div>
+                <div class="pop_body">
+                    <div class="terms">
+                        <p class="info">이 약관은 법령 및 내부통제기준에 따른 절차를 거쳐 제공됩니다.</p>
+                        <dl class="notice no_bullet">
+                            <dt>유의사항</dt>
+                            <dd>
+                                <ol>
+                                    <li>
+                                        <p class="tit">제1조 (목적)</p>
+                                        <ul class="list_dot">
+                                            <li>이 약관은 키움증권 주식회사(이하 “회사”라 한다)가 이용자에게 제공하는 “포인트 서비스”(이하 “서비스”라 한다)와 관련한 이용자와 회사 간의 권리와 의무, 책임사항, 서비스 이용조건, 절차 등 기본적인 사항을 규정함을 목적으로 한다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제2조 (용어의 정의)</p>
+                                        <ul class="list_dot">
+                                            <li>
+                                                ① 이 약관에서 사용하는 용어의 정의는 다음 각 호와 같다
+                                                <ul class="list_bar">
+                                                    <li>1. “서비스”란 이용자가 회사의 온라인 매체를 통해 포인트를 적립, 환전, 사용하는 서비스를 말한다.</li>
+                                                    <li>2. “이용자”란 온라인 매체를 통해 이 약관에 동의하여 회사가 제공하는 서비스를 이용하는 개인 이용자를 말한다.</li>
+                                                    <li>3. “키움 포인트”란 이용자가 서비스를 통해 전액 무상으로 적립한 재산적 가치가 있는 재화(포인트)를 말한다.</li>
+                                                    <li>4. “가용 포인트”란 이용자가 적립한 포인트 중 이미 사용 및 소멸한 포인트를 제외한 포인트를 말한다.</li>
+                                                    <li>5. “제휴사”란 광고플랫폼 제휴 계약을 통해 서비스 내 제휴 미션 및 광고를 공급하는 자를 말한다</li>
+                                                    <li>6. “환전” 이란 키움포인트서비스를 통해 적립한 포인트를 회사의 예수금으로 전환하는 것을 말한다.</li>
+                                                </ul>
+                                            </li>
+                                            <li>② 이 약관에 사용된 용어 중 달리 정의되지 않은 것은 ‘전자금융거래 이용에 관한 기본약관’을 따른다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제3조 (약관의 효력)</p>
+                                        <ul class="list_dot">
+                                            <li>이 약관은 홈페이지 또는 앱 서비스에 게시하여 이용자에게 공지하고, 이에 이용자가 동의한 경우 효력이 발생한다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제4조 (포인트 적립 및 회수)</p>
+                                        <ul class="list_dot">
+                                            <li>① 포인트는 회사와 제휴사가 제공하는 서비스 내 광고 또는 미션에 명시된 조건을 충족할 경우 전액 무상으로 적립된다.</li>
+                                            <li>② 포인트 적립 금액 및 적립 시기는 회사가 운영하는 홈페이지 또는 앱서비스에 사전 안내된 내용을 따른다.</li>
+                                            <li>③ 포인트의 적립은 개인 이용자에 한하여 가능하며, 적립 금액은 1일 최대 30만원으로 제한된다. 단, 회사는 금융감독당국의 권고, 금융사고, 기타 금융소비자보호 사유 등이 발생하는 경우 적립 금액의 1일 한도를 축소할 수 있으며 이 경우 축소한 적립한도, 축소한 사유 등을 사전에 알려야 한다.</li>
+                                            <li>④ 회사 및 제휴사가 제시한 순서나 방식을 준수하지 않은 경우 포인트가 적립되지 않을 수 있으며, 회사는 이를 이용자가 충분히 알 수 있도록 사전에 안내해야 한다.</li>
+                                            <li>
+                                                ⑤ 부정한 방법으로 취득한 포인트 및 적립의 원인이 되는 사유가 취소된 경우 포인트를 회수할 수 있으며 회사는 이용자에게 회수사실 및 사유를 사전에 통보 하여야 하나, 다음 각 호에 해당하는 경우 사전통지 대상의 예외로 하되 지체없이 사후 통지한다.
+                                                <ul class="list_bar">
+                                                    <li>1. 시스템 오류 또는 허점을 악용하여 포인트를 적립한 경우</li>
+                                                    <li>2. 타인의 계정을 도용하여 포인트를 취득한 경우</li>
+                                                    <li>3. 해킹 등 비정상적 수단을 이용해 포인트를 적립한 경우</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제5조 (포인트 사용)</p>
+                                        <ul class="list_dot">
+                                            <li>① 이용자는 포인트를 금융상품 및 주식의 매수 대금으로 사용하거나, 환전을 통해 예수금으로 활용할 수 있다.</li>
+                                            <li>② 1포인트는 1원과 동일한 가치를 가지며, 가용 포인트가 1포인트 이상일 경우 사용하는것을 원칙으로 한다.</li>
+                                            <li>③ 환전이 완료된 이후에는 포인트로의 재전환이 불가하다.</li>
+                                            <li>④ 포인트는 대여, 양도 등이 불가하다. 단, 동일인의 계좌 내에서는 대체 등이 가능하다.</li>
+                                            <li>⑤ 증권을 매수하기 위해 사용된 포인트는 매수 요청 시점 즉시 차감된다</li>
+                                            <li>⑥ 포인트 사용 후 잔여 포인트는 회사에서 운영하는 홈페이지 또는 앱서비스에서 확인 가능하다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제6조 (포인트 유효기간 및 소멸)</p>
+                                        <ul class="list_dot">
+                                            <li>① 포인트의 유효기간은 최초 적립일로부터 5년(60개월)이며, 유효기간 만료일의 익월 1일에 자동 소멸된다.</li>
+                                            <li>② 회사는 제 1항의 유효기간에 따른 포인트 소멸 시 소멸 예정 포인트, 소멸 시기 등 포인트 소멸과 관련된 내용을 이메일, 문자메시지 등을 통해 안내한다.</li>
+                                            <li>③ 이용자의 모든 계좌가 폐쇄되거나, 서비스를 탈퇴한 경우 포인트 서비스의 이용 자격이 상실되며, 적립한 포인트도 소멸된다. 단 회사는 계좌 폐쇄 및 서비스 탈퇴 절차를 진행하기 전 포인트 소멸에 대한 내용을 안내하고 이용자는 이에 동의한 후 해당 절차를 완료할 수 있다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제7조 (이용자의 의무)</p>
+                                        <ul class="list_dot">
+                                            <li>① 이용자는 회사의 서비스 이용 시 전자금융거래법 등 관련 법령, 본 약관을 준수해야 한다.</li>
+                                            <li>② 이용자는 제 4조 5항 등에 해당하는 부적절한 방법으로 포인트를 적립 및 사용한 경우 회사는 사유, 기간 등을 고지한 후 서비스 사용을 제한할 수 있다.</li>
+                                            <li>③ 이용자는 자신의 명의가 도용되거나 제3자에게 부정하게 사용된 것을 인지한 경우 지체없이 그 사실을 회사에 통보하여야 한다.</li>
+                                            <li>④ 이용자는 포인트의 적립, 환전, 사용과 관련하여 당사가 고지하는 내용을 적시 확인할 수 있도록 전자우편주소, 휴대폰 번호 등을 최신화 하여야 한다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제8조 (회사의 의무)</p>
+                                        <ul class="list_dot">
+                                            <li>① 회사는 약관에 따라 안정적이고 지속적인 서비스 제공을 위해 노력한다.</li>
+                                            <li>② 회사는 이용자로부터 제7조 제3항에 따라 통지를 받은 경우, 즉시 서비스 이용을 제한하여야 하며, 이후 제3자가 서비스를 사용하여 이용자에게 손해가 발생한 경우 그 손해를 배상한다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제9조 (서비스의 종료)</p>
+                                        <ul class="list_dot">
+                                            <li>
+                                                회사는 다음 각 호의 어느 해당 사유가 발생한 경우 서비스 제공을 종료할 수 있다. 단 서비스를 종료하고자 하는 날로부터 최소 1개월 이전에 본 약관 제 10조 1항에 규정된 통지방법을 준용하여 회원에게 서비스 종료 사실과 가용포인트 사용에 관한 사항 등을 안내하여야 한다.
+                                                <ul class="list_bar">
+                                                    <li>1. 영업부문의 폐지나 통합, 영업양도나 합병, 분할, 경영정책의 변경 및 이에 준하는 사유가 발생하는 경우 본 약관에 의한 서비스를 종료 또는 폐쇄할 수 있다.</li>
+                                                    <li>2. 서비스 종료일 이후 이용자는 회사와 제휴사의 미션 수행을 통한 포인트 적립을 할 수 없으며, 회사가 별도 지정하는 날까지 본 약관에 따라 통지한 기준에 따라 가용포인트를 사용하여야한다.</li>
+                                                    <li>3. 서비스 종료일까지 사용하지 않은 포인트는 모두 소멸된다.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제10조 (약관의 변경 등)</p>
+                                        <ul class="list_dot">
+                                            <li>① 회사는 약관을 변경하고자 하는 경우 시행일 1개월 전에 변경되는 약관을 서비스를 제공하는 전자적 장치(해당 전자적 장치에 게시하기 어려운 경우에는 이용자가 접근하기 쉬운 전자적 장치)에 게시하고, 이용자에게 전자우편, SMS 등으로 통지하여야 한다. 다만, 이용자가 이의를 제기할 경우 회사는 이용자에게 적절한 방법으로 약관 변경내용을 통지하였음을 확인해 주어야한다.</li>
+                                            <li>② 제1항에도 불구하고 회사가 법령의 개정으로 인하여 긴급하게 약관을 변경하는 때에는 변경된 약관을 전자적 장치에 1개월 이상 게시하고 제1항에서 정한 방법으로 이용자에게 통지하여야 한다.</li>
+                                            <li>③ 회사가 제1항 및 제2항에 따라 변경된 약관을 게시하거나 통지하는 경우에는 “이용자가 약관의 변경 내용이 게시되거나 통지된 후부터 변경되는 약관의 시행일 전의 영업일까지 이내에 계약을 해지할 수 있으며, 약관의 변경내용에 이의를 제기하지 아니하는 경우 약관의 변경내용에 승인한 것으로 본다.”라는 취지의 내용을 통지하여야 한다.</li>
+                                            <li>④ 이용자는 약관의 변경내용이 게시되거나 통지된 후부터 변경되는 약관의 시행일 전의 영업일까지 전자금융거래의 계약을 해지할 수 있고, 약관의 변경내용에 대하여 이의를 제기하지 아니하는 경우에는 약관의 변경을 승인한 것으로 본다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제11조 (분쟁처리 및 분쟁조정)</p>
+                                        <ul class="list_dot">
+                                            <li>① 이용자는 회사 홈페이지에 게시된 분쟁처리 책임자 및 담당자 또는 아래 경로를 통하여 전자금융거래와 관련한 의견 및 불만의 제기, 손해배상의 청구 등의 분쟁처리를 요구할 수 있다.
+                                                <ul class="list_bar">
+                                                    <li>- 키움증권 홈페이지(www.kiwoom.com) > (우측 상단) 소비자보호포털 > 민원신청 > 민원신청안내</li>
+                                                </ul>
+                                            </li>
+                                            <li>② 이용자는 제1항에 따라 서면(전자문서를 포함합니다) 또는 전자적 장치를 이용하여 회사의 본점이나 영업점에 분쟁처리를 신청할 수 있으며, 회사는 15일 이내에 이에 대한 조사 또는 처리결과를 이용자에게 안내한다.</li>
+                                            <li>③ 이용자는 회사의 전자금융거래의 처리에 관하여 이의가 있을 때에는 금융감독원의 금융분쟁조정위원회, 한국소비자원의 소비자분쟁조정위원회 등을 통하여 분쟁조정을 신청할 수 있다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제12조 (우선순위)</p>
+                                        <ul class="list_dot">
+                                            <li>① 회사와 이용자 사이에 개별적으로 합의한 사항이 이 약관에 정한 사항과 다를 때에는 그 합의사항을 이 약관에 우선하여 적용한다.</li>
+                                            <li>② 이 약관에서 정하지 않은 사항(용어의 정의 포함)에 관하여는 다른 합의사항이 없으면 「전자금융거래법」, 「전자상거래 등에서의 소비자 보호에 관한 법률」, 「자본시장과 금융투자업에 관한 법률」 등 관계 법령과 회사의 「전자금융거래 이용에 관한 기본약관 」에서 정한 바에 따른다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="tit">제13조 (준거법)</p>
+                                        <ul class="list_dot">
+                                            <li>① 약관의 해석 및 적용에 관하여는 대한민국법을 적용한다</li>
+                                            <li>② 이 약관에 의한 거래와 관련하여 발생된 분쟁에 대하여 회사와 이용자 사이에 소송의 필요가 생긴 경우에는 그 관할법원은 민사소송법이 정한 바에 따른다.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </dd>
+                            <dt>부 칙</dt>
+                            <dd>
+                                <ol>
+                                    <li>
+                                        <p class="tit">제1조 (시행일)</p>
+                                        <ul class="list_dot">
+                                            <li>이 약관은 2024년 11월 14일부터 시행됩니다.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <button type="button" class="agree_btn" data-class="popup_point">동의</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        // 바텀시트 닫기 시 체크 해제
+        $(".popup_event .close button, .popup_event .dim").on("click", function() {
+            $(".popup_event input").prop("checked", false);
+            $(".btn_all_agree").attr("disabled", true);
+        });
+
+        // 전체동의
+        $(".all_agree input").on("click", function() {
+            if($(this).is(":checked")) {
+                $(this).prop("checked", false);
+                $(this).parents("dd").find(".agree_list li").each(function () {
+                    popup.open($(this).find("input:not(:checked)").data("class"));
+                });
+            } else {
+                $(this).parents("dd").find(".agree_list input").prop("checked", false);
+            }
+        });
+
+        // 개별동의
+        $(".agree_list input").on("click", function() {
+            if($(this).is(":checked")) {
+                popup.open($(this).data("class"));
+                $(this).prop("checked", false);
+            }
+            checkboxState($(this));
+        });
+
+        // 개별 팝업 동의
+        $(".agree_btn").click(function() {
+            popup.close($(this).data("class"));
+            $(".agree_list input[data-class="+ $(this).data("class") + "]").prop('checked', true);
+            checkboxState($(this));
+        });
+
+        // 전체동의 체크박스 활성화, 동의하기 버튼 활성화
+        function checkboxState(is) {
+            const dd = $("input[data-class=" + is.data("class") + "]").parents("dd");
+            if(dd.find(".agree_list li input").length == dd.find(".agree_list li input:checked").length) {
+                dd.find(".all_agree input").prop("checked", true);
+            } else {
+                dd.find(".all_agree input").prop("checked", false);
+            }
+            if($(".agree_list li input").length == $(".agree_list li input:checked").length) {
+                $(".btn_all_agree").attr("disabled", false);
+            } else {
+                $(".btn_all_agree").attr("disabled", true);
+            }
+        }
+    </script>
+</body>
+</html>

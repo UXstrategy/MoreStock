@@ -869,30 +869,6 @@
             background: url("../images/score30.png") no-repeat 0 0 / 100% 100%;
         }
     }
-    .total_count {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-        position: absolute;
-        top: 158rem;
-        left: 143rem;
-        width: 74rem;
-        height: 27rem;
-        background: rgba(255, 255, 255, 0.58);
-        border-radius: 14rem;
-        text-align: center;
-        span {
-            font-weight: 700;
-            font-size: 14rem;
-            color: #25a0c6;
-            opacity: .7;
-        }
-        .count {
-            font-weight: 700;
-            opacity: 1;
-        }
-    }
     .plate {
         display: flex;
         position: absolute;
